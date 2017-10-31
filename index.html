@@ -1,0 +1,359 @@
+<!doctype html>
+<html>
+<head>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta property="og:type" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title>815TV 모바일</title>
+
+<!--[if lt IE 9]>
+<script src="common/js/html5.js"></script>
+<script src="common/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- reset & common style -->
+<link rel="stylesheet" type="text/css" href="common/css/reset-normalize.css" />
+<link rel="stylesheet" type="text/css" href="common/css/common.css" />
+
+<!-- CSS custom -->
+<link rel="stylesheet" type="text/css" href="common/css/XEicon/xeicon.min.css" />
+<link rel="stylesheet" type="text/css" href="common/css/animate.css" />
+<link rel="stylesheet" type="text/css" href="common/css/layout.css" />
+
+<!-- JS -->
+<script type="text/javascript" src="common/js/jquery-1.12.1.min.js"></script>
+<script type="text/javascript">
+$(document).on('click','.m_nav',function(e){
+	e.preventDefault();
+	$('.menu_side').show(240)
+});
+$(document).on('click scroll','.menu_side .close, .menu_side .ly_dimmed',function(e){
+	e.preventDefault();
+	var width = $('.menu_side').width();
+	$('.menu_side').animate({left:'-'+width+'px'},240,function(){
+		$('.menu_side').hide();
+		$('.menu_side').css({left:'0px'});
+	});
+});
+</script>
+</head>
+<body>
+
+
+<div id="wrap">
+	<!--header-->
+	<div class="header">
+		<div class="head">
+			<a href="#" class="m_nav"><img src="images/icon_menu.png" width="24" alt="메뉴" /></a>
+			<h1 class="logo"><a href="index.html"><img src="images/logo.png" height="50" alt="815TV" /></a></h1>
+			<a href="account/login.html" class="login"><img src="images/icon_login.png" width="26" alt="로그인하기" /></a>
+			<!--<a href="mypage/mypage_index.html" class="mypage"><img src="images/icon_mypage.png" alt="마이페이지" /></a>-->
+		</div>
+		<div class="menu_side">
+			<div class="ly_dimmed"></div>
+			<div class="inner animated slideInLeft">
+				<div class="head">
+					<div class="logo"><img src="images/logo.png" height="40" alt="815TV" /></div>
+					<button type="button" class="close"><i class="xi xi-close"></i></button>
+				</div>
+				<div class="con">
+					<div class="button_group clearfix">
+						<div class="col2"><a href="account/login.html" class="btn btn-line block">로그인</a></div>
+						<div class="col2"><a href="account/join.html" class="btn btn-line block">회원가입</a></div>
+					</div>
+					<div class="cscenter clearfix">
+						<div class="pull-left">
+							<h4 class="tit">고객센터</h4>
+							<p class="cs_number">1899-5786</p>
+							<span class="cs_time">365일 월~금 8:30~24:30</span>
+						</div>
+						<div class="pull-right">
+							<a href="tel:1899-5786" class="call">전화걸기</a>
+						</div>
+					</div>
+					<div class="menu_list">
+						<ul>
+							<li><a href="live/live.html">전문가방송 <i class="xi xi-angle-right pull-right"></i></a>
+								<ul>
+									<li><a href="#">서브1</a></li>
+									<li><a href="#">서브2</a></li>
+									<li><a href="#">서브3</a></li>
+									<li><a href="#">서브4</a></li>
+								</ul>
+							</li>
+							<li><a href="board/board_list.html">투자전략 <i class="xi xi-angle-right pull-right"></i></a></li>
+							<li><a href="board/board_list.html">감사후기 <i class="xi xi-angle-right pull-right"></i></a>
+								<ul>
+									<li><a href="#">서브1</a></li>
+									<li><a href="#">서브2</a></li>
+								</ul>
+							</li>
+							<li><a href="board/board_list.html">공지사항 <i class="xi xi-angle-right pull-right"></i></a>
+								<ul>
+									<li><a href="#">서브1</a></li>
+									<li><a href="#">서브2</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="navigation">
+			<ul class="nav">
+				<li class="active"><a href="live/live.html">전문가방송</a></li>
+				<li><a href="board/board_list.html">투자전략</a></li>
+				<li><a href="board/board_list.html">감사후기</a></li>
+				<li><a href="board/board_list.html">공지사항</a></li>
+			</ul>
+		</div>
+    </div>
+    <!--//header-->
+    <div class="main_visual">
+		<div class="main_visual_inner">
+			<div class="visual_images">
+				<div class="item"><img src="images/sample_visual.png" alt="비주얼이미지 샘플" /></div>
+				<div class="item hide"><img src="images/noimg/main-visual.jpg" alt="noimg" /></div>
+			</div>
+			<div class="visual_nav">
+				<a href="#" class="bullet active"></a>
+				<a href="#" class="bullet "></a>
+				<a href="#" class="bullet "></a>
+			</div>
+		</div>
+    </div>
+	<!--content-->
+    <div class="content">
+		<!--section1-->
+		<div class="content-default">
+			<!--latest-->
+			<div class="latest-default">
+				<div class="head">
+					<h2 class="tit">
+						베스트감사후기 
+						<span class="sub">오늘은 어느전문가가 수익을 냈을까?</span> 
+						<a href="board/board_list.html" class="more"><img src="images/icon_latest_more.png" alt="더보기" width="16" /></a>
+					</h2>
+				</div>
+				<div class="con">
+					<!--repeat {-->
+					<div class="item">
+						<a href="board/board_read.html">
+							<h3 class="tit">비도 오고 그래서 니 생각이 나서</h3>
+							<div class="info">
+								<span class="name">무궁화삼천리</span>
+								<span class="date">2017. 05. 29</span>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="board/board_read.html">
+							<h3 class="tit">감사합니다. 사랑합니다. 고맙습니다. 전문가님</h3>
+							<div class="info">
+								<span class="name">무궁화삼천리</span>
+								<span class="date">2017. 05. 29</span>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="board/board_read.html">
+							<h3 class="tit">얼씨구나 좋구나~ 수익 풍년이로구나~~~~</h3>
+							<div class="info">
+								<span class="name">무궁화삼천리</span>
+								<span class="date">2017. 05. 29</span>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="board/board_read.html">
+							<h3 class="tit">저는 이거보고 깜짝 놀랐습니다. 수익이 완전 대박인데요~ 감사합니다 정말감사합니다.</h3>
+							<div class="info">
+								<span class="name">무궁화삼천리</span>
+								<span class="date">2017. 05. 29</span>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="board/board_read.html">
+							<h3 class="tit">여의도에 가면 편지를 쓰세요</h3>
+							<div class="info">
+								<span class="name">무궁화삼천리</span>
+								<span class="date">2017. 05. 29</span>
+							</div>
+						</a>
+					</div>
+					<!--}repeat-->
+				</div>
+			</div>
+			<!--//latest-->
+		</div>
+		<!--//section1-->
+		<!--section2-->
+		<div class="content-default">
+			<div class="main_ad">
+				<a href="#" class="hide"><img src="images/sample_ad.png" alt="광고샘플" /></a>
+				<a href="#"><img src="images/noimg/main-ad.jpg" alt="noimg" /></a>
+			</div>
+		</div>
+		<!--//section2-->
+		<!--section3-->
+		<div class="content-default">
+			<!--latest-->
+			<div class="latest-default">
+				<div class="head">
+					<h2 class="tit">
+						LIVE 방송 
+						<span class="sub">수익의 향연! 그 뜨거운 방송 속으로!</span> 
+						<a href="board/board_list.html" class="more"><img src="images/icon_latest_more.png" alt="더보기" width="16" /></a>
+					</h2>
+				</div>
+				<div class="con">
+					<!--repeat {-->
+					<div class="item-cast">
+						<div class="profile-area">
+							<div class="picture">
+								<!-- http://www.815tv.co.kr/live/main.asp   전문가방송 페이지에 나오는 전문가 이미지를 썻습니다. -->
+								<div class="profile-img"><img src="http://www.815tv.co.kr/images/anal/fok1541_live.jpg" alt="전문가사진" /></div>
+								<div class="link-cafe-home"><a href="live/profile.html" title=""><img src="images/icon_cafe.png" alt="홈" /></a></div>
+							</div>
+							<div class="ment">
+								<h1 class="profile-title">태평성대로 가는길</h1>
+								<div class="name">
+									<span class="label-stock">주식</span>
+									<span class="name">암행어사</span>
+								</div>
+								<div class="info">
+									<span class="time">2017. 3. 10&nbsp;&nbsp;08:30~15:30</span>
+								</div>
+							</div>
+						</div>
+						<div class="button-area">
+							<button type="button" class="btn btn-active block animated infinite blink">LIVE 무료방송</button>
+						</div>
+					</div>
+					<div class="item-cast">
+						<div class="profile-area">
+							<div class="picture">
+								<div class="profile-img"><img src="http://www.815tv.co.kr/images/anal/jupiteam3_live.jpg" alt="전문가사진" /></div>
+								<div class="link-cafe-home"><a href="live/profile.html" title=""><img src="images/icon_cafe.png" alt="홈" /></a></div>
+							</div>
+							<div class="ment">
+								<h1 class="profile-title">우라노스의 모닝 크로노스</h1>
+								<div class="name">
+									<span class="label-stock">주식</span>
+									<span class="name">우라노스</span>
+								</div>
+								<div class="info">
+									<span class="time">2017. 3. 10&nbsp;&nbsp;08:30~15:30</span>
+								</div>
+							</div>
+						</div>
+						<div class="button-area">
+							<button type="button" class="btn btn-info block">LIVE 유료방송</button>
+						</div>
+					</div>
+					<div class="item-cast">
+						<div class="profile-area">
+							<div class="picture">
+								<div class="profile-img"><img src="http://www.815tv.co.kr/images/anal/fok1541_live.jpg" alt="전문가사진" /></div>
+								<div class="link-cafe-home"><a href="live/profile.html" title=""><img src="images/icon_cafe.png" alt="홈" /></a></div>
+							</div>
+							<div class="ment">
+								<h1 class="profile-title">수익률 1위! 멘탈케어! 주식투자의 정석!</h1>
+								<div class="name">
+									<span class="label-stock">주식</span>
+									<span class="name">양귀비</span>
+								</div>
+								<div class="info">
+									<span class="time">2017. 3. 10&nbsp;&nbsp;08:30~15:30</span>
+								</div>
+							</div>
+						</div>
+						<div class="button-area">
+							<button type="button" class="btn btn-disable block">방송예정</button>
+						</div>
+					</div>
+					<div class="item-cast">
+						<div class="profile-area">
+							<div class="picture">
+								<div class="profile-img"><img src="http://www.815tv.co.kr/images/anal/shinsaimdang_live.jpg" alt="전문가사진" /></div>
+								<div class="link-cafe-home"><a href="live/profile.html" title=""><img src="images/icon_cafe.png" alt="홈" /></a></div>
+							</div>
+							<div class="ment">
+								<h1 class="profile-title">신사임당, 성격은 잔다르크</h1>
+								<div class="name">
+									<span class="label-stock">주식</span>
+									<span class="name">양귀비</span>
+								</div>
+								<div class="info">
+									<span class="time">2017. 3. 10&nbsp;&nbsp;08:30~15:30</span>
+								</div>
+							</div>
+						</div>
+						<div class="button-area">
+							<button type="button" class="btn btn-disable block">방송예정</button>
+						</div>
+					</div>
+					<!--}repeat-->
+				</div>
+			</div>
+			<!--//latest-->
+		</div>
+		<!--//section3-->
+    </div>
+    <!--//content-->
+    <!--footer-->
+    <div class="footer">
+		<p class="warning">
+			본 사이트에서 제공되는 모든 정보는 투자판단의 참고자료이며, 서비스 이용에 따른 최종 책임은 이용자에게 있습니다.
+		</p>
+		<p class="info">
+			㈜고구려인베스트먼트 | 대표이사 : 전운규 | 법인등록번호 : 110111-5510527 | 사업자등록번호 107-88-29382 | 통신판매 : 제2017-전주완산-0116호
+		</p>
+		<div class="footbtn">
+			<a href="page/guide.html" class="btn btn-foot">이용약관</a>
+			<a href="page/personalinfo.html" class="btn btn-foot">개인정보취급방침</a>
+		</div>
+		<div class="copy">
+			Copyrightⓒ고구려인베스트먼트.co.,Ltd. All rights reserved.
+		</div>
+    </div>
+    <!--//footer-->
+    <div class="quick_menu">
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

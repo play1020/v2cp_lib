@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta property="og:type" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title>815TV 모바일</title>
+
+<!--[if lt IE 9]>
+<script src="common/js/html5.js"></script>
+<script src="common/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="../images/favicon.ico">
+
+<!-- reset & common style -->
+<link rel="stylesheet" type="text/css" href="../common/css/reset-normalize.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/common.css" />
+
+<!-- CSS custom -->
+<link rel="stylesheet" type="text/css" href="../common/css/XEicon/xeicon.min.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/animate.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/layout.css" />
+
+<!-- JS -->
+<script type="text/javascript" src="../common/js/jquery-1.12.1.min.js"></script>
+<script type="text/javascript">
+$(document).on('click','.m_nav',function(e){
+	e.preventDefault();
+	$('.menu_side').show(240)
+});
+$(document).on('click scroll','.menu_side .close, .menu_side .ly_dimmed',function(e){
+	e.preventDefault();
+	var width = $('.menu_side').width();
+	$('.menu_side').animate({left:'-'+width+'px'},240,function(){
+		$('.menu_side').hide();
+		$('.menu_side').css({left:'0px'});
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="wrap">
+	<!--header-->
+	<div class="header">
+		<div class="head">
+			<a href="#" class="m_nav"><img src="../images/icon_menu.png" width="24" alt="메뉴" /></a>
+			<h1 class="logo"><a href="../index.html"><img src="../images/logo.png" height="50" alt="815TV" /></a></h1>
+			<a href="login.html" class="login"><img src="../images/icon_login.png" width="26" alt="로그인하기" /></a>
+			<!--<a href="mypage/mypage_index.html" class="mypage"><img src="images/icon_mypage.png" alt="마이페이지" /></a>-->
+		</div>
+		<div class="menu_side">
+			<div class="ly_dimmed"></div>
+			<div class="inner animated slideInLeft">
+				<div class="head">
+					<div class="logo"><img src="../images/logo.png" height="40" alt="815TV" /></div>
+					<button type="button" class="close"><i class="xi xi-close"></i></button>
+				</div>
+				<div class="con">
+					<div class="button_group clearfix">
+						<div class="col2"><a href="login.html" class="btn btn-line block">로그인</a></div>
+						<div class="col2"><a href="join.html" class="btn btn-line block">회원가입</a></div>
+					</div>
+					<div class="cscenter clearfix">
+						<div class="pull-left">
+							<h4 class="tit">고객센터</h4>
+							<p class="cs_number">1899-5786</p>
+							<span class="cs_time">365일 월~금 8:30~24:30</span>
+						</div>
+						<div class="pull-right">
+							<a href="tel:1899-5786" class="call">전화걸기</a>
+						</div>
+					</div>
+					<div class="menu_list">
+						<ul>
+							<li><a href="../live/live.html">전문가방송 <i class="xi xi-angle-right pull-right"></i></a>
+								<ul>
+									<li><a href="#">서브1</a></li>
+									<li><a href="#">서브2</a></li>
+									<li><a href="#">서브3</a></li>
+									<li><a href="#">서브4</a></li>
+								</ul>
+							</li>
+							<li><a href="../board/board_list.html">투자전략 <i class="xi xi-angle-right pull-right"></i></a></li>
+							<li><a href="../board/board_list.html">감사후기 <i class="xi xi-angle-right pull-right"></i></a>
+								<ul>
+									<li><a href="#">서브1</a></li>
+									<li><a href="#">서브2</a></li>
+								</ul>
+							</li>
+							<li><a href="../board/board_list.html">공지사항 <i class="xi xi-angle-right pull-right"></i></a>
+								<ul>
+									<li><a href="#">서브1</a></li>
+									<li><a href="#">서브2</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--
+		<div class="navigation">
+			<ul class="nav">
+				<li class="active"><a href="../live/live.html">전문가방송</a></li>
+				<li><a href="../board/board_list.html">투자전략</a></li>
+				<li><a href="../board/board_list.html">감사후기</a></li>
+				<li><a href="../board/board_list.html">공지사항</a></li>
+			</ul>
+		</div>
+		-->
+    </div>
+    <!--//header-->
+    <div class="main_visual">
+    </div>
+    <div class="content">
+		<div class="sub-head">
+			<h2 class="title">회원가입</h2>
+		</div>
+		<!--section-->
+		<div class="content-default">
+			<form action="join_complete.html" method="get">
+				<div class="card-section">
+					<fieldset class="fieldset">
+						<div class="form-group">
+							<h4 class="title-lb">아이디</h4>
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="아이디를 입력하세요" />
+								<span class="input-group-btn">
+									<button type="button" class="btn btn-primary">중복확인</button>
+								</span>
+							</div>
+							<span class="info">영문, 숫자 5~16자 (띄어쓰기, 특수문자 불가)</span>
+						</div>
+					</fieldset>
+				</div>
+				<div class="card-section">
+					<fieldset class="fieldset">
+						<div class="form-group">
+							<h4 class="title-lb">비밀번호</h4>
+							<input type="password" class="form-control block" placeholder="비밀번호입력"/>
+							<input type="password" class="form-control block" placeholder="비밀번호확인" />
+							<span class="info">영문, 숫자 6~16자 (띄어쓰기 불가)</span>
+						</div>
+					</fieldset>
+				</div>
+				<div class="card-section">
+					<fieldset class="fieldset">
+						<div class="form-group">
+							<h4 class="title-lb">성명</h4>
+							<input type="text" class="form-control block" />
+							<h4 class="title-lb">필명</h4>
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="" />
+								<span class="input-group-btn">
+									<button type="button" class="btn btn-primary">중복확인</button>
+								</span>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="card-section">
+					<fieldset class="fieldset">
+						<div class="form-group">
+							<h4 class="title-lb">휴대폰인증</h4>
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="번호를입력하세요" />
+								<span class="input-group-btn">
+									<button type="button" class="btn btn-primary">인증요청</button>
+								</span>
+							</div>
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="인증번호를 입력하세요" />
+								<span class="input-group-btn">
+									<button type="button" class="btn btn-primary">인증확인</button>
+								</span>
+							</div>
+							<label class="chk"><input type="checkbox" /> <i class="xi xi-check-circleout"></i> <span>SMS수신동의</span></label>
+							<span class="info">(815TV에서 제공하는 유익한 정보를 문자로 받으실 수 있습니다.)</span>
+						</div>
+					</fieldset>
+				</div>
+				<div class="more">
+					<button type="submit" class="btn btn-primary block">회원가입완료</button>
+				</div>
+			</form>
+			
+		</div>
+		<!--//section-->
+    </div>
+    <!--//content-->
+    <!--footer-->
+    <div class="footer">
+		<p class="warning">
+			본 사이트에서 제공되는 모든 정보는 투자판단의 참고자료이며, 서비스 이용에 따른 최종 책임은 이용자에게 있습니다.
+		</p>
+		<p class="info">
+			㈜고구려인베스트먼트 | 대표이사 : 전운규 | 법인등록번호 : 110111-5510527 | 사업자등록번호 107-88-29382 | 통신판매 : 제2017-전주완산-0116호
+		</p>
+		<div class="copy">
+			Copyrightⓒ고구려인베스트먼트.co.,Ltd. All rights reserved.
+		</div>
+    </div>
+    <!--//footer-->
+	<!-- quick_menu -->
+    <div class="quick_menu">
+    </div>
+	<!-- //quick_menu -->
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

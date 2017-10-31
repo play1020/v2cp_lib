@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+<head>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta property="og:type" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title>815TV 모바일</title>
+
+<!--[if lt IE 9]>
+<script src="common/js/html5.js"></script>
+<script src="common/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="../images/favicon.ico">
+
+<!-- reset & common style -->
+<link rel="stylesheet" type="text/css" href="../common/css/reset-normalize.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/common.css" />
+
+<!-- CSS custom -->
+<link rel="stylesheet" type="text/css" href="../common/css/XEicon/xeicon.min.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/animate.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/layout.css" />
+
+<!-- JS -->
+<script type="text/javascript" src="../common/js/jquery-1.12.1.min.js"></script>
+<script type="text/javascript">
+$(document).on('click','.m_nav',function(e){
+	e.preventDefault();
+	$('.menu_side').show(240)
+});
+$(document).on('click scroll','.menu_side .close, .menu_side .ly_dimmed',function(e){
+	e.preventDefault();
+	var width = $('.menu_side').width();
+	$('.menu_side').animate({left:'-'+width+'px'},240,function(){
+		$('.menu_side').hide();
+		$('.menu_side').css({left:'0px'});
+	});
+});
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+	<!--header-->
+	<div class="header">
+		<div class="head">
+			<a href="#" class="m_nav"><img src="../images/icon_menu.png" width="24" alt="메뉴" /></a>
+			<h1 class="logo"><a href="../index.html"><img src="../images/logo.png" height="50" alt="815TV" /></a></h1>
+			<a href="../account/login.html" class="login"><img src="../images/icon_login.png" width="26" alt="로그인하기" /></a>
+			<!--<a href="mypage/mypage_index.html" class="mypage"><img src="images/icon_mypage.png" alt="마이페이지" /></a>-->
+		</div>
+		<div class="menu_side">
+			<div class="ly_dimmed"></div>
+			<div class="inner animated slideInLeft">
+				<div class="head">
+					<div class="logo"><img src="../images/logo.png" height="40" alt="815TV" /></div>
+					<button type="button" class="close"><i class="xi xi-close"></i></button>
+				</div>
+				<div class="con">
+					<div class="button_group clearfix">
+						<div class="col2"><a href="../account/login.html" class="btn btn-line block">로그인</a></div>
+						<div class="col2"><a href="../account/join.html" class="btn btn-line block">회원가입</a></div>
+					</div>
+					<div class="cscenter clearfix">
+						<div class="pull-left">
+							<h4 class="tit">고객센터</h4>
+							<p class="cs_number">1899-5786</p>
+							<span class="cs_time">365일 월~금 8:30~24:30</span>
+						</div>
+						<div class="pull-right">
+							<a href="tel:1899-5786" class="call">전화걸기</a>
+						</div>
+					</div>
+					<div class="menu_list">
+						<ul>
+							<li><a href="../live/live.html">전문가방송 <i class="xi xi-angle-right pull-right"></i></a>
+								<ul>
+									<li><a href="#">서브1</a></li>
+									<li><a href="#">서브2</a></li>
+									<li><a href="#">서브3</a></li>
+									<li><a href="#">서브4</a></li>
+								</ul>
+							</li>
+							<li><a href="board_list.html">투자전략 <i class="xi xi-angle-right pull-right"></i></a></li>
+							<li><a href="board_list.html">감사후기 <i class="xi xi-angle-right pull-right"></i></a>
+								<ul>
+									<li><a href="#">서브1</a></li>
+									<li><a href="#">서브2</a></li>
+								</ul>
+							</li>
+							<li><a href="board_list.html">공지사항 <i class="xi xi-angle-right pull-right"></i></a>
+								<ul>
+									<li><a href="#">서브1</a></li>
+									<li><a href="#">서브2</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="navigation">
+			<ul class="nav">
+				<li class="active"><a href="../live/live.html">전문가방송</a></li>
+				<li><a href="board_list.html">투자전략</a></li>
+				<li><a href="board_list.html">감사후기</a></li>
+				<li><a href="board_list.html">공지사항</a></li>
+			</ul>
+		</div>
+    </div>
+    <!--//header-->
+    <div class="main_visual">
+    </div>
+    <div class="content">
+		<div class="sub-head">
+        	<div class="left">
+				<a href="#" class="btn btn-transparent"><i class="xi xi-angle-left"></i> 뒤로</a>
+			</div>
+			<h2 class="title">투자전략</h2>
+			<div class="right">
+				<a href="board_write.html" class="btn btn-white border-radius">수정</a>
+			</div>
+		</div>
+		<!--section-->
+		<div class="content-default">
+			
+			<div class="board-read">
+				<!--article_title-->
+				<div class="card-section">
+					<h3 class="tit">붉은 물길을 통한 매매! (월추천주 확인!)</h3> <!-- 여긴 말줄임표를 넣지 않았습니다. 줄바꿈이 되도 크게 문제 없을듯 합니다. -->
+					<p class="mata">
+						<span class="date">2017.06.05</span>
+						<span class="name">여의도미꾸라지</span>
+					</p>
+				</div>
+				<!--//article_title-->
+				<!--article_view-->
+				<div class="card-section">
+					<div class="text">
+단타장인 오늘 마감 방송때 손절 부분에서 질타를 받았던지 맘고생 심하게 한
+것 같은데 전문가가 방송에서 고백하는거 처음봤다 손절했다 안했다를 떠나서 
+고객들 손절 했던 부분들 책임지고 사과했고 앞으로 뚝심가지고 리드하겠더라 
+오늘 방송 본사람은 다 알죠? 이가탄탄ㅎㅎ<br/><br/>
+<img src="../images/icon_menu.png"/><br/>
+<img src="../images/sample_visual.png"/><br/>
+어쨋든 오늘 단타장인 뚝심봤고 앞으로 응원하겠다 도망안치고 잘하더라 
+멋있다 흥해라 단타장인~
+					</div>				
+				</div>
+				<!--//article_view-->
+				<!--article_reply-->
+				<div class="card-section">
+					<div class="reply_write_box">
+						<form action="#" method="get">
+							<p class="tit"><i class="xi xi-message"></i> 댓글입력</p>
+							<textarea rows="4" class="reply_write"></textarea>
+							<button type="submit" class="btn btn-primary block">댓글등록</button>
+						</form>
+					</div>
+					<ul class="reply_view_box">
+						<!--repeat {-->
+						<li class="reply_list">
+							<h6 class="name">슬램이글</h6>
+							<p class="text">
+타이어 자글자글 갈라진거 보이시죠? 가뭄난것처럼? 타이어도 오래되면 고무가 삭는다고 하더라구요(2~3년) 앵간하면 교체해주시는게 좋습니다 돌발상황에 타이어가 버텨주기 힘들꺼에요							
+							</p>
+							<div class="info">
+								<span class="date">2017.08.04 20:00:00</span>
+								<a href="#" class="del" title="삭제"><i class="xi xi-trash"></i></a>
+							</div>
+						</li>
+						<li class="reply_list">
+							<h6 class="name">여기는독수리</h6>
+							<p class="text">
+기대되는 이벤트네요. 저도 응원많이 하겠습니다!!
+							</p>
+							<div class="info">
+								<span class="date">2017.08.04 20:00:00</span>
+								<a href="#" class="del" title="삭제"><i class="xi xi-trash"></i></a>
+							</div>
+						</li>
+						<li class="reply_list">
+							<h6 class="name">집뚜기</h6>
+							<p class="text">
+단타장인이 1등으로 마감합니다 탄력받은김에 gogo							
+							</p>
+							<div class="info">
+								<span class="date">2017.08.04 20:00:00</span>
+								<a href="#" class="del" title="삭제"><i class="xi xi-trash"></i></a>
+							</div>
+						</li>
+						<!--} repeat-->
+					</ul>
+				</div>
+				<!--//article_reply-->
+				<div class="more">
+					<a href="board_list.html" class="btn btn-primary block">목록으로</a>
+				</div>
+			</div>
+		</div>
+		<!--//section-->
+    </div>
+    <!--//content-->
+    <!--footer-->
+    <div class="footer">
+		<p class="warning">
+			본 사이트에서 제공되는 모든 정보는 투자판단의 참고자료이며, 서비스 이용에 따른 최종 책임은 이용자에게 있습니다.
+		</p>
+		<p class="info">
+			㈜고구려인베스트먼트 | 대표이사 : 전운규 | 법인등록번호 : 110111-5510527 | 사업자등록번호 107-88-29382 | 통신판매 : 제2017-전주완산-0116호
+		</p>
+		<div class="copy">
+			Copyrightⓒ고구려인베스트먼트.co.,Ltd. All rights reserved.
+		</div>
+    </div>
+    <!--//footer-->
+	<!-- quick_menu -->
+    <div class="quick_menu">
+    </div>
+	<!-- //quick_menu -->
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
