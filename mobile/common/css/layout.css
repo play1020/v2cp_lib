@@ -88,11 +88,11 @@
 
 
 .latest-default > .con{background-color:#fff;}
-.latest-default > .con > .item{padding:0 20px;}
+.latest-default > .con > .item,
 .latest-default > .con > .item-cast,
 .latest-default > .con > .profile-list {padding:15px 20px;}
-.latest-default > .con > .item > a{position:relative; display:block; padding:15px 0;}
-.latest-default > .con > .item > a:after{position:absolute; bottom:0; left:0;right:0; display:block;  content:''; border-bottom:1px solid #f2f2f2}
+.latest-default > .con > .item > a{position:relative; display:block;}
+.latest-default > .con > .item > a:after{position:absolute; bottom:-15px; left:0;right:0; display:block;  content:''; border-bottom:1px solid #f2f2f2}
 .latest-default > .con > .item .tit{margin:0 auto; color:#595959; font-size:1rem; font-weight:normal; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;}
 .latest-default > .con > .item .tit > .reply_count{margin-left:4px; color:#0071bc; font-size:0.875rem; vertical-align:top;}
 .latest-default > .con > .item .info{font-size:0.750rem}
@@ -125,7 +125,7 @@
 .board-read .reply_view_box > .reply_list > .name{margin:0 0 10px 0; font-size:1.125rem; color:#595959;}
 .board-read .reply_view_box > .reply_list > .text{color:#595959; line-height:1.4}
 .board-read .reply_view_box > .reply_list > .info{margin:10px 0 0 0;color:#808080;}
-.board-read .reply_view_box > .reply_list > .info .del{padding:8px; color:#808080; font-size:0.875rem; text-decoration:underline; }
+.board-read .reply_view_box > .reply_list > .info .del{color:#808080; font-size:0.875rem; text-decoration:underline; }
 
 /*** paging ***/
 .page{text-align:center;margin:20px 0 0 0;}
