@@ -84,7 +84,7 @@
 .latest-default > .head{padding:15px 20px; background-color:#6a6e7c;}
 .latest-default > .head > .tit{position:relative; margin:0; padding-right:15px; font-size:1rem; font-weight:normal; color:#fff; overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .latest-default > .head > .tit > .sub{color:#fff; font-size:12px; color:#dadce2; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;}
-.latest-default > .head > .tit > .more{position:absolute;right:0; top:3px; display:block; margin:0;}
+.latest-default > .head > .tit > .more{position:absolute;right:-15px; top:-15px; display:block; margin:0;padding:15px}
 
 
 .latest-default > .con{background-color:#fff;}
