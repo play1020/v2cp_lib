@@ -121,17 +121,31 @@ $(document).on('click scroll','.menu_side .close, .menu_side .ly_dimmed',functio
     </div>
     <!--//header-->
     <div class="main_visual">
-		<div class="main_visual_inner">
-			<div class="visual_images">
-				<div class="item"><img src="images/sample_visual.png" alt="비주얼이미지 샘플" /></div>
-				<div class="item hide"><img src="images/noimg/main-visual.jpg" alt="noimg" /></div>
+		<link rel="stylesheet" type="text/css" href="plugin/swiper/dist/css/swiper.min.css"/>
+		<div class="main_visual_inner swiper-container ">
+			<div class="visual_images swiper-wrapper">
+				<div class="item swiper-slide"><img src="images/noimg/main-visual.jpg" alt="noimg" /></div>
+				<div class="item swiper-slide"><img src="images/sample_visual.png" alt="비주얼이미지 샘플" /></div>
+				<div class="item swiper-slide"><img src="images/noimg/main-visual.jpg" alt="noimg" /></div>
 			</div>
-			<div class="visual_nav">
-				<a href="#" class="bullet active"></a>
-				<a href="#" class="bullet "></a>
-				<a href="#" class="bullet "></a>
-			</div>
+		<div class="swiper-pagination"></div>
 		</div>
+		<script type="text/javascript" src="plugin/swiper/dist/js/swiper.min.js"></script>
+		<script>
+		var swiper = new Swiper('.swiper-container', {
+			slidesPerView: 1,
+			spaceBetween: 30,
+			loop: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+		</script>
     </div>
 	<!--content-->
     <div class="content">
@@ -223,7 +237,6 @@ $(document).on('click scroll','.menu_side .close, .menu_side .ly_dimmed',functio
 					<div class="item-cast">
 						<div class="profile-area">
 							<div class="picture">
-								<!-- http://www.815tv.co.kr/live/main.asp   전문가방송 페이지에 나오는 전문가 이미지를 썻습니다. -->
 								<div class="profile-img"><img src="http://www.815tv.co.kr/images/anal/fok1541_live.jpg" alt="전문가사진" /></div>
 								<div class="link-cafe-home"><a href="live/profile.html" title=""><img src="images/icon_cafe.png" alt="홈" /></a></div>
 							</div>
