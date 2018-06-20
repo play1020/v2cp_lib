@@ -1,0 +1,7 @@
+@font-face {
+ font-family: 'NanumSquare';
+ src: url(NanumSquare.eot);
+ src: url(NanumSquare.eot?#iefix) format('embedded-opentype'),
+      url(NanumSquare.woff) format('woff'),
+      url(NanumSquare.ttf) format('truetype');
+}

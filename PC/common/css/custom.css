@@ -1,0 +1,13 @@
+@charset "utf-8";
+/*기본세팅*/
+body,th,td,input,select,textarea,button {font-family:Dotum, '돋움', Malgun Gothic, '맑은고딕', 'Nanum Barun Gothic', sans-serif; }
+h1, h2, h3, h4, h5, h6{font-family:'NanumSquare', 'Nanum Barun Gothic', Malgun Gothic,'맑은고딕',  Dotum, '돋움', sans-serif;}
+
+body{background:#fff; }
+
+#header{}
+#header > .gnb_wrap{}
+
+.container{display:block; margin:0 auto; width:1000px;}
+.container:before,
+.container:after{display:block; content: ''; clear: both;}
