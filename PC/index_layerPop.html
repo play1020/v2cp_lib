@@ -1,0 +1,997 @@
+<!doctype html>
+<html>
+<head>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta property="og:type" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="images/favicon.ico">
+<!-- reset & common style -->
+<link rel="stylesheet" type="text/css" href="common/css/NanumSquare-master.css" />
+	
+<!-- font icon -->
+<link rel="stylesheet" type="text/css" href="common/css/iconkit/xeicon/xeicon.min.css" />
+
+<!-- css animate -->
+<link rel="stylesheet" type="text/css" href="common/css/animate.css" />
+
+<!-- css custom -->
+<link rel="stylesheet" type="text/css" href="common/css/style.css" />
+
+<!--[if lt IE 9]>
+	<script src="common/js/html5shiv.js"></script>
+	<script src="common/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- common -->
+<script type="text/javascript" src="common/js/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="common/js/defaultJs.js"></script>
+
+<title>엘리트스탁</title>
+
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+		<div class="gnb_wrap">
+			<div class="container-center">
+				<div class="f_l">
+					<div class="account">
+						<a href="account/join.html" class="join btn btn-default">회원가입</a>
+						<a href="account/find.html" class="find btn btn-muted">아이디/비밀번호 찾기</a>
+					</div>
+				</div>
+				<div class="f_r">
+					<!-- 로그인 전 -->
+					<form class="outLogin" action="#" method="post">
+						<input type="text" class="form-control " placeholder="아이디" />
+						<input type="password" class="form-control " placeholder="패스워드" />
+						<button type="submit" class="button">로그인</button>
+					</form>
+					<!-- 로그인 후-->
+					<div class="outLogin_after" style="display:none;">
+						<span class="name">라그나로크님</span>
+						<a href="member/mypage.html">마이페이지</a>
+						<a href="#" >로그아웃</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-center">
+			<div class="banner_l">
+				<img src="images/top_banner_left.png" alt="앱 설치링크 받기" />
+				<div class="input-group">
+					<input type="text" class="form-control block" placeholder="-없이 입력" />
+					<span class="input-group-btn">
+						<button type="button" class="btn btn-darkGray">확인</button>
+					</span>
+				</div>
+			</div>
+			<h1 class="logo align_center"><a href="index.html"><img src="images/logo.png" alt="" /></a></h1>
+			<div class="banner_r">
+				<img src="images/top_banner_right.png" alt="고객문의" />
+			</div>
+		</div>
+		<div class="lnb_wrap">
+			<div class="container-center">
+				<ul class="lnb">
+					<li class="active">
+						<a href="live/live.html">전문가방송</a>
+						<ul>
+							<li class="hot"><a href="live/live.html">라이브방송</a></li>
+							<li><a href="live/vod.html">녹화방송</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="board/boardList.html">투자전략</a>
+						<ul>
+							<li><a href="board/boardList.html">주식투자전략</a></li>
+							<li><a href="board/boardList.html">정회원게시판</a></li>
+							<li><a href="board/boardList.html">종목상담</a></li>
+							<li><a href="board/boardList.html">금일 엘리트 종목</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="board/boardList.html">감사후기</a>
+						<ul>
+							<li class="new"><a href="board/boardList.html">베스트감사후기</a></li>
+							<li><a href="board/rorList.html">수익률뽐내기</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="board/boardList.html">프리미엄방송</a>
+						<ul>
+							<li><a href="board/boardList.html">수익만세PLUS</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="board/boardList.html">고객센터</a>
+						<ul>
+							<li><a href="board/boardList.html">공지사항</a></li>
+							<li><a href="board/schedule.html">무료방송스케줄</a></li>
+							<li><a href="board/boardList.html">문의하기</a></li>
+							<li><a href="board/faq.html">자주묻는질문</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="lnb_menu">
+					<div class="schedule"><a href="board/schedule.html">무료방송스케줄</a></div>
+					<div class="sitemap"><a href="#"><img src="images/icon_hamburger.png" alt="전체보기" />&nbsp; 전체보기</a></div>
+				</div>
+			</div>
+			<div class="lnb_2depth">
+				<div class="container-center">
+					<div class="info">
+						<div class="item">
+							<div class="title" style="color:#fff">
+								<h3>상담센터</h3>
+								<span>연중무휴</span>
+							</div>
+							<div class="text">
+								1522-1325
+							</div>
+						</div>
+						<div class="item">
+							<div class="title" style="color:#fff">
+								<h3><img src="images/icon_gear.png" alt="gear" /> 원격지원</h3>
+								<span>상담원과 연결 후 사용</span>
+							</div>
+							<div class="text">
+								<a href="#">원격요청</a>
+							</div>
+						</div>
+					</div>
+					
+				</div><!-- .container -->
+				<div class="ad_lnbMenu">
+					<div class="container-center">
+						<a href="#"><img src="images/mainBanner/ad1.png" alt="광고 샘플" /></a>
+						<p class="no-more">
+							<label> <input type="checkbox" /> 오늘 하루 보지 않기</label>
+							<button type="button" class="close" data-target="ad_lnbMenu">닫기</button>
+						</p>
+					</div>
+				</div>
+			</div><!-- .lnb_2depth -->
+		</div><!-- .lnb_wrap -->
+	</div><!-- #header -->
+	
+	<div id="main_visual">
+		<!-- start visual -->
+		<div class="container-center">
+			<link rel="stylesheet" href="common/js/swiper/css/swiper.css">
+			<style>
+				#slide1{}
+				#slide2{margin:0 20px;}
+				#slide3{}
+				.swiper-container {
+					width: 100%;
+					height: 100%;
+					overflow: visible;
+				}
+				.swiper-pagination{top:-28px; right:0; left:auto !important; display:inline-block; width: 48px !important;}
+				.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{margin:0 2px;}
+				.slide{float:left; paddin:30px 0; width:450px; height:403px; overflow: hidden;}
+				.slide > h4{margin-bottom:10px; font-size: 16px; color:#999999; font-weight: normal}
+				.slide > h4 > span {font-size:12px; color:#e5e5e5;}
+			</style>
+			
+			<div id="slide1" class="slide">
+				<h4>신규전문가 <span>New Face</span></h4>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><a href="#"><img src="http://via.placeholder.com/450x375" alt="" /></a></div>
+						<div class="swiper-slide"><a href="#"><img src="http://via.placeholder.com/450x375" alt="" /></a></div>
+						<div class="swiper-slide"><a href="#"><img src="http://via.placeholder.com/450x375" alt="" /></a></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+			
+			<div id="slide2" class="slide">
+				<h4>무료방송중 <span>On Air</span></h4>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><a href="#"><img src="http://via.placeholder.com/450x375" alt="" /></a></div>
+						<div class="swiper-slide"><a href="#"><img src="http://via.placeholder.com/450x375" alt="" /></a></div>
+						<div class="swiper-slide"><a href="#"><img src="http://via.placeholder.com/450x375" alt="" /></a></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+			
+			<div id="slide3" class="slide">
+				<h4>이벤트 <span>EVENT</span></h4>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><a href="#"><img src="http://via.placeholder.com/450x375" alt="" /></a></div>
+						<div class="swiper-slide"><a href="#"><img src="http://via.placeholder.com/450x375" alt="" /></a></div>
+						<div class="swiper-slide"><a href="#"><img src="http://via.placeholder.com/450x375" alt="" /></a></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+
+			<script src="common/js/swiper/js/swiper.min.js"></script>
+			<script>
+			var swiper = new Swiper('#slide1 > .swiper-container', {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+				},
+			});
+			var swiper = new Swiper('#slide2 > .swiper-container', {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+				},
+			});
+			var swiper = new Swiper('#slide3 > .swiper-container', {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+				},
+			});
+			</script>
+		</div><!-- .container -->
+		<!--// end visual -->
+		
+		<div class="best-profit">
+			<style>
+				.best-profit-button-prev, .best-profit-button-next{
+					position: absolute;
+					top: 50%;
+					width: 27px;
+					height: 44px;
+					margin-top: -68px;
+					z-index: 10;
+					cursor: pointer;
+					background-size: 27px 44px;
+					background-position: center;
+					background-repeat: no-repeat;
+					opacity: 0.8;
+				}
+				.best-profit-button-prev:hover, .best-profit-button-next:hover{
+					opacity: 1;
+				}
+				.best-profit-button-prev{
+					background-image: url(images/slide_arrow_left.png);
+					left:-50px;
+				}
+				.best-profit-button-next{
+					background-image: url(images/slide_arrow_right.png);
+					right:-50px;
+				}
+				.swiper-button-disabled{opacity: 0.2;}
+			</style>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<!--repect{-->
+					<div class="swiper-slide">
+						<div class="item">
+							<p class="tit">SBI인베스트먼트</p>
+							<p class="per">+17.51%</p>
+							<p class="stock">여의도미꾸라지</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="item">
+							<p class="tit">SBI인베스트먼트</p>
+							<p class="per">+17.51%</p>
+							<p class="stock">여의도미꾸라지</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="item">
+							<p class="tit">SBI인베스트먼트</p>
+							<p class="per">+17.51%</p>
+							<p class="stock">여의도미꾸라지</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="item">
+							<p class="tit">SBI인베스트먼트</p>
+							<p class="per">+17.51%</p>
+							<p class="stock">여의도미꾸라지</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="item">
+							<p class="tit">SBI인베스트먼트</p>
+							<p class="per">+17.51%</p>
+							<p class="stock">여의도미꾸라지</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="item">
+							<p class="tit">SBI인베스트먼트</p>
+							<p class="per">+17.51%</p>
+							<p class="stock">여의도미꾸라지</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="item">
+							<p class="tit">SBI인베스트먼트</p>
+							<p class="per">+17.51%</p>
+							<p class="stock">여의도미꾸라지</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="item">
+							<p class="tit">SBI인베스트먼트</p>
+							<p class="per">+17.51%</p>
+							<p class="stock">여의도미꾸라지</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="item">
+							<p class="tit">SBI인베스트먼트</p>
+							<p class="per">+17.51%</p>
+							<p class="stock">여의도미꾸라지</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="item">
+							<p class="tit">SBI인베스트먼트</p>
+							<p class="per">+17.51%</p>
+							<p class="stock">여의도미꾸라지</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="item">
+							<p class="tit">SBI인베스트먼트</p>
+							<p class="per">+17.51%</p>
+							<p class="stock">여의도미꾸라지</p>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="item">
+							<p class="tit">SBI인베스트먼트</p>
+							<p class="per">+17.51%</p>
+							<p class="stock">여의도미꾸라지</p>
+						</div>
+					</div>
+					<!--}repect-->
+				</div>
+			</div>
+			<div class="container-center">
+				<div class="best-profit-button-next"></div>
+				<div class="best-profit-button-prev"></div>
+			</div>
+			<script>
+			var swiper = new Swiper('.best-profit > .swiper-container', {
+				slidesPerView: 6,
+				spaceBetween: 0,
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+				},
+				navigation: {
+					nextEl: '.best-profit-button-next',
+					prevEl: '.best-profit-button-prev',
+				},
+			});
+			</script>
+		</div>
+		
+	</div><!-- #main_visual -->
+	
+	<div class="container">
+		<div class="banner_area">
+		</div>
+        <div class="content_area">
+			<!-- section1 -->
+			<section id="best_anal">
+				<div class="container-center">
+					<h4 class="align_center"><img src="images/main-best-anal.png" alt="엘리트스탁의 실제회원분들이 직접 선정한 분야별 1위 전문" /></h4>
+					<div class="list">
+						<!-- repect {-->
+						<div class="item">
+							<div class="field">
+								<img src="images/main-label-best.png" alt="메달" />
+								<div class="tit">
+									<h5>TOP RATED</h5>
+									<h4>최고수익</h4>
+								</div>
+							</div>
+							<div class="img"><img src="images/anal/main-bestanal-sample1.png" alt="샘플전문가" /></div>
+							<div class="btn-group">
+								<a href="#" class="btn-circle btn-primary">가입</a>
+								<a href="#" class="btn-circle btn-default">프로필</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="field">
+								<img src="images/main-label-best.png" alt="메달" />
+								<div class="tit">
+									<h5>TOP RATED</h5>
+									<h4>가입률최다</h4>
+								</div>
+							</div>
+							<div class="img"><img src="images/anal/main-bestanal-sample2.png" alt="샘플전문가" /></div>
+							<div class="btn-group">
+								<a href="#" class="btn-circle btn-primary">가입</a>
+								<a href="#" class="btn-circle btn-default">프로필</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="field">
+								<img src="images/main-label-best.png" alt="메달" />
+								<div class="tit">
+									<h5>TOP RATED</h5>
+									<h4>최다원금회복</h4>
+								</div>
+							</div>
+							<div class="img"><img src="images/anal/main-bestanal-sample3.png" alt="샘플전문가" /></div>
+							<div class="btn-group">
+								<a href="#" class="btn-circle btn-primary">가입</a>
+								<a href="#" class="btn-circle btn-default">프로필</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="field">
+								<img src="images/main-label-best.png" alt="메달" />
+								<div class="tit">
+									<h5>TOP RATED</h5>
+									<h4>선호도 1위</h4>
+								</div>
+							</div>
+							<div class="img"><img src="images/anal/main-bestanal-sample4.png" alt="샘플전문가" /></div>
+							<div class="btn-group">
+								<a href="#" class="btn-circle btn-primary">가입</a>
+								<a href="#" class="btn-circle btn-default">프로필</a>
+							</div>
+						</div>
+						<!--} repect -->
+					</div>
+				</div>
+			</section>
+			
+			<!-- section2 -->
+			<section id="manage_latest">
+				<div class="container-center">
+					<div class="lay_left">
+						<div class="latest-default">
+							<div class="head">
+								<h2 class="tit">
+									베스트감사후기 
+									<a href="board/board_list.html" class="more">더보기 <img src="images/icon_latest_more.png" alt="더보기" width="16" /></a>
+								</h2>
+							</div>
+							<div class="con">
+								<div class="best_thanks">
+									<div class="best_thanks_tit"><img src="images/main-best-thanks.png" alt="최고의감사후기" /></div>
+									<div id="best_thanks_slide">
+										<div class="swiper-container">
+											<div class="swiper-wrapper">
+												<!-- repect {-->
+												<div class="swiper-slide">
+													<div class="thanks_con">
+														<div class="f_l">
+															<h4 class="tit">흥칫뿡님의 감사후기</h4>
+															<p class="name">여의도미꾸라지 전문가</p>
+															<p class="txt">이렇게 크게먹고 나올줄은 정말 몰랐네요 선취매의 힘은 볼때마다 대단한것 같다고 생각합니다</p>
+															<a href="board/boardView.html"><img src="images/main-best-thanks-btn.png" alt="자세히보기" /></a>
+														</div>
+														<div class="f_r">
+															<a href="live/profile.html">
+																<img src="images/anal/main-bestthanks-sample1.png" alt="베스트감사전문가" />
+																<img src="images/main-label-best2.png" alt="메달" class="medal" />
+															</a>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="thanks_con">
+														<div class="f_l">
+															<h4 class="tit">흥칫뿡님의 감사후기</h4>
+															<p class="name">여의도미꾸라지 전문가</p>
+															<p class="txt">이렇게 크게먹고 나올줄은 정말 몰랐네요 선취매의 힘은 볼때마다 대단한것 같다고 생각합니다</p>
+															<a href="board/boardView.html"><img src="images/main-best-thanks-btn.png" alt="자세히보기" /></a>
+														</div>
+														<div class="f_r">
+															<a href="live/profile.html">
+																<img src="images/anal/main-bestthanks-sample1.png" alt="베스트감사전문가" />
+																<img src="images/main-label-best2.png" alt="메달" class="medal" />
+															</a>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="thanks_con">
+														<div class="f_l">
+															<h4 class="tit">흥칫뿡님의 감사후기</h4>
+															<p class="name">여의도미꾸라지 전문가</p>
+															<p class="txt">이렇게 크게먹고 나올줄은 정말 몰랐네요 선취매의 힘은 볼때마다 대단한것 같다고 생각합니다</p>
+															<a href="board/boardView.html"><img src="images/main-best-thanks-btn.png" alt="자세히보기" /></a>
+														</div>
+														<div class="f_r">
+															<a href="live/profile.html">
+																<img src="images/anal/main-bestthanks-sample1.png" alt="베스트감사전문가" />
+																<img src="images/main-label-best2.png" alt="메달" class="medal" />
+															</a>
+														</div>
+													</div>
+												</div>
+												<!--} repect -->
+											</div>
+											<div class="swiper-pagination"></div>
+											<div class="swiper-button-prev"></div>
+											<div class="swiper-button-next"></div>
+										</div>
+									</div><!-- #best_thanks_slide -->
+									<script>
+									var best_thanks_slide = new Swiper ('#best_thanks_slide > .swiper-container', {
+										slidesPerView: 1,
+										spaceBetween: 30,
+										loop: true,
+										pagination: {
+										  el: '.swiper-pagination',
+										},
+										autoplay: {
+											delay: 6000,
+										},
+										navigation: {
+											nextEl: '.swiper-button-next',
+											prevEl: '.swiper-button-prev',
+										},
+									})
+									</script>
+								</div><!-- .bestthanks -->
+							</div><!-- .con -->
+						</div><!-- .latest-default -->
+					</div><!-- .lay_left -->
+
+					<div class="lay_right">
+						<!-- start latest -->
+						<div class="latest-default">
+							<div class="head">
+								<h2 class="tit">
+									투자전략
+									<a href="board/board_list.html" class="more">더보기 <img src="images/icon_latest_more.png" alt="더보기" width="16" /></a>
+								</h2>
+							</div>
+							<div class="con">
+								<!--repeat {-->
+								<div class="item">
+									<a href="board/board_read.html">
+										<h3 class="tit">[상한사령부]장세무관 안정수익나는 무료수익비법 지금 공개합니다!</h3>
+									</a>
+								</div>
+								<div class="item">
+									<a href="board/board_read.html">
+										<h3 class="tit">[시황분석실] 화약고에 불지르려는 금융투자수법을 파해쳐 보자!</h3>
+									</a>
+								</div>
+								<div class="item">
+									<a href="board/board_read.html">
+										<h3 class="tit">[단타영웅] 에이티넘, 당일 단타매매(영상有)</h3>
+									</a>
+								</div>
+								<!--}repeat-->
+							</div>
+						</div>
+						<!--//end latest start-->
+						
+						<!-- start latest -->
+						<div class="latest-default">
+							<div class="head">
+								<h2 class="tit">
+									공지사항 
+									<a href="board/board_list.html" class="more">더보기 <img src="images/icon_latest_more.png" alt="더보기" width="16" /></a>
+								</h2>
+							</div>
+							<div class="con">
+								<!--repeat {-->
+								<div class="item">
+									<a href="board/board_read.html">
+										<h3 class="tit">[이벤트]나태지옥에 빠져라!</h3>
+									</a>
+								</div>
+								<!--}repeat-->
+							</div>
+						</div>
+						<!--//end latest start-->
+					</div><!-- .lay_right -->
+				</div><!-- .container-center -->
+			</section>
+			
+			<!-- section3 -->
+			<section id="live_list" class="container-center">
+				<div class="latest-default">
+					<div class="head">
+						<h2 class="tit">전문가방송</h2>
+					</div>
+					<div class="con">
+						<div class="list">
+							<!-- repect {-->
+							<div class="item">
+								<div class="text">
+									<img src="images/livelist-label1.png" alt="무료방송중" />
+									<h3 class="name">여의도미꾸라지</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+									<div class="info red animated flash infinite slow">
+										<span class="circle"></span> 방송중
+									</div>
+								</div>
+								<div class="img">
+									<a href="live/profile.html"><a href="live/profile.html"><img src="images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a></a>
+								</div>
+								<div class="bottom">
+									<a href="live/live.html">라이브방송</a>
+									<a href="live/vod.html">녹화방송</a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="text">
+									<img src="images/livelist-label2.png" alt="회원방송중" />
+									<h3 class="name">여의도미꾸라지</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+									<div class="info blue animated flash infinite slow">
+										<span class="circle"></span> 리딩중
+									</div>
+								</div>
+								<div class="img">
+									<a href="live/profile.html"><img src="images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a>
+								</div>
+								<div class="bottom">
+									<a href="live/live.html">라이브방송</a>
+									<a href="live/vod.html">녹화방송</a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="text">
+									<img src="images/livelist-label3.png" alt="방송예정" />
+									<h3 class="name">여의도미꾸라지</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+									<div class="info ">
+										<span class="circle"></span> 준비중
+									</div>
+								</div>
+								<div class="img">
+									<a href="live/profile.html"><img src="images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a>
+								</div>
+								<div class="bottom">
+									<a href="live/live.html">라이브방송</a>
+									<a href="live/vod.html">녹화방송</a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="text">
+									<img src="images/livelist-label3.png" alt="방송예정" />
+									<h3 class="name">여의도미꾸라지</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+									<div class="info">
+										<span class="circle"></span> 준비중
+									</div>
+								</div>
+								<div class="img">
+									<a href="live/profile.html"><img src="images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a>
+								</div>
+								<div class="bottom">
+									<a href="live/live.html">라이브방송</a>
+									<a href="live/vod.html">녹화방송</a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="text">
+									<img src="images/livelist-label3.png" alt="방송예정" />
+									<h3 class="name">여의도미꾸라지</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+									<div class="info">
+										<span class="circle"></span> 준비중
+									</div>
+								</div>
+								<div class="img">
+									<a href="live/profile.html"><img src="images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a>
+								</div>
+								<div class="bottom">
+									<a href="live/live.html">라이브방송</a>
+									<a href="live/vod.html">녹화방송</a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="text">
+									<img src="images/livelist-label3.png" alt="방송예정" />
+									<h3 class="name">여의도미꾸라지</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+									<div class="info">
+										<span class="circle"></span> 준비중
+									</div>
+								</div>
+								<div class="img">
+									<a href="live/profile.html"><img src="images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a>
+								</div>
+								<div class="bottom">
+									<a href="live/live.html">라이브방송</a>
+									<a href="live/vod.html">녹화방송</a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="text">
+									<img src="images/livelist-label3.png" alt="방송예정" />
+									<h3 class="name">여의도미꾸라지</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+									<div class="info">
+										<span class="circle"></span> 준비중
+									</div>
+								</div>
+								<div class="img">
+									<a href="live/profile.html"><img src="images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a>
+								</div>
+								<div class="bottom">
+									<a href="live/live.html">라이브방송</a>
+									<a href="live/vod.html">녹화방송</a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="text">
+									<img src="images/livelist-label3.png" alt="방송예정" />
+									<h3 class="name">여의도미꾸라지</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+									<div class="info">
+										<span class="circle"></span> 준비중
+									</div>
+								</div>
+								<div class="img">
+									<a href="live/profile.html"><img src="images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a>
+								</div>
+								<div class="bottom">
+									<a href="live/live.html">라이브방송</a>
+									<a href="live/vod.html">녹화방송</a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="text">
+									<img src="images/livelist-label3.png" alt="방송예정" />
+									<h3 class="name">여의도미꾸라지</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+									<div class="info">
+										<span class="circle"></span> 준비중
+									</div>
+								</div>
+								<div class="img">
+									<a href="live/profile.html"><img src="images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a>
+								</div>
+								<div class="bottom">
+									<a href="live/live.html">라이브방송</a>
+									<a href="live/vod.html">녹화방송</a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="text">
+									<img src="images/livelist-label3.png" alt="방송예정" />
+									<h3 class="name">여의도미꾸라지</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+									<div class="info">
+										<span class="circle"></span> 준비중
+									</div>
+								</div>
+								<div class="img">
+									<a href="live/profile.html"><img src="images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a>
+								</div>
+								<div class="bottom">
+									<a href="live/live.html">라이브방송</a>
+									<a href="live/vod.html">녹화방송</a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="text">
+									<img src="images/livelist-label3.png" alt="방송예정" />
+									<h3 class="name">여의도미꾸라지</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+									<div class="info">
+										<span class="circle"></span> 준비중
+									</div>
+								</div>
+								<div class="img">
+									<a href="live/profile.html"><img src="images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a>
+								</div>
+								<div class="bottom">
+									<a href="live/live.html">라이브방송</a>
+									<a href="live/vod.html">녹화방송</a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="text">
+									<img src="images/livelist-label3.png" alt="방송예정" />
+									<h3 class="name">여의도미꾸라지</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+									<div class="info">
+										<span class="circle"></span> 준비중
+									</div>
+								</div>
+								<div class="img">
+									<a href="live/profile.html"><img src="images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a>
+								</div>
+								<div class="bottom">
+									<a href="live/live.html">라이브방송</a>
+									<a href="live/vod.html">녹화방송</a>
+								</div>
+							</div>
+							<!--} repect -->
+						</div>
+					</div><!-- .con -->
+				</div>
+			</section>
+		</div>
+		<div class="banner_area">
+			<!-- banner -->
+		</div>
+	</div>
+	
+	<div class="footer">
+		<div class="foot_cscenter container-center">
+			<div class="latest-default">
+				<div class="head">
+					<h2 class="tit">고객센터</h2>
+				</div>
+				<div class="con">
+					<div class="top">
+						<div class="quick_menu">
+							<a href="#">
+								<img src="images/foot-img1.png" alt="자주묻는질문" />
+								<span>자주묻는질문</span>
+							</a>
+							<a href="#">
+								<img src="images/foot-img2.png" alt="문의하기" />
+								<span>문의하기</span>
+							</a>
+							<a href="#" class="remote">
+								<span>원격지원센터</span>
+								<img src="images/btn-remote.png" alt="원격지원요청" />
+							</a>
+						</div>
+						<div class="quick_info">
+							<div class="info1">
+								<h3 class="tit">입금계좌</h3>
+								<p class="bank_num">562701-04-037389</p>
+								<p class="txt">우리은행 (주)애플스탁</p>
+							</div>
+							<div class="info2">
+								<h3 class="tit">상담전화</h3>
+								<p class="num">1522-1325</p>
+							</div>
+							<div class="info3">
+								<h3 class="tit">업무시간</h3>
+								<p class="txt">연중무휴</p>
+							</div>							
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="experience">
+							<a href="#"><img src="images/foot-img3.png" alt="카카오플러스친구 추가" /></a>
+						</div>
+						<div class="join">
+							<div class="txt">
+								<a href="account/join.html"><img src="images/foot-img4.png" alt="회원가입" /></a>
+							</div>
+							<div class="quick_btn">
+								<a href="live/live.html">
+									<img src="images/foot-quickimg1.png" alt="이미" />
+									<br/>
+									<span>라이브방송</span>
+								</a>
+								<a href="board/schedule.html">
+									<img src="images/foot-quickimg2.png" alt="이미" />
+									<br/>
+									<span>무료방송일정</span>
+								</a>
+								<a href="board/boardList.html">
+									<img src="images/foot-quickimg3.png" alt="이미" />
+									<br/>
+									<span>투자전략</span>
+								</a>
+								<a href="board/boardList.html">
+									<img src="images/foot-quickimg4.png" alt="이미" />
+									<br/>
+									<span>TV방송</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div><!-- .con -->
+			</div>
+			<style>
+				#lightbox{position: fixed;top: 0px;left: 0px; right:0px; bottom:0px;width: 100%;height: 100%;background: none; box-sizing: content-box; display: block; z-index: 99999;}
+				#lightbox > .box{position: relative; margin:0 auto; z-index: 99991}
+				#lightbox > .box > .image{position:relative; margin:0 auto; margin-top:50px; width:800px; height: 0; text-align: center}
+				#lightbox > .box > .image > .close_icon{ position: absolute; top:-24px;right:-60px; color:#fff;z-index: 100000;}
+				#lightbox > .box > .image > .close_icon > a{color:#fff; font-size:70px; font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif"; text-decoration: none;}
+				#lightbox > .box > .image > .close_text{position: absolute; top:-50px;left:0;right:0; display: inline-block; text-align: center;}
+				#lightbox > .box > .image > .close_text > a{color:#fff; text-decoration: none;padding:15px 35px; margin:0 auto; border:3px solid #fff; color:#fff; font-size:18px;}
+				#lightbox > .box > .image > .no_more{color:#fff;text-align: center}
+				#lightbox > .dim{position: absolute; left: 0; top: 0; right:0; bottom:0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 99990;}
+			</style>
+			<div id="lightbox" class="lightbox">
+				<div class="box">
+					<div class="image">
+						<div class="close_icon btnLightboxClose"><a href="#">X</a></div>
+					</div>
+					<div class="vod-container">
+						<div class="container type_center" style=" width: 854px; margin: 0 auto; margin-top: 243px;">
+							<div class="vod-area f_l">
+								<div class="block">
+									<p>영상을 계속보려면!</p>
+									<div class="button-group">
+										<a href="#" class="button red">로그인</a>
+										<a href="#" class="button">회원가입</a>
+									</div>
+								</div>
+								<img src="images/play.jpg" alt="수요주식회" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dim"></div>
+			</div>
+			<script type="text/javascript">
+			$(document).on('click','div.lightbox .btnLightboxClose',function(e){
+				e.preventDefault();
+				$("#lightbox").remove();
+				location.href="/";
+			});
+			</script>
+		</div>
+				
+		<div class="footinfo">
+			<div class="container-center">
+				<div class="footmenu">
+					<ul>
+						<li><a href="company/stipulation.html">이용약관</a></li>
+						<li><a href="company/privacy.html">개인정보취급방침</a></li>
+						<li><a href="company/ethics.html">정보제공윤리강령</a></li>
+						<li><a href="company/control.html">내부통제기준</a></li>
+						<li><a href="company/copyright.html">저작권정책</a></li>
+						<li><a href="company/notice.html">투자자유의사항</a></li>
+						<li><a href="company/written.html">준법서약서</a></li>
+						<li><a href="company/lawedu.html">전문가준법교육</a></li>
+					</ul>
+				</div>
+				<div class="sitewarning">본 사이트에서 제공하는 모든 정보는 투자판단의 참고자료이며, 서비스 이용에 따른 최종 책임은 이용자에게 있습니다.</div>
+				<address class="siteinfo">
+주식회사 애플스탁 | 경기도 김포시 고촌읍 장차로 1, 7층 703호 | 고객센터 : 1522-1325 | FAX : 02-6971-9940<br/>
+대표자 : 권영성 | 법인등록번호 : 110111-5656511 | 사업자등록번호 732-88-00032 | 통신판매 : 제2015-서울영등포-0301호
+				</address>
+			</div>
+		</div>
+		<div class="copy">
+			<div class="container-center">
+				Copyright 2018 © 애플스탁 Co.,Ltd. All Rights Reserved
+				<a href="#" class="go_top"><img src="images/go_top.png" alt="맨위로"/></a> <!-- 맨위로 부드럽게 스크롤 되게 해주세요 -->
+			</div>
+		</div>
+	</div>
+	
+	
+</div>
+
+</body>
+</html>

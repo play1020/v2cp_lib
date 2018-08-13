@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*** reset ***/
 body, th, td, input, select, textarea, button {
   font-family: Dotum, Malgun Gothic, 'Nanum Barun Gothic', sans-serif; }
@@ -1776,3 +1777,146 @@ textarea.form-control {
 
 .total_sms .item > textarea {
   resize: none; }
+
+/** 20180705 영상게시판 추가 **/
+.board_mov {
+  margin-left: -11px;
+  margin-right: -11px; }
+
+.board_mov:before,
+.board_mov:after {
+  display: block;
+  content: '';
+  clear: both; }
+
+.board_mov > a {
+  padding-left: 11px;
+  padding-right: 11px;
+  margin-bottom: 20px;
+  float: left;
+  display: block;
+  width: 226px; }
+
+.board_mov .thum {
+  margin-bottom: 10px;
+  height: 127px; }
+
+.board_mov .title {
+  line-height: 1.4;
+  height: 32px;
+  overflow: hidden; }
+
+/** 20180809 영상게시판 스타일 추가 **/
+.board_playCardStyle {
+  margin-bottom: 10px; }
+  .board_playCardStyle > a {
+    float: left;
+    display: block;
+    width: 180px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: background-color 300ms; }
+    .board_playCardStyle > a .thum {
+      position: relative;
+      margin-bottom: 10px; }
+      .board_playCardStyle > a .thum .label-replay {
+        position: absolute;
+        display: inline-block;
+        padding: 3px 6px;
+        right: 4px;
+        top: 4px;
+        background-color: #d51324;
+        color: #fff; }
+    .board_playCardStyle > a .text .title {
+      margin-bottom: 17px;
+      font-size: 15px;
+      line-height: 21px;
+      height: 40px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: normal; }
+      .board_playCardStyle > a .text .title .free, .board_playCardStyle > a .text .title .pay {
+        width: auto;
+        border-radius: 2px; }
+    .board_playCardStyle > a .text .name {
+      margin-bottom: 5px;
+      color: #808080; }
+    .board_playCardStyle > a .text .info > * {
+      color: #808080;
+      font-size: 11px; }
+    .board_playCardStyle > a .text .info .hit {
+      margin-right: 5px; }
+  .board_playCardStyle > a:hover {
+    background-color: #f2f2f2; }
+
+.board_playCardStyle:before,
+.board_playCardStyle:after {
+  display: block;
+  content: ' ';
+  clear: both; }
+
+.board_playWebzineStyle {
+  margin-bottom: 10px; }
+  .board_playWebzineStyle > a {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: background-color 300ms; }
+    .board_playWebzineStyle > a .thum {
+      position: absolute;
+      left: 10px;
+      top: 10px; }
+      .board_playWebzineStyle > a .thum .label-replay {
+        position: absolute;
+        display: inline-block;
+        padding: 3px 6px;
+        right: 4px;
+        top: 4px;
+        background-color: #d51324;
+        color: #fff; }
+    .board_playWebzineStyle > a .text {
+      display: block;
+      padding-left: 210px; }
+      .board_playWebzineStyle > a .text .title {
+        margin-top: 8px;
+        margin-bottom: 16px;
+        font-size: 18px;
+        line-height: 21px;
+        height: 40px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        word-break: normal;
+        font-weight: normal; }
+        .board_playWebzineStyle > a .text .title .free, .board_playWebzineStyle > a .text .title .pay {
+          width: auto;
+          border-radius: 2px;
+          font-size: 12px; }
+      .board_playWebzineStyle > a .text .name {
+        margin-bottom: 5px;
+        color: #808080; }
+      .board_playWebzineStyle > a .text .info {
+        margin-bottom: 9px; }
+        .board_playWebzineStyle > a .text .info > * {
+          color: #808080;
+          font-size: 11px; }
+        .board_playWebzineStyle > a .text .info .hit {
+          margin-right: 5px; }
+  .board_playWebzineStyle > a:hover {
+    background-color: #f2f2f2; }
+  .board_playWebzineStyle > a:before,
+  .board_playWebzineStyle > a::after {
+    display: block;
+    content: ' ';
+    clear: both; }
+
+.board_playWebzineStyle:before,
+.board_playWebzineStyle:after {
+  display: block;
+  content: ' ';
+  clear: both; }
