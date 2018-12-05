@@ -130,6 +130,53 @@
 .board-read .reply_view_box > .reply_list > .info{margin:10px 0 0 0;color:#808080;}
 .board-read .reply_view_box > .reply_list > .info .del{padding:8px; color:#808080; font-size:0.875rem; text-decoration:underline; }
 
+
+/*** playCardStyle ***/
+.playCardStyle{padding:10px; background-color:#fff; box-sizing: border-box;}
+.playCardStyle:before,
+.playCardStyle:after{display: block;content: '';clear: both;}
+.playCardStyle > .item{
+	float:left;
+	margin-bottom:10px;
+	padding:5px;
+	width:50%;
+	box-sizing: border-box;
+}
+.playCardStyle > .item > .thumnail > img{
+	width:100%;
+}
+.playCardStyle > .item > .meta{line-height: 19px;border-bottom:1px solid #efefef;}
+.playCardStyle > .item > .meta > .tit{margin:15px 0; height:58px;overflow: hidden; font-weight:400; font-size:15px; color:#333;}
+.playCardStyle > .item > .meta > .txt{font-size:14px; color:#666;}
+.playCardStyle > .item > .meta > .txt .name{display:block; margin-bottom:0px}
+.playCardStyle > .item > .meta > .txt .view{font-size:12px; color:#999}
+.playCardStyle > .item > .meta > .txt .date{font-size:12px; color:#999}
+
+/*** playListStyle ***/
+.playListStyle{padding:10px; background-color:#fff; box-sizing: border-box;}
+.playListStyle:before,
+.playListStyle:after{display: block;content: '';clear: both;}
+.playListStyle > .item{display:table; margin-bottom:15px; padding-bottom:10px; vertical-align: top;border-bottom:1px solid #efefef;}
+.playListStyle > .item > .thumnail {display:table-cell; padding:0 6px; width:36.4%; box-sizing: border-box; text-align: center}
+.playListStyle > .item > .thumnail > img{width:100%; vertical-align: top; }
+.playListStyle > .item > .meta{padding:0 10px; width:63.6%;display:table-cell;vertical-align: middle}
+.playListStyle > .item > .meta > .tit{
+	margin:0 0 10px 0; height:44px;font-weight:400; font-size:15px; color:#333;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    padding-top: 1px;
+    line-height: 21px;
+    letter-spacing: -1px;
+    white-space: normal;
+}
+.playListStyle > .item > .meta > .txt{margin:0;font-size:14px; color:#666;text-align: right;}
+.playListStyle > .item > .meta > .txt .name{margin-bottom:0px; float:left;}
+.playListStyle > .item > .meta > .txt .view{font-size:12px; color:#999}
+.playListStyle > .item > .meta > .txt .date{font-size:12px; color:#999}
+
 /*** paging ***/
 .page{text-align:center;margin:20px 0 0 0;}
 .page > .pagination{display:inline-block;margin:0; margin-left:-2px; margin-right:-2px; padding:0;list-style:none;}

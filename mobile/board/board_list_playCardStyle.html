@@ -1,0 +1,353 @@
+<!doctype html>
+<html>
+<head>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta property="og:type" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title>815TV 모바일</title>
+
+<!--[if lt IE 9]>
+<script src="common/js/html5.js"></script>
+<script src="common/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="../images/favicon.ico">
+
+<!-- reset & common style -->
+<link rel="stylesheet" type="text/css" href="../common/css/reset-normalize.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/common.css" />
+
+<!-- CSS custom -->
+<link rel="stylesheet" type="text/css" href="../common/css/XEicon/xeicon.min.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/animate.css" />
+<link rel="stylesheet" type="text/css" href="../common/css/layout.css" />
+
+<!-- JS -->
+<script type="text/javascript" src="../common/js/jquery-1.12.1.min.js"></script>
+<script type="text/javascript">
+// $(document).on('click','.m_nav',function(e){
+// 	e.preventDefault();
+// 	$('.menu_side').show(240)	
+// });
+// $(document).on('click scroll','.menu_side .close, .menu_side .ly_dimmed',function(e){
+// 	e.preventDefault();
+// 	var width = $('.menu_side').width();
+// 	$('.menu_side').animate({left:'-'+width+'px'},240,function(){
+// 		$('.menu_side').hide();
+// 		$('.menu_side').css({left:'0px'});
+// 	});	
+// });
+//아아폰 WebViewJavascriptBridge 설정
+function setupWebViewJavascriptBridge(callback) {
+	if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+	if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+	window.WVJBCallbacks = [callback];
+	var WVJBIframe = document.createElement('iframe');
+	WVJBIframe.style.display = 'none';
+	WVJBIframe.src = 'https://__bridge_loaded__';
+	document.documentElement.appendChild(WVJBIframe);
+	setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+}
+
+$(document).on('click','.m_nav',function(e){
+ 	e.preventDefault();
+ 	$('.menu_side').show(240)
+
+ 	//아이폰 openMenuCallback 함수 호출 
+ 	setupWebViewJavascriptBridge(function(bridge) {
+ 	
+ 		bridge.callHandler('openMenuCallback', {'bsh': 'bsh'}, function(response) {
+			//log('JS got response', response)
+		})
+	})
+ 	//안드로이드 openMenuCallback 함수 호출 
+	window.AndroidJavascriptBridge.openMenuCallback("{'bsh': 'bsh'}");
+});
+
+$(document).on('click scroll','.menu_side .close, .menu_side .ly_dimmed',function(e){
+	e.preventDefault();
+	var width = $('.menu_side').width();
+	$('.menu_side').animate({left:'-'+width+'px'},240,function(){
+		$('.menu_side').hide();
+		$('.menu_side').css({left:'0px'});
+	});	
+
+ 	//아이폰 closeMenuCallback 함수 호출 
+	setupWebViewJavascriptBridge(function(bridge) {
+	 	
+ 		bridge.callHandler('closeMenuCallback', {'bsh1': 'bsh1'}, function(response) {
+			//log('JS got response', response)
+		})
+	})
+	
+ 	//안드로이드 closeMenuCallback 함수 호출 
+	window.AndroidJavascriptBridge.closeMenuCallback("{'bsh1': 'bsh1'}");
+});
+</script>
+</head>
+
+<body>
+<div id="wrap">
+	<!--header-->
+	<div class="header">
+		<div class="head">
+			<a href="#" class="m_nav"><img src="../images/icon_menu.png" width="24" alt="메뉴" /></a>
+			<h1 class="logo"><a href="../index.html"><img src="../images/logo.png" height="50" alt="815TV" /></a></h1>
+			<a href="../account/login.html" class="login"><img src="../images/icon_login.png" width="26" alt="로그인하기" /></a>
+			<!--<a href="mypage/mypage_index.html" class="mypage"><img src="images/icon_mypage.png" alt="마이페이지" /></a>-->
+		</div>
+		<div class="menu_side">
+			<div class="ly_dimmed"></div>
+			<div class="inner animated slideInLeft">
+				<div class="head">
+					<div class="logo"><img src="../images/logo.png" height="40" alt="815TV" /></div>
+					<button type="button" class="close"><i class="xi xi-close"></i></button>
+				</div>
+				<div class="con">
+					<div class="button_group clearfix">
+						<div class="col2"><a href="../account/login.html" class="btn btn-line block">로그인</a></div>
+						<div class="col2"><a href="../account/join.html" class="btn btn-line block">회원가입</a></div>
+					</div>
+					<div class="cscenter clearfix">
+						<div class="pull-left">
+							<h4 class="tit">고객센터</h4>
+							<p class="cs_number">1899-5786</p>
+							<span class="cs_time">365일 월~금 8:30~24:30</span>
+						</div>
+						<div class="pull-right">
+							<a href="tel:1899-5786" class="call">전화걸기</a>
+						</div>
+					</div>
+					<div class="menu_list">
+						<ul>
+							<li><a href="../live/live.html">전문가방송 <i class="xi xi-angle-right pull-right"></i></a>
+								<ul>
+									<li><a href="#">서브1</a></li>
+									<li><a href="#">서브2</a></li>
+									<li><a href="#">서브3</a></li>
+									<li><a href="#">서브4</a></li>
+								</ul>
+							</li>
+							<li><a href="board_list.html">투자전략 <i class="xi xi-angle-right pull-right"></i></a></li>
+							<li><a href="board_list.html">감사후기 <i class="xi xi-angle-right pull-right"></i></a>
+								<ul>
+									<li><a href="#">서브1</a></li>
+									<li><a href="#">서브2</a></li>
+								</ul>
+							</li>
+							<li><a href="board_list.html">공지사항 <i class="xi xi-angle-right pull-right"></i></a>
+								<ul>
+									<li><a href="#">서브1</a></li>
+									<li><a href="#">서브2</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="navigation">
+			<ul class="nav">
+				<li class="active"><a href="../live/live.html">전문가방송</a></li>
+				<li><a href="board_list.html">투자전략</a></li>
+				<li><a href="board_list.html">감사후기</a></li>
+				<li><a href="board_list.html">공지사항</a></li>
+			</ul>
+		</div>
+    </div>
+    <!--//header-->
+    <div class="main_visual">
+    </div>
+    <div class="content">
+		<div class="sub-head">
+			<h2 class="title">영상게시판(카드형)</h2>
+			<div class="right">
+				<!--<a href="board_write.html" class="btn btn-white border-radius"><i class="xi xi-pen"></i> 글쓰기</a>-->
+				<!-- 플로팅버튼 -->
+				<a href="board_write.html" class="float-btn"><i class="xi xi-pen xi-2x"></i></a>
+			</div>
+		</div>
+		<form method="get" action="#">
+			<div class="search">
+				<div class="dp_tbl_cell">
+					<select class="form-control">
+						<option value="">제목</option>
+					</select>
+				</div>
+				<div class="dp_tbl_cell">
+					<input type="text" class="form-control" />
+				</div>
+				<div class="dp_tbl_cell">
+					<button type="submit" class="btn btn-primary"><i class="xi xi-magnifier" style="color:#fff;"></i></button>
+				</div>
+			</div>
+		</form>
+		<!-- 셀렉트 1개
+		<form method="get" action="#">
+			<div class="search">
+				<div class="dp_tbl_cell">
+					<select class="form-control">
+						<option value="">전문가선택</option>
+						<option value="">투자지존</option>
+						<option value="">투자지존</option>
+					</select>
+				</div>
+			</div>
+		</form>
+		-->
+		<!--section-->
+		<div class="content-default">
+			<!--PlayCardStyle-->
+			<div class="playCardStyle">
+				<!--repect{-->
+				<div class="item">
+					<div class="thumnail"><img src="http://via.placeholder.com/1280x720" alt="sampleImg" /></div>
+					<div class="meta">
+						<h4 class="tit">[단타] 드디어 강의편! 단타는 이렇게 치는겁니다! | 단타장인의 실전매매 영상 | 주식은 수익만세V</h4>
+						<p class="txt">
+							<span class="name">여의도미꾸라지</span>
+							<span class="view"><i class="xi xi-eye"></i>123</span>
+							<span class="date"><i class="xi xi-home"></i>2018.02.02</span>
+						</p> 
+					</div>
+				</div>
+				<div class="item">
+					<div class="thumnail"><img src="http://via.placeholder.com/1280x720" alt="sampleImg" /></div>
+					<div class="meta">
+						<h4 class="tit">[단타] 드디어 강의편! 단타는 이렇게 치는겁니다! | 단타장인의 실전매매 영상 | 주식은 수익만세V</h4>
+						<p class="txt">
+							<span class="name">여의도미꾸라지</span>
+							<span class="view"><i class="xi xi-eye"></i>123</span>
+							<span class="date"><i class="xi xi-home"></i>2018.02.02</span>
+						</p> 
+					</div>
+				</div>
+				<div class="item">
+					<div class="thumnail"><img src="http://via.placeholder.com/1280x720" alt="sampleImg" /></div>
+					<div class="meta">
+						<h4 class="tit">[단타] 드디어 강의편! 단타는 이렇게 치는겁니다! | 단타장인의 실전매매 영상 | 주식은 수익만세V</h4>
+						<p class="txt">
+							<span class="name">여의도미꾸라지</span>
+							<span class="view"><i class="xi xi-eye"></i>123</span>
+							<span class="date"><i class="xi xi-home"></i>2018.02.02</span>
+						</p> 
+					</div>
+				</div>
+				<div class="item">
+					<div class="thumnail"><img src="http://via.placeholder.com/1280x720" alt="sampleImg" /></div>
+					<div class="meta">
+						<h4 class="tit">[단타] 드디어 강의편! 단타는 이렇게 치는겁니다! | 단타장인의 실전매매 영상 | 주식은 수익만세V</h4>
+						<p class="txt">
+							<span class="name">여의도미꾸라지</span>
+							<span class="view"><i class="xi xi-eye"></i>123</span>
+							<span class="date"><i class="xi xi-home"></i>2018.02.02</span>
+						</p> 
+					</div>
+				</div>
+				<div class="item">
+					<div class="thumnail"><img src="http://via.placeholder.com/1280x720" alt="sampleImg" /></div>
+					<div class="meta">
+						<h4 class="tit">[단타] 드디어 강의편! 단타는 이렇게 치는겁니다! | 단타장인의 실전매매 영상 | 주식은 수익만세V</h4>
+						<p class="txt">
+							<span class="name">여의도미꾸라지</span>
+							<span class="view"><i class="xi xi-eye"></i>123</span>
+							<span class="date"><i class="xi xi-home"></i>2018.02.02</span>
+						</p> 
+					</div>
+				</div>
+				<div class="item">
+					<div class="thumnail"><img src="http://via.placeholder.com/1280x720" alt="sampleImg" /></div>
+					<div class="meta">
+						<h4 class="tit">[단타] 드디어 강의편! 단타는 이렇게 치는겁니다! | 단타장인의 실전매매 영상 | 주식은 수익만세V</h4>
+						<p class="txt">
+							<span class="name">여의도미꾸라지</span>
+							<span class="view"><i class="xi xi-eye"></i>123</span>
+							<span class="date"><i class="xi xi-home"></i>2018.02.02</span>
+						</p> 
+					</div>
+				</div>
+				<div class="item">
+					<div class="thumnail"><img src="http://via.placeholder.com/1280x720" alt="sampleImg" /></div>
+					<div class="meta">
+						<h4 class="tit">[단타] 드디어 강의편! 단타는 이렇게 치는겁니다! | 단타장인의 실전매매 영상 | 주식은 수익만세V</h4>
+						<p class="txt">
+							<span class="name">여의도미꾸라지</span>
+							<span class="view"><i class="xi xi-eye"></i>123</span>
+							<span class="date"><i class="xi xi-home"></i>2018.02.02</span>
+						</p> 
+					</div>
+				</div>
+				<div class="item">
+					<div class="thumnail"><img src="http://via.placeholder.com/1280x720" alt="sampleImg" /></div>
+					<div class="meta">
+						<h4 class="tit">[단타] 드디어 강의편! 단타는 이렇게 치는겁니다! | 단타장인의 실전매매 영상 | 주식은 수익만세V</h4>
+						<p class="txt">
+							<span class="name">여의도미꾸라지</span>
+							<span class="view"><i class="xi xi-eye"></i>123</span>
+							<span class="date"><i class="xi xi-home"></i>2018.02.02</span>
+						</p> 
+					</div>
+				</div>
+				<div class="item">
+					<div class="thumnail"><img src="http://via.placeholder.com/1280x720" alt="sampleImg" /></div>
+					<div class="meta">
+						<h4 class="tit">[단타] 드디어 강의편! 단타는 이렇게 치는겁니다! | 단타장인의 실전매매 영상 | 주식은 수익만세V</h4>
+						<p class="txt">
+							<span class="name">여의도미꾸라지</span>
+							<span class="view"><i class="xi xi-eye"></i>123</span>
+							<span class="date"><i class="xi xi-home"></i>2018.02.02</span>
+						</p> 
+					</div>
+				</div>
+				
+				<!--}repect-->
+			</div>
+			<!--//PlayCardStyle-->
+			<div class="page">
+				<!-- xi아이콘이 안들어 간다면 주석안에 있는걸로 교체해주세요 -->
+				<ul class="pagination">
+					<li class="first"><a href="#"><i class="xi xi-angle-double-left"></i><!--&lt;&lt;--></a></li>
+					<li class="prev"><a href="#"><i class="xi xi-angle-left"></i><!--&lt;--></a></li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li class="active"><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li class="next"><a href="#"><i class="xi xi-angle-right"></i><!--&gt;--></a></li>
+					<li class="last"><a href="#"><i class="xi xi-angle-double-right"></i><!--&gt;&gt;--></a></li>
+				</ul>
+			</div>
+			
+		</div>
+		<!--//section-->
+    </div>
+    <!--//content-->
+    <!--footer-->
+    <div class="footer">
+		<p class="warning">
+			본 사이트에서 제공되는 모든 정보는 투자판단의 참고자료이며, 서비스 이용에 따른 최종 책임은 이용자에게 있습니다.
+		</p>
+		<p class="info">
+			㈜고구려인베스트먼트 | 대표이사 : 전운규 | 법인등록번호 : 110111-5510527 | 사업자등록번호 107-88-29382 | 통신판매 : 제2017-전주완산-0116호
+		</p>
+		<div class="copy">
+			Copyrightⓒ고구려인베스트먼트.co.,Ltd. All rights reserved.
+		</div>
+    </div>
+    <!--//footer-->
+	<!-- quick_menu -->
+    <div class="quick_menu">
+    </div>
+	<!-- //quick_menu -->
+</div>
+</body>
+</html>
