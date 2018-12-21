@@ -104,6 +104,9 @@ input[type="radio"] {
 .align_justify {
   text-align: justify; }
 
+body.dialogOpen {
+  overflow: hidden; }
+
 .dialog {
   position: fixed;
   top: 0;
@@ -115,7 +118,9 @@ input[type="radio"] {
   display: none;
   text-align: center;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 999999; }
+  z-index: 999999;
+  overflow-x: hidden;
+  overflow-y: auto; }
 
 .dialog .dialog_content {
   position: relative;

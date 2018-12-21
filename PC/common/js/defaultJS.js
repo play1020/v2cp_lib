@@ -17,12 +17,14 @@ $(document).ready(function(){
 	
 	//레이어팝업
 	$('[data-dialogCall]').on('click',function(){
+		$('body').addClass('dialogOpen')
 		//오픈할 다이얼로그창
 		var callName = $(this).attr('data-dialogCall');
 		$('[data-dialog='+callName+']').fadeIn('fast');
 		//닫기버튼 이벤트 입력
 		$('[data-dialog='+callName+']').find('.close').on('click',function(){
 			dialogWindowClose(callName)
+			$('body').removeClass('dialogOpen')
 		})
 	})
 	function dialogWindowClose(target){
