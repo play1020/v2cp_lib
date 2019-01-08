@@ -22,7 +22,7 @@ $(document).ready(function(){
 		var callName = $(this).attr('data-dialogCall');
 		$('[data-dialog='+callName+']').fadeIn('fast');
 		//닫기버튼 이벤트 입력
-		$('[data-dialog='+callName+']').find('.close').on('click',function(){
+		$('[data-dialog='+callName+']').find('.close, .dialog_bg').on('click',function(){
 			dialogWindowClose(callName)
 			$('body').removeClass('dialogOpen')
 		})

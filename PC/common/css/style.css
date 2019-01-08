@@ -117,30 +117,46 @@ body.dialogOpen {
   height: 100%;
   display: none;
   text-align: center;
-  background: rgba(0, 0, 0, 0.7);
   z-index: 999999;
   overflow-x: hidden;
   overflow-y: auto; }
 
-.dialog .dialog_content {
-  position: relative;
-  padding: 0;
-  margin: 0 auto;
-  margin-top: 50px;
+.dialog .dialog_front {
   display: inline-block;
-  background-color: #fff; }
+  position: relative;
+  height: 100%;
+  z-index: 20; }
 
-.dialog .dialog_content .dialog_body {
+.dialog .dialog_front .dialog_content {
+  display: inline-block;
+  position: relative;
   padding: 0; }
 
-.dialog .dialog_content .dialog_footer {
+.dialog .dialog_front .dialog_content .dialog_body {
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 0;
+  background-color: #fff; }
+
+.dialog .dialog_front .dialog_content .dialog_footer {
   padding: 8px 5px;
   background-color: #333333;
   color: #fff; }
 
-.dialog .dialog_content .dialog_footer .close {
+.dialog .dialog_front .dialog_content .dialog_footer .close {
   background-color: none;
   border: none; }
+
+.dialog .dialog_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10; }
 
 .layer_widget {
   display: none;
