@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta property="og:type" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- css animate -->
+<link rel="stylesheet" type="text/css" href="common/css/animate.css" />
+
+<!-- css custom -->
+<link rel="stylesheet" type="text/css" href="common/css/style.css" />
+
+<!--[if lt IE 9]>
+	<script src="common/js/html5shiv.js"></script>
+	<script src="common/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- common -->
+<script type="text/javascript" src="common/js/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="common/js/defaultJs.js"></script>
+
+<title>프로그래스바</title>
+
+</head>
+<body>
+	
+	<style>
+		.progress-group{margin:0 auto; width:300px;}
+		.progress{position: relative;}
+		.progress .tit{}
+		.progress .progress-bar{position: relative; width:100%; height:30px; background-color:#cccccc;}
+		.progress .progress-bar .progress-value{position: absolute; top:0; bottom:0; width:0%; height:100%; text-align: center; background-color:#FF0000}
+		.progress .progress-bar .progress-value .value{position: relative; }
+	</style>
+	
+	
+	<p>1차 확인버튼(분석) <button type="button" class="progressButton">분석</button></p>
+	<p>2차 확인버튼(정보입력) <button type="button">확인</button></p>
+	
+	<div class="progress-group">
+		<div class="progress" data-complete="수급분석 완료">
+			<p class="tit">수급분석중···</p>
+			<div class="progress-bar">
+				<div class="progress-value">
+					<span class="value"></span>
+				</div>
+			</div>
+		</div>
+		<div class="progress" data-complete="산업분석 완료">
+			<p class="tit">산업분석중···</p>
+			<div class="progress-bar">
+				<div class="progress-value">
+					<span class="value"></span>
+				</div>
+			</div>
+		</div>
+		<div class="progress" data-complete="기업분석 완료">
+			<p class="tit">기업분석중···</p>
+			<div class="progress-bar">
+				<div class="progress-value">
+					<span class="value"></span>
+				</div>
+			</div>
+		</div>
+		<div class="progress" data-complete="수급분석 완료">
+			<p class="tit">수급분석중···</p>
+			<div class="progress-bar">
+				<div class="progress-value">
+					<span class="value"></span>
+				</div>
+			</div>
+		</div>
+		<div class="progress" data-complete="산업분석 완료">
+			<p class="tit">산업분석중···</p>
+			<div class="progress-bar">
+				<div class="progress-value">
+					<span class="value"></span>
+				</div>
+			</div>
+		</div>
+		<div class="progress" data-complete="기업분석 완료">
+			<p class="tit">기업분석중···</p>
+			<div class="progress-bar">
+				<div class="progress-value">
+					<span class="value"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<script>
+		$(document).ready(function(){
+			var progTimeout= 0
+			var group = $('.progress-group')					//로딩바 그룹
+			var groupLenth = group.children().length			//로딩바 갯수
+			var startProg = 1;									//로딩바 순서(첫번째)
+			var timer = 0;										//퍼센트 담을 변수
+			var spd = 10;										//애니메이션속도
+			function progressing(e){
+				
+				var selecter = $('.progress-group .progress:nth-child('+startProg+')')			// 작동할 로딩바 선택자
+				
+				selecter.find('.progress-value').css({'width':timer+'%'});						// css 수정 (로딩바 늘어남)
+				progValue(selecter,timer)														// 숫자변경 함수 (선택자, 현재 타이머값)
+				
+				if(timer >= 100){  																// 100% 완료 됬을 경우
+					progTitle(selecter)	//타이틀 변경
+					selecter.find('.progress-value').css("width","100%");							// 100% 오버됬을 수도 있으니 100%고정
+					startProg++;																	// 로딩바 순서에 1을 더 해준다(다음 로딩바 번호)
+					timer=0;																		// 퍼센트 담은 변수를 0으로 초기화
+					if(startProg > groupLenth){														// 로딩바 갯수보다 그 이상 실행되지 않게 조건을 걸어줌
+						clearTimeout(progTimeout);														// setTimeout을 지워줌으로써 완전 종료
+						progressingAfter();																// 로딩바 완료 후 실행될 (이벤트가 들어있는) 함수
+						return;																			// 이 조건문을 실행했다면 함수내에 이 이하의 줄 내용은 더 이상 실행하지 않는다.
+					};
+					progTimeout = setTimeout(function(){progressing(startProg)},spd);			// 변경된 로딩바로 다시 함수를 실행
+					return;																		// 이 조건문을 실행했다면 함수내에 이 이하의 줄 내용은 더 이상 실행하지 않는다.
+				}
+
+				timer++;																		// % 값을 1 증가 시킨다.
+				progTimeout = setTimeout(function(){progressing(startProg)},spd);				// 한번 더 함수를 실행시킨다. 
+				
+				console.log(startProg+' '+timer+' '+progTimeout) //값확인용 콘솔
+			};
+			
+			/* 1. 숫자함수 */
+			function progValue(e, d){			// (선택자, 현재 타이머값)
+				e.find('.value').text(d+'%')	// 숫자값을 변경한다
+			}
+			
+			/* 2. 로딩바 제목 변경 */
+			function progTitle(e){				// (선택자)
+				e.find('.tit').text(e.attr('data-complete'))	// 로딩이 완료되면 텍스트를 변경한다.
+			}
+			
+			/* 3. 로딩바 이후 */
+			function progressingAfter(){
+				console.log('완료!! 로딩완료 후 이벤트를 실행하면 됨!')	//이곳에 로딩바 이후 액션을 넣으면 됨
+			}
+			
+			// ★★ 이벤트 시작
+			$('.progressButton').on('click',function(){
+				progressing(startProg);
+			});
+			
+		}); 
+	</script>
+	
+
+</body>
+</html>
