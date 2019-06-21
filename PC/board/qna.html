@@ -113,7 +113,7 @@
 						<ul>
 							<li><a href="boardList.html">공지사항</a></li>
 							<li><a href="schedule.html">무료방송스케줄</a></li>
-							<li><a href="boardList.html">문의하기</a></li>
+							<li><a href="qna.html">문의하기</a></li>
 							<li><a href="faq.html">자주묻는질문</a></li>
 							<li><a href="calendar.html">재료달력</a></li>
 						</ul>
@@ -180,198 +180,184 @@
 						<ul class="snb">
 							<li><a href="boardList.html">공지사항</a></li>
 							<li><a href="schedule.html">무료방송스케줄</a></li>
-							<li><a href="boardList.html">문의하기</a></li>
-							<li class="active"><a href="qna.html">자주묻는질문</a></li>
+							<li class="active"><a href="qna.html">문의하기</a></li>
+							<li><a href="faq.html">자주묻는질문</a></li>
 							<li><a href="calendar.html">재료달력</a></li>
 						</ul>
 					</aside>
 					
 					<div class="content_wrap">
 						<div class="title-default">
-							<h2>자주하는질문</h2>
+							<h2>문의하기(Q&amp;A)</h2>
 							<div class="breadCrumb">
 								<ul>
 									<li><a href="#">홈</a></li>
 									<li><a href="#">고객센터</a></li>
-									<li>자주묻는질문</li>
+									<li>문의하기</li>
 								</ul>
 							</div>
 						</div>
 						<article class="content-default">
-<!--
 							<div class="head">
-								<div class="title-sm">
-									<h3>일반질문</h3>
+								<div class="title-reply">
+									<h3>물어보고 싶은게 있다면 바로 물어보세요</h3>
 								</div>
 							</div>
--->
 							<div class="body">
-<style>
-	#accordion {border-top:3px solid #eee}
-	#accordion .tit{
-		position: relative;
-		padding: 0 50px 0 80px;
-		border-bottom:1px solid #e6e6e6;
-		outline:none;
-		cursor: pointer;
-	}
-	#accordion .tit:before{
-		display: block;
-		content: 'Q';
-		position: absolute;
-		top: 15px;
-		left: 20px;
-		box-sizing: border-box;
-		width: 40px;
-		height: 40px;
-		border: 1px solid #ff4057;
-		border-radius: 100%;
-		background: #ff4057;
-		font-family: 'NanumSquare';
-		font-weight: 700;
-		font-size: 24px;
-		line-height: 38px;
-		color: #ffffff;
-		text-align: center;
-	}
-	#accordion .tit .txt{
-		display:block;
-		padding: 20px 0;
-		font-weight: 700;
-		font-size: 18px;
-		line-height: 26px;
-		color: #2d2d2d;
-	}
-	#accordion .con{
-		position: relative;
-		padding: 30px 50px 30px 80px;
-		font-size:16px;
-		font-weight: 300;
-		border-bottom:1px solid #e6e6e6;
-		background-color:#fcfcfc;
-	}
-	#accordion .con:before{
-		display: block;
-		content: 'A';
-		position: absolute;
-		top: 30px;
-		left: 20px;
-		box-sizing: border-box;
-		width: 40px;
-		height: 40px;
-		border: 1px solid #ff4057;
-		border-radius: 100%;
-		background: #ffffff;
-		font-family: 'NanumSquare';
-		font-weight: 700;
-		font-size: 24px;
-		line-height: 38px;
-		color: #ff4057;
-		text-align: center;
-		transition: all .3s;
-	}
-	#accordion .con ol{
-		padding:0 0 0 25px;
-		list-style:decimal
-	}
-	#accordion .con ol li{
-		line-height: 28px;
-	}
-	#accordion .con p{
-		margin:15px 0;
-		font-size:16px;
-	}
-	#accordion .con p:first-child{
-		margin:0;
-	}
-</style>			
-<div id="accordion">
-	<h3 class="tit">
-		<span class="txt">회원가입은 어떻게 하나요?</span>
-	</h3>
-	<div class="con">
-		<ol>
-			<li>엘리트스탁 메인 홈페이지 우측상단 '회원가입' 클릭</li>
-			<li>약관에 동의합니다 체크 후 확인 클릭</li>
-			<li>아이디, 비밀번호, 이름 등 기본정보입력 클릭</li>
-			<li>회원가입 완료</li> 
-		</ol>
-	</div>
-	<h3 class="tit">
-		<span class="txt">방송시청 방법이 궁금합니다.</span>
-	</h3>
-	<div class="con">
-		<ol>
-			<li>엘리트스탁 메인 홈페이지 우측상단 아이디, 패스워드를 입력</li>
-			<li>메인 홈페이지 전문가방송에 라이브방송 클릭</li>
-		</ol>
-	</div>
-	<h3 class="tit">
-		<span class="txt">방송결제 방법이 궁급합니다</span>
-	</h3>
-	<div class="con">
-		<ol>
-			<li>메인 홈페이지에서 로그인 후 화면 우측의 스크롤바를 내립니다.</li>
-			<li>전문가를 확인 후 해당 전문가 바로가기 클릭</li>
-			<li>카페에서 우측 하단의 전문가 서비스를 확인</li>
-			<li>가입을 원하는 개월 수 클릭</li>
-			<li>원하시는 서비스를 선택 후 결제 방법 신용카드 무통장 방법을 선택합니다.</li>
-			<li>회원정보 확인 및 개인정보 이용 제공 체크 후 확인</li>
-		</ol>
-		<p>만약 이러한 부분이 어렵거나 안되신다면 <strong>고객센터 1522-1325</strong>로 연락주세요 </p>
-	</div>
-	<h3 class="tit">
-		<span class="txt">아이디 혹은 비밀번호를 잊어버렸습니다.</span>
-	</h3>
-	<div class="con">
-		<ol>
-			<li>엘리트스탁 메인 홈페이지 좌측상단 아이디/비밀번호찾기 클릭</li>
-			<li>이름, 전화번호 입력 후 해당하는 아이디/비밀번호 찾기버튼 클릭</li>
-			<li>변경된 비밀번호를 통해서 로그인이 가능하십니다.</li>
-		</ol>
-		<p>만약 이러한 부분이 어렵거나 안되신다면 <strong>고객센터 1522-1325</strong>로 연락주세요 </p>
-	</div>
-	<h3 class="tit">
-		<span class="txt">현금영수증 발급하고 싶습니다.</span>
-	</h3>
-	<div class="con">
-		<p>
-무통장 입금후 고객센터 게시판에 [휴대폰번호],[입금자성함],[아이디],[필명]을 작성해 주시면 확인 후 현금영수증이 발행이 됩니다.
-현금영수증은 해당월과 본인에게만 발행이 가능하니 참고하세요
-		</p>
-		<p> 만약 이러한 부분이 어렵거나 안되신다면 <strong>고객센터 1522-1325</strong>로 연락주세요</p>
-	</div>
-	<h3 class="tit">
-		<span class="txt">전문가 녹화방송 시청은 어떻게 하나요?</span>
-	</h3>
-	<div class="con">
-		<p>엘리트스탁 메인 홈페이지 전문가방송에서 해당 녹화방송 전문가 클릭시 청취 가능하십니다.</p>
-	</div>
-	<h3 class="tit">
-		<span class="txt">휴대폰 본인인증이 안됩니다. </span>
-	</h3>
-	<div class="con">
-		<p>휴대폰번호 자동스팸처리 되어있는지 확인하세요. 그래도 인증이 원할이 안되시면 <strong>고객센터(1899-3368)</strong> 문의주시면 됩니다.</p>
-	</div>
-	<h3 class="tit">
-		<span class="txt">종목상담은 어떻게 받을 수 있나요?</span>
-	</h3>
-	<div class="con">
-		<ol>
-			<li>엘리트스탁 메인 홈페이지 우측상단 아이디, 패스워드를 입력</li>
-			<li>메인 홈페이지 전문가방송에 라이브방송 클릭</li>
-			<li>전문가 방송상에서 종목명 - 매수가 - 비중 입력 시 상담 가능하십니다.</li>
-		</ol>
-	</div>
+								<div class="reply_text">
+									<textarea class="form-control" placeholder="로그인 후 사용해주세요."></textarea>
+									<div class="add-on">
+										<a href="#" class="btn btn-primary">등록</a>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="content-default">
+							<div class="body">
+								<div id="accordion" class="qnaStyle">
+									<!-- 1. 본인이 쓴 질문 수정 및 답글 미입력 상태시 {-->
+									<h3 class="tit on"> <!-- .on은 비밀글이 아닐시, .on이 없으면 비밀글 -->
+										<span class="txt">질문글의 길이가 얼마까지 가능한지 잘 모르겠네요. 얼만큼 해야 적절할지?</span>
+										<div class="meta">
+											<span class="name">주식신동고박사</span>
+											<span class="date">2019.03.27 13:37</span>
+											<!-- 본인 글일 경우에만 추가 {-->
+											<div class="tool">
+												<a href="#" class="btn btn-sm btn-darkGray">수정</a>
+												<a href="#" class="btn btn-sm btn-darkGray">삭제</a>
+											</div>
+											<!--} 본인 글일 경우에만 추가 끝 -->
+										</div>
+										<div class="reply_text">
+											<textarea class="form-control" placeholder="질문내용을 수정하세요">질문글의 길이가 얼마까지 가능한지 잘 모르겠네요. 얼만큼 해야 적절할지?</textarea>
+											<div class="add-on">
+												<a href="#" class="btn btn-primary">수정</a>
+											</div>
+										</div>
+									</h3>
+									<div class="con on">
+										<div class="reply_text">
+											<textarea class="form-control" placeholder="답글을 입력하세요"></textarea>
+											<div class="add-on">
+												<a href="#" class="btn btn-primary">등록</a>
+											</div>
+										</div>
+									</div>
+									<!--} 1. 끝-->
+									<!-- 2. 답글 수정 시 {-->
+									<h3 class="tit on">
+										<span class="txt">회원가입은 어떻게 하나요?</span>
+										<div class="meta">
+											<span class="name">주식신동고박사</span>
+											<span class="date">2019.03.27 13:37</span>
+										</div>
+									</h3>
+									<div class="con on">
+										<ol>
+											<li>성공투자방송 메인 홈페이지 우측상단 '회원가입' 클릭</li>
+											<li>약관에 동의합니다 체크 후 확인 클릭</li>
+											<li>아이디, 비밀번호, 이름 등 기본정보입력 클릭</li>
+											<li>회원가입 완료</li> 
+										</ol>
+										<div class="edit-group">
+											<a href="#" class="btn btn-sm btn-darkGray">수정</a>
+											<a href="#" class="btn btn-sm btn-darkGray">삭제</a>
+										</div>
+										<div class="reply_text">
+											<textarea class="form-control" placeholder="수정내용">
+	1. 성공투자방송 메인 홈페이지 우측상단 '회원가입' 클릭
+	2. 약관에 동의합니다 체크 후 확인 클릭
+	3. 아이디, 비밀번호, 이름 등 기본정보입력 클릭
+	4. 회원가입 완료										
+											</textarea>
+											<div class="add-on">
+												<a href="#" class="btn btn-primary">수정</a>
+											</div>
+										</div>
+									</div>
+									<!--} 2. 끝-->
+									<h3 class="tit">
+										<span class="txt"><i class="xi xi-lock"></i> 비밀글입니다.</span>
+										<div class="meta">
+											<span class="name">주식신동고박사</span>
+											<span class="date">2019.03.27 13:37</span>
+										</div>
+									</h3>
+									<div class="con">
+										비밀글입니다. 본인이 작성한 글만 보입니다.
+										<div class="edit-group">
+											<a href="#" class="btn btn-sm btn-darkGray">수정</a>
+											<a href="#" class="btn btn-sm btn-darkGray">삭제</a>
+										</div>
+									</div>
+									<h3 class="tit">
+										<span class="txt"><i class="xi xi-lock"></i> 비밀글입니다.</span>
+										<div class="meta">
+											<span class="name">주식신동고박사</span>
+											<span class="date">2019.03.27 13:37</span>
+										</div>
+									</h3>
+									<div class="con">
+										비밀글입니다. 본인이 작성한 글만 보입니다.
+										<div class="edit-group">
+											<a href="#" class="btn btn-sm btn-darkGray">수정</a>
+											<a href="#" class="btn btn-sm btn-darkGray">삭제</a>
+										</div>
+									</div>
+									<h3 class="tit">
+										<span class="txt"><i class="xi xi-lock"></i> 비밀글입니다.</span>
+										<div class="meta">
+											<span class="name">주식신동고박사</span>
+											<span class="date">2019.03.27 13:37</span>
+										</div>
+									</h3>
+									<div class="con">
+										비밀글입니다. 본인이 작성한 글만 보입니다.
+										<div class="edit-group">
+											<a href="#" class="btn btn-sm btn-darkGray">수정</a>
+											<a href="#" class="btn btn-sm btn-darkGray">삭제</a>
+										</div>
+									</div>
+									<h3 class="tit">
+										<span class="txt"><i class="xi xi-lock"></i> 비밀글입니다.</span>
+										<div class="meta">
+											<span class="name">주식신동고박사</span>
+											<span class="date">2019.03.27 13:37</span>
+										</div>
+									</h3>
+									<div class="con">
+										비밀글입니다. 본인이 작성한 글만 보입니다.
+										<div class="edit-group">
+											<a href="#" class="btn btn-sm btn-darkGray">수정</a>
+											<a href="#" class="btn btn-sm btn-darkGray">삭제</a>
+										</div>
+									</div>
 
-</div>
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>	
-<script>
-$( function() {
-	$( "#accordion" ).accordion();
-} );
-</script>
+								</div>
+								<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+								<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>	
+								<script>
+								$( function() {
+									$( "#accordion" ).accordion({
+										collapsible: true,			//true - 모든 컨텐츠를 접을 수 있음 / fules - 무조건 한 컨텐츠 오픈
+										heightStyle: "content"		//자동 높이 조절  content - 각 내용 만큼 자동으로 / auto - 내용중 가장 긴 컨텐츠 기준으로 맞춤 / fill - 부모 기준으로 컨텐츠를 맞춤
+									});
+								} );
+								</script>
+							</div>
+							<div class="foot">
+								<div class="page">
+									<ul class="pagination">
+										<li class="prev"><a href="#">&lt;</a></li>
+										<li class="active"><a href="#">1</a></li>
+										<li class=""><a href="#">2</a></li>
+										<li class=""><a href="#">3</a></li>
+										<li class=""><a href="#">4</a></li>
+										<li class=""><a href="#">5</a></li>
+										<li class="next"><a href="#">&gt;</a>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</article>
 					</div>

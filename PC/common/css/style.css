@@ -566,6 +566,39 @@ textarea.form-control {
     bottom: 10px;
     font-size: 12px; }
 
+.title-reply {
+  position: relative;
+  padding: 0 30px; }
+  .title-reply > h3 {
+    padding: 30px 0 8px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    border-bottom: 1px solid #343434;
+    background-color: #fff; }
+
+.title-sm-view {
+  position: relative; }
+  .title-sm-view > h3 {
+    padding: 30px 0 0;
+    font-size: 18px;
+    font-weight: 400;
+    /*border-bottom:solid $defaultLineColor;*/
+    background-color: #fff; }
+  .title-sm-view .ipt {
+    position: absolute;
+    right: 0px;
+    top: 15px; }
+    .title-sm-view .ipt > .ap_btn {
+      display: inline-block;
+      padding: 0 10px;
+      height: 32px;
+      line-height: 32px;
+      font-size: 12px;
+      color: #fff;
+      vertical-align: top;
+      background-color: #262626; }
+
 .title-info {
   position: relative; }
   .title-info > h3 {
@@ -968,6 +1001,10 @@ textarea.form-control {
   .reply_text .add-on {
     display: table-cell; }
 
+.content-default .body > .reply_text {
+  margin-top: -45px;
+  margin-bottom: 0; }
+
 .reply_list .item {
   padding: 15px;
   margin-bottom: 15px;
@@ -1063,12 +1100,22 @@ textarea.form-control {
   background-position: center center;
   background-repeat: repeat-y; }
   #header .lnb_wrap .lnb {
-    float: left; }
+    float: left;
+    position: relative;
+    display: table;
+    width: calc( 100% - 258px );
+    height: 52px; }
     #header .lnb_wrap .lnb > li {
       position: relative;
-      float: left; }
+      display: table-cell;
+      width: 1000px;
+      /* 사이트 최대 크기에 맞춤. 메인메뉴 5개 기준 17576px 이상 넘어가면 깨짐 왜 그런지는 모르겠음 */ }
       #header .lnb_wrap .lnb > li > a {
-        padding: 14px 30px;
+        text-align: center;
+        padding: 14px 0;
+        position: relative;
+        width: 100%;
+        height: 100%;
         display: block;
         font-family: 'NanumSquare', 'Nanum Barun Gothic', Malgun Gothic,  Dotum, sans-serif;
         font-size: 18px; }
@@ -2026,3 +2073,110 @@ textarea.form-control {
   .tbl_calendar tbody td.active p {
     color: #ff6000;
     text-decoration: underline; }
+
+/** 아코디언 **/
+#accordion.qnaStyle .tit {
+  padding: 0 220px 0 80px; }
+#accordion.qnaStyle .tit.on:before {
+  border: 1px solid #ff4057;
+  background: #ff4057; }
+#accordion.qnaStyle .con.on:before {
+  border: 1px solid #ff4057;
+  color: #ff4057;
+  background-color: #fff; }
+
+#accordion {
+  border-top: 3px solid #eee; }
+  #accordion .tit {
+    position: relative;
+    padding: 0 50px 0 80px;
+    border-bottom: 1px solid #e6e6e6;
+    outline: none;
+    cursor: pointer; }
+    #accordion .tit .txt {
+      display: block;
+      padding: 20px 0;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 26px;
+      color: #2d2d2d; }
+    #accordion .tit .meta {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 22px 0 30px;
+      font-size: 14px;
+      text-align: right; }
+      #accordion .tit .meta .name {
+        display: inline-block;
+        width: 102px;
+        color: #333;
+        text-align: right;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap; }
+      #accordion .tit .meta .date {
+        display: inline-block;
+        font-size: 12px;
+        color: #888; }
+      #accordion .tit .meta .tool {
+        margin-top: 10px; }
+  #accordion .tit:before {
+    display: block;
+    content: 'Q';
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #999;
+    border-radius: 100%;
+    background: #999;
+    font-family: 'NanumSquare';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 38px;
+    color: #ffffff;
+    text-align: center; }
+  #accordion .con {
+    position: relative;
+    padding: 30px 50px 30px 80px;
+    font-size: 16px;
+    font-weight: 300;
+    border-bottom: 1px solid #e6e6e6;
+    background-color: #fcfcfc; }
+    #accordion .con .edit-group {
+      margin: 5px 0;
+      text-align: right; }
+    #accordion .con .edit-group + .reply_text {
+      margin-top: 20px; }
+    #accordion .con ol {
+      padding: 0 0 0 25px;
+      list-style: decimal; }
+      #accordion .con ol li {
+        line-height: 28px; }
+    #accordion .con p {
+      margin: 15px 0;
+      font-size: 16px; }
+    #accordion .con p:first-child {
+      margin: 0; }
+  #accordion .con:before {
+    display: block;
+    content: 'A';
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #999;
+    border-radius: 100%;
+    background: #fff;
+    font-family: 'NanumSquare';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 38px;
+    color: #999;
+    text-align: center;
+    transition: all .3s; }

@@ -113,7 +113,7 @@
 						<ul>
 							<li><a href="boardList.html">공지사항</a></li>
 							<li><a href="schedule.html">무료방송스케줄</a></li>
-							<li><a href="boardList.html">문의하기</a></li>
+							<li><a href="qna.html">문의하기</a></li>
 							<li><a href="faq.html">자주묻는질문</a></li>
 							<li><a href="calendar.html">재료달력</a></li>
 						</ul>
@@ -180,7 +180,7 @@
 						<ul class="snb">
 							<li><a href="boardList.html">공지사항</a></li>
 							<li><a href="schedule.html">무료방송스케줄</a></li>
-							<li><a href="boardList.html">문의하기</a></li>
+							<li><a href="qna.html">문의하기</a></li>
 							<li class="active"><a href="qna.html">자주묻는질문</a></li>
 							<li><a href="calendar.html">재료달력</a></li>
 						</ul>
@@ -206,85 +206,7 @@
 							</div>
 -->
 							<div class="body">
-<style>
-	#accordion {border-top:3px solid #eee}
-	#accordion .tit{
-		position: relative;
-		padding: 0 50px 0 80px;
-		border-bottom:1px solid #e6e6e6;
-		outline:none;
-		cursor: pointer;
-	}
-	#accordion .tit:before{
-		display: block;
-		content: 'Q';
-		position: absolute;
-		top: 15px;
-		left: 20px;
-		box-sizing: border-box;
-		width: 40px;
-		height: 40px;
-		border: 1px solid #ff4057;
-		border-radius: 100%;
-		background: #ff4057;
-		font-family: 'NanumSquare';
-		font-weight: 700;
-		font-size: 24px;
-		line-height: 38px;
-		color: #ffffff;
-		text-align: center;
-	}
-	#accordion .tit .txt{
-		display:block;
-		padding: 20px 0;
-		font-weight: 700;
-		font-size: 18px;
-		line-height: 26px;
-		color: #2d2d2d;
-	}
-	#accordion .con{
-		position: relative;
-		padding: 30px 50px 30px 80px;
-		font-size:16px;
-		font-weight: 300;
-		border-bottom:1px solid #e6e6e6;
-		background-color:#fcfcfc;
-	}
-	#accordion .con:before{
-		display: block;
-		content: 'A';
-		position: absolute;
-		top: 30px;
-		left: 20px;
-		box-sizing: border-box;
-		width: 40px;
-		height: 40px;
-		border: 1px solid #ff4057;
-		border-radius: 100%;
-		background: #ffffff;
-		font-family: 'NanumSquare';
-		font-weight: 700;
-		font-size: 24px;
-		line-height: 38px;
-		color: #ff4057;
-		text-align: center;
-		transition: all .3s;
-	}
-	#accordion .con ol{
-		padding:0 0 0 25px;
-		list-style:decimal
-	}
-	#accordion .con ol li{
-		line-height: 28px;
-	}
-	#accordion .con p{
-		margin:15px 0;
-		font-size:16px;
-	}
-	#accordion .con p:first-child{
-		margin:0;
-	}
-</style>			
+		
 <div id="accordion">
 	<h3 class="tit">
 		<span class="txt">회원가입은 어떻게 하나요?</span>
@@ -369,7 +291,10 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>	
 <script>
 $( function() {
-	$( "#accordion" ).accordion();
+	$( "#accordion" ).accordion({
+		collapsible: true,			//true - 모든 컨텐츠를 접을 수 있음 / fules - 무조건 한 컨텐츠 오픈
+		heightStyle: "content"		//자동 높이 조절  content - 각 내용 만큼 자동으로 / auto - 내용중 가장 긴 컨텐츠 기준으로 맞춤 / fill - 부모 기준으로 컨텐츠를 맞춤
+	});
 } );
 </script>
 							</div>

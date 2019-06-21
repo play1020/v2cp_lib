@@ -469,6 +469,42 @@ textarea.form-control{
 		font-size:12px;
 	}
 }
+.title-reply{ 
+	position: relative;
+	padding: 0 30px;
+	> h3{
+		padding:30px 0 8px;
+        margin-bottom:15px;
+		font-size:18px;
+		font-weight: 400;
+		border-bottom:1px solid #343434;
+		background-color:#fff;
+	}
+}
+.title-sm-view{
+	position: relative;
+	> h3{
+		padding:30px 0 0;
+		font-size:18px;
+		font-weight: 400;
+		/*border-bottom:solid $defaultLineColor;*/
+		background-color:#fff;
+	}
+	.ipt{
+		position: absolute;
+		right:0px; top:15px;
+		> .ap_btn{
+			display:inline-block;
+			padding:0 10px;
+			height:32px;
+			line-height: 32px;
+			font-size:12px;
+			color:#fff;
+			vertical-align: top;
+			background-color:$darkGrayColor;
+		}
+	}
+}
 .title-info{
 	position: relative;
 	> h3{
@@ -844,6 +880,7 @@ textarea.form-control{
 	.form-control,
 	.add-on{ display:table-cell;}
 }
+.content-default .body > .reply_text{margin-top:-45px; margin-bottom:0;} //예외처리
 .reply_list{
 	.item{
 		padding:15px;
@@ -965,11 +1002,20 @@ textarea.form-control{
 		background-repeat: repeat-y;
 		.lnb{
 			float:left;
+			position: relative;
+			display: table;
+			width:calc( 100% - 258px );
+			height:52px;
 			> li{
 				position: relative;
-				float:left;
+				display:table-cell;
+				width:1000px; /* 사이트 최대 크기에 맞춤. 메인메뉴 5개 기준 17576px 이상 넘어가면 깨짐 왜 그런지는 모르겠음 */
 				> a{
-					padding:14px 30px;
+					text-align: center;
+					padding:14px 0;
+					position: relative;
+					width:100%;
+					height:100%;
 					display:block;
 					font-family:'NanumSquare', 'Nanum Barun Gothic', Malgun Gothic,  Dotum, sans-serif;
 					font-size:18px;
@@ -1882,3 +1928,102 @@ textarea.form-control{
 		}
 	}
 }
+
+
+/** 아코디언 **/
+#accordion.qnaStyle {
+	.tit{padding: 0 220px 0 80px;}
+	.tit.on:before{border: 1px solid #ff4057;background: #ff4057;}
+	.con.on:before{border: 1px solid #ff4057;color: #ff4057;background-color:#fff;}
+}
+#accordion {
+	border-top:3px solid #eee; 
+	.tit{
+		position: relative;
+		padding: 0 50px 0 80px;
+		border-bottom:1px solid #e6e6e6;
+		outline:none;
+		cursor: pointer;
+		.txt{
+			display:block;
+			padding: 20px 0;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 26px;
+			color: #2d2d2d;
+		}
+		
+		.meta{
+			position:absolute;right:0;top:0;padding:22px 0 30px;font-size:14px; text-align: right;
+			.name{display:inline-block; width:102px; color:#333; text-align: right; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+			.date{display:inline-block; font-size:12px; color:#888;}
+			.tool{margin-top:10px;}
+		}
+		
+	}
+	.tit:before{
+		display: block;
+		content: 'Q';
+		position: absolute;
+		top: 15px;
+		left: 20px;
+		box-sizing: border-box;
+		width: 40px;
+		height: 40px;
+		border: 1px solid #999;
+		border-radius: 100%;
+		background: #999;
+		font-family: 'NanumSquare';
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 38px;
+		color: #ffffff;
+		text-align: center;
+	}
+	.con{
+		position: relative;
+		padding: 30px 50px 30px 80px;
+		font-size:16px;
+		font-weight: 300;
+		border-bottom:1px solid #e6e6e6;
+		background-color:#fcfcfc;
+		.edit-group{margin:5px 0;text-align:right;}
+		.edit-group + .reply_text{margin-top:20px;}
+		ol{
+			padding:0 0 0 25px;
+			list-style:decimal;
+			li{
+				line-height: 28px;
+			}
+		}
+		p{
+			margin:15px 0;
+			font-size:16px;
+		}
+		p:first-child{
+			margin:0;
+		}
+	}
+	.con:before{
+		display: block;
+		content: 'A';
+		position: absolute;
+		top: 30px;
+		left: 20px;
+		box-sizing: border-box;
+		width: 40px;
+		height: 40px;
+		border: 1px solid #999;
+		border-radius: 100%;
+		background: #fff;
+		font-family: 'NanumSquare';
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 38px;
+		color: #999;
+		text-align: center;
+		transition: all .3s;
+		
+	}
+}
+
