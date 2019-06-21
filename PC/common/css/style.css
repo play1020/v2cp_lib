@@ -1974,3 +1974,55 @@ textarea.form-control {
   display: block;
   content: ' ';
   clear: both; }
+
+/** 재료달력 **/
+.calendar_nav {
+  padding: 0 0 25px 0;
+  text-align: center;
+  font-size: 17px;
+  font-family: 'NanumSquare', 'Nanum Barun Gothic', Malgun Gothic,  Dotum, sans-serif; }
+  .calendar_nav .day {
+    display: inline-block;
+    width: 200px;
+    letter-spacing: -1px;
+    font-size: 21px;
+    color: #000; }
+  .calendar_nav .prev, .calendar_nav .next {
+    display: inline-block;
+    color: #888888;
+    vertical-align: middle; }
+
+.tbl_calendar thead th {
+  padding: 8px 0;
+  background-color: #f6f6f9;
+  border-top: solid 1px #e6e6e6;
+  border-bottom: solid 1px #e6e6e6;
+  box-sizing: border-box;
+  font-family: 'NanumSquare', 'Nanum Barun Gothic', Malgun Gothic,  Dotum, sans-serif;
+  font-size: 16px;
+  color: #36393f; }
+.tbl_calendar thead .sun {
+  color: #f00; }
+.tbl_calendar thead .sat {
+  color: #00f; }
+.tbl_calendar tbody td {
+  font-size: 11px;
+  vertical-align: text-top;
+  padding: 10px 5px;
+  box-sizing: border-box;
+  border-bottom: solid 1px #e6e6e6; }
+  .tbl_calendar tbody td .day {
+    display: inline-block;
+    padding: 0 0 10px 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: #666666;
+    font-weight: bold;
+    text-align: left; }
+  .tbl_calendar tbody td p {
+    color: #888888; }
+.tbl_calendar tbody td.active {
+  background-color: #ffefe5; }
+  .tbl_calendar tbody td.active p {
+    color: #ff6000;
+    text-decoration: underline; }

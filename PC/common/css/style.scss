@@ -1823,3 +1823,62 @@ textarea.form-control{
     content: ' ';
     clear: both;
 }
+
+/** 재료달력 **/
+.calendar_nav{
+	padding:0 0 25px 0;
+	text-align: center;
+	font-size:17px;
+	font-family: 'NanumSquare', 'Nanum Barun Gothic', Malgun Gothic,  Dotum, sans-serif;
+	.day{
+		display:inline-block;
+		width:200px;
+		letter-spacing: -1px;
+		font-size:21px;
+		color:#000;
+	}
+	.prev, .next{
+		display:inline-block;
+		color:#888888;
+		vertical-align: middle;
+	}
+}
+.tbl_calendar{
+	thead{
+		th{
+			padding:8px 0;
+			background-color:#f6f6f9;
+			border-top:solid $defaultLineColor;
+			border-bottom:solid $defaultLineColor;
+			box-sizing: border-box;
+			font-family: 'NanumSquare', 'Nanum Barun Gothic', Malgun Gothic,  Dotum, sans-serif;
+			font-size:16px;
+			color:#36393f;
+		}
+		.sun{color:#f00;}
+		.sat{color:#00f;}
+	}
+	tbody{
+		td{
+			font-size:11px;
+			vertical-align: text-top; 
+			padding:10px 5px;
+			box-sizing: border-box;
+			border-bottom:solid $defaultLineColor; 
+			.day{
+				display:inline-block;
+				padding:0 0 10px 0;
+				box-sizing: border-box;
+				font-size:12px;
+				color:#666666;
+				font-weight: bold;
+				text-align: left;
+			}
+			p{color:#888888;}
+		}
+		td.active{
+			background-color:#ffefe5;
+			p{color:#ff6000;text-decoration: underline;}
+		}
+	}
+}
