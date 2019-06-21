@@ -1103,6 +1103,7 @@ textarea.form-control {
     float: left;
     position: relative;
     display: table;
+    width: 742px;
     width: calc( 100% - 258px );
     height: 52px; }
     #header .lnb_wrap .lnb > li {
@@ -1115,7 +1116,6 @@ textarea.form-control {
         padding: 14px 0;
         position: relative;
         width: 100%;
-        height: 100%;
         display: block;
         font-family: 'NanumSquare', 'Nanum Barun Gothic', Malgun Gothic,  Dotum, sans-serif;
         font-size: 18px; }
