@@ -37,7 +37,6 @@
 </head>
 
 <body>
-
 <div id="wrap">
 	<!--header-->
 	<div class="header">
@@ -79,14 +78,14 @@
 									<li><a href="#">서브4</a></li>
 								</ul>
 							</li>
-							<li><a href="board_list.html">투자전략 <i class="xi xi-angle-right pull-right"></i></a></li>
-							<li><a href="board_list.html">감사후기 <i class="xi xi-angle-right pull-right"></i></a>
+							<li><a href="boardList.html">투자전략 <i class="xi xi-angle-right pull-right"></i></a></li>
+							<li><a href="boardList.html">감사후기 <i class="xi xi-angle-right pull-right"></i></a>
 								<ul>
 									<li><a href="#">서브1</a></li>
 									<li><a href="#">서브2</a></li>
 								</ul>
 							</li>
-							<li><a href="board_list.html">공지사항 <i class="xi xi-angle-right pull-right"></i></a>
+							<li><a href="boardList.html">공지사항 <i class="xi xi-angle-right pull-right"></i></a>
 								<ul>
 									<li><a href="#">서브1</a></li>
 									<li><a href="#">서브2</a></li>
@@ -100,9 +99,9 @@
 		<div class="navigation">
 			<ul class="nav">
 				<li class="active"><a href="../live/live.html">전문가방송</a></li>
-				<li><a href="board_list.html">투자전략</a></li>
-				<li><a href="board_list.html">감사후기</a></li>
-				<li><a href="board_list.html">공지사항</a></li>
+				<li><a href="boardList.html">투자전략</a></li>
+				<li><a href="boardList.html">감사후기</a></li>
+				<li><a href="boardList.html">공지사항</a></li>
 			</ul>
 		</div>
     </div>
@@ -111,41 +110,117 @@
     </div>
     <div class="content">
 		<div class="sub-head">
-        	<div class="left">
-				<a href="#" class="btn btn-transparent"><i class="xi xi-angle-left"></i> 뒤로</a>
-			</div>
 			<h2 class="title">투자전략</h2>
 			<div class="right">
-				<!--<a href="board_write.html" class="btn btn-white border-radius">완료</a>-->
+				<!--<a href="board_write.html" class="btn btn-white border-radius"><i class="xi xi-pen"></i> 글쓰기</a>-->
+				<!-- 플로팅버튼 -->
+				<a href="boardWrite.html" class="float-btn"><i class="xi xi-pen xi-2x"></i></a>
 			</div>
 		</div>
-		<!--section-->
-		<div class="content-default">
-			<div class="board-read">
-				<!--option-->
-				<div class="card-section">
+		<form method="get" action="#">
+			<div class="search">
+				<div class="dp_tbl_cell">
+					<select class="form-control">
+						<option value="">제목</option>
+					</select>
+				</div>
+				<div class="dp_tbl_cell">
+					<input type="text" class="form-control" />
+				</div>
+				<div class="dp_tbl_cell">
+					<button type="submit" class="btn btn-primary"><i class="xi xi-magnifier" style="color:#fff;"></i></button>
+				</div>
+			</div>
+		</form>
+		<!-- 셀렉트 1개
+		<form method="get" action="#">
+			<div class="search">
+				<div class="dp_tbl_cell">
 					<select class="form-control">
 						<option value="">전문가선택</option>
 						<option value="">투자지존</option>
 						<option value="">투자지존</option>
 					</select>
 				</div>
-				<!--//option-->
-				<!--article_title-->
-				<div class="card-section">
-					<h3 class="tit"><input type="text" placeholder="제목을 입력해주세요." class="form-control" /></h3> 
-				</div>
-				<!--//article_title-->
-				<!--write-->
-				<div class="card-section">
-					<textarea class="form-control" rows="10" placeholder="내용을 입력해주세요."></textarea>			
-				</div>
-				<!--//write-->
-				<div class="more two align-center">
-					<a href="board_read.html" class="btn btn-info">글쓰기</a>
-					<a href="board_list.html" class="btn btn-disable">취소</a>
-				</div>
 			</div>
+		</form>
+		-->
+		<!--section-->
+		<div class="content-default">
+			<!--latest-->
+			<div class="latest-default">
+				<div class="con">
+					<!--repeat {-->
+					<div class="item">
+						<a href="boardView.html">
+							<h3 class="tit">비도 오고 그래서 니 생각이 나서<span class="reply_count">(3)</span></h3>
+							<div class="info">
+								<span class="name">무궁화삼천리</span>
+								<span class="date">2017. 05. 29</span>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="boardView.html">
+							<h3 class="tit">감사합니다. 사랑합니다. 고맙습니다. 전문가님</h3>
+							<div class="info">
+								<span class="name">무궁화삼천리</span>
+								<span class="date">2017. 05. 29</span>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="boardView.html">
+							<h3 class="tit">얼씨구나 좋구나~ 수익 풍년이로구나~~~~</h3>
+							<div class="info">
+								<span class="name">무궁화삼천리</span>
+								<span class="date">2017. 05. 29</span>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="boardView.html">
+							<h3 class="tit">저는 이거보고 깜짝 놀랐습니다. 수익이 완전 대박인데요~ 감사합니다 정말감사합니다.<span class="reply_count">(3)</span></h3>
+							<div class="info">
+								<span class="name">무궁화삼천리</span>
+								<span class="date">2017. 05. 29</span>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="boardView.html">
+							<h3 class="tit">여의도에 가면 편지를 쓰세요</h3>
+							<div class="info">
+								<span class="name">무궁화삼천리</span>
+								<span class="date">2017. 05. 29</span>
+							</div>
+						</a>
+					</div>
+					<!--}repeat-->
+				</div>
+				<div class="page">
+					<!-- xi아이콘이 안들어 간다면 주석안에 있는걸로 교체해주세요 -->
+					<ul class="pagination">
+						<li class="first"><a href="#"><i class="xi xi-angle-double-left"></i><!--&lt;&lt;--></a></li>
+						<li class="prev"><a href="#"><i class="xi xi-angle-left"></i><!--&lt;--></a></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li class="active"><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li class="next"><a href="#"><i class="xi xi-angle-right"></i><!--&gt;--></a></li>
+						<li class="last"><a href="#"><i class="xi xi-angle-double-right"></i><!--&gt;&gt;--></a></li>
+					</ul>
+				</div>
+				<!--
+				<div class="more">
+					<button type="button" class="btn btn-primary block">더보기</button>
+					<p class="nomore">더 이상 글이 없습니다.</p>
+				</div>
+				-->					
+			</div>
+			<!--//latest-->
+			
 		</div>
 		<!--//section-->
     </div>
@@ -168,28 +243,5 @@
     </div>
 	<!-- //quick_menu -->
 </div>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -59,3 +59,70 @@ $(document).on('click scroll swipeleft','.menu_side .close, .menu_side .ly_dimme
  	//안드로이드 closeMenuCallback 함수 호출 
 	window.AndroidJavascriptBridge.closeMenuCallback("{'bsh1': 'bsh1'}");
 });
+
+
+$(document).ready(function(){
+	
+	//공지사항 아코디언형 게시판
+	$('.accordion').find('.item').on('click',function(e){
+		$(this).siblings().find('.hiddenText').slideUp('fast');
+		$(this).find('.hiddenText').slideToggle('fast');
+		e.preventDefault();
+	});
+	
+	//탭 스크립트
+	function tabControl(){
+		var tabName = $("[data-tabControl]");
+		
+		$(tabName).find('.tab-head ul > li').each(function(e){
+			var indexNumber = $(this).index() + 1
+			var tabContents = $(this).parent().parent().siblings('.tab-body')
+
+			$(this).on('click',function(e){
+				$(this).siblings().removeClass('active')
+				$(this).addClass('active')
+				tabContents.find('.tab-contents').hide()
+				tabContents.find('.tab-contents:nth-child('+ indexNumber +')').show()
+				e.preventDefault()
+			})
+		})
+	}
+	tabControl()
+	
+})
+
+//동영상사이즈 리사이즈
+function moiveSize(){
+	var movieW = $('.youtubeFrame').width();
+	var movieRe = (movieW / 16) * 9;
+	$('.youtubeFrame').height(movieRe);
+}
+$(document).ready(function(){
+	moiveSize();
+})
+$(window).resize(function(){
+	moiveSize();
+})
+
+//ESC, F5 막기
+//document.onkeydown = function (e) {
+//    key = (e) ? e.keyCode : event.keyCode;
+//    if (key == 27 || key == 116) {
+//        if (e) {
+//            e.preventDefault();
+//        } else {
+//            event.keyCode = 0;
+//            event.returnValue = false;
+//        }
+//    }
+//}
+
+//오른쪽마우스 막기
+//document.oncontextmenu = function (e) {
+//    if (e) {
+//        e.preventDefault();
+//    } else {
+//        event.keyCode = 0;
+//        event.returnValue = false;
+//    }
+//}
