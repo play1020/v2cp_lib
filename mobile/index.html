@@ -33,66 +33,7 @@
 
 <!-- JS -->
 <script type="text/javascript" src="common/js/jquery-1.12.1.min.js"></script>
-<script type="text/javascript">
-// $(document).on('click','.m_nav',function(e){
-// 	e.preventDefault();
-// 	$('.menu_side').show(240)	
-// });
-// $(document).on('click scroll','.menu_side .close, .menu_side .ly_dimmed',function(e){
-// 	e.preventDefault();
-// 	var width = $('.menu_side').width();
-// 	$('.menu_side').animate({left:'-'+width+'px'},240,function(){
-// 		$('.menu_side').hide();
-// 		$('.menu_side').css({left:'0px'});
-// 	});	
-// });
-//아아폰 WebViewJavascriptBridge 설정
-function setupWebViewJavascriptBridge(callback) {
-	if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
-	if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
-	window.WVJBCallbacks = [callback];
-	var WVJBIframe = document.createElement('iframe');
-	WVJBIframe.style.display = 'none';
-	WVJBIframe.src = 'https://__bridge_loaded__';
-	document.documentElement.appendChild(WVJBIframe);
-	setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
-}
-
-$(document).on('click','.m_nav',function(e){
- 	e.preventDefault();
- 	$('.menu_side').show(240)
-
- 	//아이폰 openMenuCallback 함수 호출 
- 	setupWebViewJavascriptBridge(function(bridge) {
- 	
- 		bridge.callHandler('openMenuCallback', {'bsh': 'bsh'}, function(response) {
-			//log('JS got response', response)
-		})
-	})
- 	//안드로이드 openMenuCallback 함수 호출 
-	window.AndroidJavascriptBridge.openMenuCallback("{'bsh': 'bsh'}");
-});
-
-$(document).on('click scroll','.menu_side .close, .menu_side .ly_dimmed',function(e){
-	e.preventDefault();
-	var width = $('.menu_side').width();
-	$('.menu_side').animate({left:'-'+width+'px'},240,function(){
-		$('.menu_side').hide();
-		$('.menu_side').css({left:'0px'});
-	});	
-
- 	//아이폰 closeMenuCallback 함수 호출 
-	setupWebViewJavascriptBridge(function(bridge) {
-	 	
- 		bridge.callHandler('closeMenuCallback', {'bsh1': 'bsh1'}, function(response) {
-			//log('JS got response', response)
-		})
-	})
-	
- 	//안드로이드 closeMenuCallback 함수 호출 
-	window.AndroidJavascriptBridge.closeMenuCallback("{'bsh1': 'bsh1'}");
-});
-</script>
+<script type="text/javascript" src="common/js/common.js"></script>
 </head>
 <body>
 
@@ -108,7 +49,7 @@ $(document).on('click scroll','.menu_side .close, .menu_side .ly_dimmed',functio
 		</div>
 		<div class="menu_side">
 			<div class="ly_dimmed"></div>
-			<div class="inner animated slideInLeft">
+			<div class="inner">
 				<div class="head">
 					<div class="logo"><img src="images/logo.png" height="40" alt="815TV" /></div>
 					<button type="button" class="close"><i class="xi xi-close"></i></button>
