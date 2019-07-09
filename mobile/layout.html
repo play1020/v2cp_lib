@@ -60,7 +60,12 @@ function setupWebViewJavascriptBridge(callback) {
 
 $(document).on('click','.m_nav',function(e){
  	e.preventDefault();
- 	$('.menu_side').show(240)
+ 	$('.menu_side').show();
+	$('.ly_dimmed').fadeIn(100);
+	var width = $('.menu_side').width();
+	$('.menu_side > .inner').css({left:'-'+width+'px'});
+	$('.menu_side > .inner').animate({left:'0px'},240);
+	$('body').addClass('noscroll');
 
  	//아이폰 openMenuCallback 함수 호출 
  	setupWebViewJavascriptBridge(function(bridge) {
@@ -73,13 +78,23 @@ $(document).on('click','.m_nav',function(e){
 	window.AndroidJavascriptBridge.openMenuCallback("{'bsh': 'bsh'}");
 });
 
-$(document).on('click scroll','.menu_side .close, .menu_side .ly_dimmed',function(e){
+var sideMenuSwipe=0; //스와이프 오류 방지
+$(document).on('click scroll swipeleft','.menu_side .close, .menu_side .ly_dimmed',function(e){
 	e.preventDefault();
-	var width = $('.menu_side').width();
-	$('.menu_side').animate({left:'-'+width+'px'},240,function(){
-		$('.menu_side').hide();
-		$('.menu_side').css({left:'0px'});
-	});	
+	
+	if(sideMenuSwipe==0){
+		sideMenuSwipe = 1; //작동
+		var width = $('.menu_side').width();
+		$('.menu_side > .inner').animate({left:'-'+width+'px'}, 240, function(){
+			$('.ly_dimmed').fadeOut(50,function(){
+				$('.menu_side').delay(150).hide();
+				sideMenuSwipe = 0; //정지
+			})
+		})
+	};
+	
+	$('body').removeClass('noscroll');
+	
 
  	//아이폰 closeMenuCallback 함수 호출 
 	setupWebViewJavascriptBridge(function(bridge) {
