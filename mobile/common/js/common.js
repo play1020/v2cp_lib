@@ -22,12 +22,12 @@ $(document).on('click','.m_nav',function(e){
  	//아이폰 openMenuCallback 함수 호출 
  	setupWebViewJavascriptBridge(function(bridge) {
  	
- 		bridge.callHandler('openMenuCallback', {'bsh': 'bsh'}, function(response) {
+ 		bridge.callHandler('openMenuCallback', {'menustatus': 'open'}, function(response) {
 			//log('JS got response', response)
 		})
 	})
  	//안드로이드 openMenuCallback 함수 호출 
-	window.AndroidJavascriptBridge.openMenuCallback("{'bsh': 'bsh'}");
+	window.AndroidJavascriptBridge.openMenuCallback("{'menustatus': 'open'}");
 });
 
 var sideMenuSwipe=0; //스와이프 오류 방지
@@ -51,15 +51,14 @@ $(document).on('click scroll swipeleft','.menu_side .close, .menu_side .ly_dimme
  	//아이폰 closeMenuCallback 함수 호출 
 	setupWebViewJavascriptBridge(function(bridge) {
 	 	
- 		bridge.callHandler('closeMenuCallback', {'bsh1': 'bsh1'}, function(response) {
+ 		bridge.callHandler('closeMenuCallback', {'menustatus': 'close'}, function(response) {
 			//log('JS got response', response)
 		})
 	})
 	
  	//안드로이드 closeMenuCallback 함수 호출 
-	window.AndroidJavascriptBridge.closeMenuCallback("{'bsh1': 'bsh1'}");
+	window.AndroidJavascriptBridge.closeMenuCallback("{'menustatus': 'close'}");
 });
-
 
 $(document).ready(function(){
 	
