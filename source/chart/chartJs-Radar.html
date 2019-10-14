@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<!--<script type="text/javascript" src="common/js/jquery-1.12.1.min.js"></script>-->
+<script type="text/javascript" src="Chart.js-master/dist/Chart.min.js"></script>
+
+<title>레이더차트</title>
+</head>
+
+<body>
+	<style>
+		.chartBox{position: relative; width:820px;}
+	</style>
+	<div class="chartBox">
+	<canvas id="myChart"></canvas>
+	</div>
+	
+	<script>	
+	var ctx = document.getElementById('myChart')
+	var chart = new Chart(ctx, {
+		// The type of chart we want to create
+		type: "radar",
+
+		// The data for our dataset
+		data: {
+			labels: ["스캘핑매매형", "단타매매형", "단기매매형", "중기매매형", "장기매매형"],
+			datasets: [{				
+				backgroundColor: 'rgba(59, 112, 101, 0.75)',
+				borderColor: 'rgba(59, 112, 101, 0.7)',
+				borderWidth: 1,
+				data: [20,40,40,60,100],
+				"fill":true,
+				pointRadius:4,
+				pointBackgroundColor:'rgba(59, 112, 101, 0.7)',
+				pointHoverRadius:8,
+			}],
+		},
+
+		// Configuration options go here
+		options: {
+			legend: {
+				display:false
+			},
+			tolltips: {
+				enabled: true,
+				mode: 'index',
+				intersect: false,
+			},
+			elements:{
+				line:{
+					tension:0,
+				}
+			},
+			scale: {
+				ticks: {
+					display:false,
+					min:0,
+					max:100,
+					suggestedMin: 0,
+					suggestedMax: 100,
+					fontColor:'#666',
+					fontSize:14,
+					fontFamily:'tahoma'
+				},
+				
+			},
+		}
+	});
+		
+	</script>
+</body>
+</html>
