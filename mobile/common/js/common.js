@@ -10,14 +10,22 @@ function setupWebViewJavascriptBridge(callback) {
 	setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
 }
 
+
+/** 메뉴 스크립트 **/
+
+//0. penLeft 설정
+$(document).ready(function(){
+	var closeSwipe = $('.menu_side')['0']
+	var meunSwipe = new Hammer(closeSwipe);
+	meunSwipe.on("swipeleft", function(e) {
+		menuClose(e)
+	});
+})
+
+//1. 메뉴열기
 $(document).on('click','.m_nav',function(e){
  	e.preventDefault();
- 	$('.menu_side').show();
-	$('.ly_dimmed').fadeIn(240);
-	var width = $('.menu_side').width();
-	$('.menu_side > .inner').css({left:'-'+width+'px'});
-	$('.menu_side > .inner').animate({left:'0px'},240);
-	$('body').addClass('noscroll');
+	menuOpen(e)
 
  	//아이폰 openMenuCallback 함수 호출 
  	setupWebViewJavascriptBridge(function(bridge) {
@@ -30,27 +38,13 @@ $(document).on('click','.m_nav',function(e){
 	window.AndroidJavascriptBridge.openMenuCallback("{'menustatus': 'open'}");
 });
 
-var sideMenuSwipe=0; //스와이프 오류 방지
+//2. 메뉴닫기
 $(document).on('click scroll swipeleft','.menu_side .close, .menu_side .ly_dimmed',function(e){
 	e.preventDefault();
+	menuClose (e)
 	
-	if(sideMenuSwipe==0){
-		sideMenuSwipe = 1; //작동
-		var width = $('.menu_side').width();
-		$('.menu_side > .inner').animate({left:'-'+width+'px'}, 240, function(){
-			$('.ly_dimmed').fadeOut(240,function(){
-				$('.menu_side').delay(150).hide();
-				sideMenuSwipe = 0; //정지
-			})
-		})
-	};
-	
-	$('body').removeClass('noscroll');
-	
-
  	//아이폰 closeMenuCallback 함수 호출 
 	setupWebViewJavascriptBridge(function(bridge) {
-	 	
  		bridge.callHandler('closeMenuCallback', {'menustatus': 'close'}, function(response) {
 			//log('JS got response', response)
 		})
@@ -59,6 +53,34 @@ $(document).on('click scroll swipeleft','.menu_side .close, .menu_side .ly_dimme
  	//안드로이드 closeMenuCallback 함수 호출 
 	window.AndroidJavascriptBridge.closeMenuCallback("{'menustatus': 'close'}");
 });
+
+
+//메뉴 열림
+function menuOpen(e){
+	$('.menu_side').show();
+	$('.ly_dimmed').fadeIn(240);
+	var width = $('.menu_side').width();
+	$('.menu_side > .inner').css({left:'-'+width+'px'});
+	$('.menu_side > .inner').animate({left:'0px'},240);
+	$('body').addClass('noscroll');
+}
+//메뉴 닫힘 
+var sideMenuSwipe=0; //스와이프 오류 방지
+function menuClose (e){
+	if(sideMenuSwipe==0){
+		sideMenuSwipe = 1; //작동
+		var width = $('.menu_side').width();
+		$('.menu_side > .inner').animate({left:'-'+width+'px'}, 240, function(){
+			$('.menu_side > .inner > .con').animate({'scrollTop':'-9999px'})
+			$('.ly_dimmed').fadeOut(240,function(){
+				$('.menu_side').delay(150).hide();
+				sideMenuSwipe = 0; //정지
+			})
+		})
+	};	
+	$('body').removeClass('noscroll');
+}
+
 
 $(document).ready(function(){
 	
