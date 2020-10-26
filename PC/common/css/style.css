@@ -2180,3 +2180,17 @@ textarea.form-control {
     color: #999;
     text-align: center;
     transition: all .3s; }
+
+/** 페럴렉스 배경 **/
+.parallaxBackground {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  height: 1000px;
+  min-height: 1000px;
+  background-image: url(images/sample-background.jpg);
+  background-position: center 0;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-size: cover; }
