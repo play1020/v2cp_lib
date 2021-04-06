@@ -4,6 +4,7 @@ $primaryColor: #d51324;
 $darkGrayColor: #262626;
 $infoColor:#43aee5;
 $yellowColor: #f4d421;
+$orangeColor:#ff6e01;
 
 $defaultLineColor:1px #e6e6e6;
 $primaryLineColor:2px #000000;
@@ -89,12 +90,32 @@ input[type="radio"]{margin:0 3px 0 5px;}
 body.dialogOpen{overflow:hidden;}
 .dialog{position:fixed; top:0;left:0;bottom:0;right:0; width:100%; height:100%; display:none; text-align: center; z-index:999999;overflow-x:hidden; overflow-y:auto;  }
 .dialog .dialog_front{display:inline-block; position: relative; height:100%; z-index: 20;}
-.dialog .dialog_front .dialog_content{display:inline-block; position:relative; padding:0; }
-.dialog .dialog_front .dialog_content .dialog_body{margin:0 auto;margin-top:50px;padding:0; background-color:#fff;}
-.dialog .dialog_front .dialog_content .dialog_footer{padding:8px 5px; background-color:#333333; color:#fff; }
-.dialog .dialog_front .dialog_content .dialog_footer .close{background-color:none;border:none;}
+.dialog .dialog_front .dialog_content{display:inline-block; position:relative; margin-top:50px; padding:0; background-color:#fff;}
+.dialog .dialog_front .dialog_content .dialog_head{padding:5px; text-align: right;}
+.dialog .dialog_front .dialog_content .dialog_head .close{display:inline-block;padding:10px; font-size:16px;}
+.dialog .dialog_front .dialog_content .dialog_head .close .xi{}
+.dialog .dialog_front .dialog_content .dialog_body{margin:0 auto;padding:0; background-color:#fff; text-align: center;}
+.dialog .dialog_front .dialog_content .dialog_footer{/*padding:8px 5px; */background-color:#333333; color:#fff; }
+.dialog .dialog_front .dialog_content .dialog_footer .close{display:block;padding:8px 5px; width:100%; background-color:#e54343;border:none; color:#fff; text-align:center; outline: none; cursor: pointer;}
 .dialog .dialog_bg{position:fixed;top:0;left:0;bottom:0;right:0; width:100%; height:100%; background:rgba(0,0,0,0.7);z-index: 10;}
 
+//dialog 개별 스타일 
+//카카오톡 전송
+.kakaoPOP{width:420px; box-sizing: border-box;}
+.kakaoPOP > .h{position:relative; padding:20px 30px 0px; font-size:21px; color:#fff; background-color:#ffda00; box-sizing: border-box;}
+.kakaoPOP > .h h2{padding-right: 100px;  color:#1c1c1b;  font-family: 'Nanum Barun Gothic', Malgun Gothic, Dotum, sans-serif; font-weight: 600;; font-size:32px; text-align: left; letter-spacing: -2px}
+.kakaoPOP > .h i{position: absolute; right:25px; top:18px; color:#1c1c1b; font-size:80px;}
+.kakaoPOP > .b{padding:20px; border:20px solid #ffda00; border-bottom:0; }
+.kakaoPOP > .b .pic{float:left; width:80px; margin-right:15px;}
+.kakaoPOP > .b .pic > img{width:100%}
+.kakaoPOP > .b .text{margin-bottom:10px; text-align: left; font-size:14px;font-family:Dotum, sans-serif; font-weight: bold;}
+.kakaoPOP > .b .txt{float:left; text-align: left; padding-top:10px;}
+.kakaoPOP > .b .txt .t{font-size:14px; font-family: Malgun Gothic, Dotum, sans-serif; }
+.kakaoPOP > .b .txt .name{font-size:30px;  font-family: 'Nanum Barun Gothic', Malgun Gothic, Dotum, sans-serif; font-weight: 600;}
+.kakaoPOP > .b hr{padding-top:10px; border:none; border-bottom:1px dashed #ddd;}
+.kakaoPOP > .b:before,
+.kakaoPOP > .b:after{display:block;content: '';clear: both;}
+.kakaoPOP > .f{padding:0 20px 20px; border:20px solid #ffda00; border-top:0; }
 
 .layer_widget{display:none; position: fixed;top: 0;left: 0; z-index: 999999;width: 100%;height: 100%;}
 .layer_widget .ly_dimmed {position: fixed;top: 0;left: 0;bottom:0;right:0;background-color: #000;filter: alpha(opacity=50);opacity: .5;}
@@ -162,7 +183,16 @@ body.dialogOpen{overflow:hidden;}
 		margin:15px 0;
 	}
 }
-
+span.profit{
+	margin-right:6px;
+	display:inline-block;
+	padding:2px 5px;
+	border:1px solid #f00;
+	font-size:14px;
+	font-weight: bold;
+	color:#f00;
+	vertical-align: text-top;
+}
 span.new:after{
 	margin-right:6px;
 	display:inline-block;
@@ -172,6 +202,17 @@ span.new:after{
 	font-size:11px;
 	font-weight: bold;
 	color:#f00;
+	vertical-align: text-top;
+}
+span.hot:after{
+	margin-right:6px;
+	display:inline-block;
+	padding:2px 5px;
+	background-color:#f00;
+	content: 'HOT';
+	font-size:11px;
+	font-weight: bold;
+	color:#fff;
 	vertical-align: text-top;
 }
 span.pay{
@@ -649,11 +690,46 @@ textarea.form-control{
 		.pro{font-size:13px; font-weight: 400 !important; color:$mutedColor; line-height: 24px; }
 	}
 }
+
+.tbl_onelineReview{
+	tr{
+		.info{
+			padding:15px 0;
+			.title{
+				max-width: 100%;
+			}
+			.meta{
+				.stock{
+					color:$primaryColor;
+				}
+			}
+		}
+	}
+}
+
 .tbl_pay{
+	td, th{
+		border-bottom:solid $defaultLineColor;
+		padding:8px;
+	}
+	.pay{
+		text-align: right;
+		font-size:30px;
+		font-weight: 700;
+		font-family: Arial, "sans-serif";
+		color:$primaryColor;
+	}
+}
+
+.tbl_rate{
 	td, th{
 		border-bottom:solid $defaultLineColor;
 		padding:15px;
 	}
+	.name{text-align: left;}
+	.per{color:$orangeColor; font-size:14px; font-weight: bold;}
+	.stock{text-align: left;}
+	.day{text-align: right;}
 	.pay{
 		text-align: right;
 		font-size:30px;
@@ -815,6 +891,57 @@ textarea.form-control{
 .page ul li.active a {background-color:#36393f; color:#ffffff;}
 
 /** tab **/
+.tab-default{
+	> .tab-button{
+		display: table;
+		width:100%;
+		font-size:16px;
+		font-family: 'NanumSquare', 'Nanum Barun Gothic', Malgun Gothic, Dotum, sans-serif;
+		> a {
+			position: relative;
+			display:table-cell;
+			width:332px;
+			padding:15px 0;
+			text-align: center;
+			font-weight: bold;
+			border: solid $defaultLineColor;
+			color:#737373;
+			background-color:#efefef;
+		}
+		> a:hover{background-color:#F3F3F3}
+		> a.active {
+			color:$primaryColor;
+			background-color:#fff;
+		}
+	}
+	> .tab-container{
+		border:solid $defaultLineColor;
+		border-top:none;
+		font-size:15px;
+		th{font-family: 'NanumSquare', 'Nanum Barun Gothic', Malgun Gothic, Dotum, sans-serif; }
+		.name > p{font-weight:700; color:#333; font-size:16px; }
+		.stock{color:#666;}
+	}
+}
+
+.tbl_rate{
+	th,td{padding:8px; font-family: 'NanumSquare', 'Nanum Barun Gothic', Malgun Gothic, Dotum, sans-serif; }
+	.per{
+		.num_stock{
+			color:#fff;
+			background-color:#cc0000;
+			border-radius:20px;
+			font-size:18px;
+			font-weight:700;
+			height:30px;
+			text-align:center;
+			line-height:30px;
+			width:90px;
+		}
+	}
+	.now_stock{color:#cc0000; font-weight:700;}
+}
+
 .tab-wrap{
 	display: table;
 	width:100%;
@@ -880,9 +1007,12 @@ textarea.form-control{
 	.form-control,
 	.add-on{ display:table-cell;}
 }
-.content-default .body > .reply_text{margin-top:-45px; margin-bottom:0;} //예외처리
+.reply_text_review{
+	
+}
 .reply_list{
 	.item{
+		position: relative;
 		padding:15px;
 		margin-bottom:15px;
 		border-radius: 10px;
@@ -908,6 +1038,28 @@ textarea.form-control{
 					border-radius: 3px;
 					> i{color:#fff;}
 				}
+			}
+		}
+		.mid{
+			position:absolute;top:5px; right:10px;
+			margin:10px 0;
+			padding:3px 10px;
+			font-family: Malgun Gothic, Dotum, sans-serif;
+			font-size:14px; font-weight: bold;
+			border:solid $defaultLineColor;
+			background-color:$primaryColor;
+			border-radius: 10px;
+			.anal{
+				margin-right:10px;
+				color:#fff;
+			}
+			.stock{
+				margin-right:10px;
+				color:#fff;
+			}
+			.per{
+				font-size:16px;
+				color:$yellowColor;
 			}
 		}
 		.bottom{
@@ -980,45 +1132,38 @@ textarea.form-control{
 		}
 	}
 	.logo{
-		margin:16px 0 24px;
+		margin:16px 0 18px;
 	}
 	.banner_l{
 		position: absolute;
-		top:10px;
+		top:0px;
 		left:0;
 		width:200px;
 	}
 	.banner_r{
 		position: absolute;
-		top:0;
-		right:0;
+		top: -13px;
+		right: -130px;
 	}
 	.lnb_wrap{
 		min-width:1000px;
 		border-top:solid $defaultLineColor;
 		border-bottom:solid $defaultLineColor;
-		background-image:url(../../images/lnb_bg.png);
-		background-position: center center;
-		background-repeat: repeat-y;
+		background-color:$primaryColor;
+//		background-image:url(../../images/lnb_bg.png);
+//		background-position: center center;
+//		background-repeat: repeat-y;
 		.lnb{
 			float:left;
-			position: relative;
-			display: table;
-			width:742px;
-			width:calc( 100% - 258px );
-			height:52px;
 			> li{
 				position: relative;
-				display:table-cell;
-				width:1000px; /* 사이트 최대 크기에 맞춤. 메인메뉴 5개 기준 17576px 이상 넘어가면 깨짐 왜 그런지는 모르겠음 */
+				float:left;
 				> a{
-					text-align: center;
-					padding:14px 0;
-					position: relative;
-					width:100%;
+					padding:14px 30px;
 					display:block;
 					font-family:'NanumSquare', 'Nanum Barun Gothic', Malgun Gothic,  Dotum, sans-serif;
 					font-size:18px;
+					color:#fff;
 				}
 				> ul{
 					display:none;
@@ -1078,7 +1223,7 @@ textarea.form-control{
 					font-size:14px;
 					color:#fff;
 					vertical-align: middle;
-					background-color:$primaryColor;
+					background-color:#222;
 				}
 			}
 			.sitemap{
@@ -1103,7 +1248,7 @@ textarea.form-control{
 			background-color:#404040;
 			.info{
 				float:right;
-				padding:20px 5px 0;
+				padding:30px 5px 16px;
 				width:256px;
 				box-sizing: border-box;
 				.item{
@@ -1149,6 +1294,88 @@ textarea.form-control{
 						background: -webkit-linear-gradient(top, #ffffff 0%,#bfbfbf 100%); /* Chrome10-25,Safari5.1-6 */
 						background: linear-gradient(to bottom, #ffffff 0%,#bfbfbf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#bfbfbf',GradientType=0 ); /* IE6-9 */
+					}
+				}
+			}
+		}
+	}
+}
+
+.all_anal{
+	position:absolute;
+	top:0;
+	left:-125px;
+	font-family:'NanumSquare', 'Nanum Barun Gothic', Malgun Gothic,  Dotum, sans-serif;
+	z-index: 995;
+	> .title{
+		display:block;
+		width:125px;
+		height:52px;
+		line-height: 54px;
+		font-size:18px;
+		text-align: center;
+		color:#fff;
+		background-color:#691717;
+	}
+	> .list{
+		display:none;
+		border:1px solid $primaryColor;
+		background-color:#fff;
+		.head{
+			position: relative;
+			height:71px;
+			.label{
+				float:left;
+				width:68px;
+				height:51px;
+				text-align: center;
+			}
+			.txt{
+				position: relative;
+				float:left;
+				margin-top:14px;
+				width:260px;
+				z-index: 10;
+				.anal{
+					font-size:18px;
+					font-weight: bold;
+				}
+				.ment{
+					font-size:14px;
+					color:#6e6e6e;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+			}
+			.pic{
+				position: absolute;
+				top:0;right:0;
+				z-index: 9;
+			}
+		}
+		.body{
+			.tr{
+				display:table;
+				width:100%;
+				border-top:solid $defaultLineColor;
+				.td{
+					display: table-cell;
+					/*width:33.33333333333333px;*/
+					text-align: left;
+					font-size:14px;
+					box-sizing: border-box;
+					> a{
+						width:121px;
+						overflow: hidden;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+						display: block;
+						padding:10px;
+					}
+					> a:hover{
+						color:$primaryColor;
+						background-color:#f3f3f3;
 					}
 				}
 			}
@@ -1224,7 +1451,7 @@ textarea.form-control{
 				> a{
 					display:block;
 					float:left;
-					width:155px;
+					width:136px;
 					height:85px;
 					text-align: center;
 					background: url(../../images/foot-dot.png) no-repeat right center;
@@ -1251,6 +1478,10 @@ textarea.form-control{
 				.info3{
 					float:left;
 					padding:0 0 0 20px;
+				}
+				.info4{
+					float:left;
+					padding:0 0 0 18px;
 				}
 				.tit{
 					margin-top:5px;
@@ -1360,6 +1591,41 @@ textarea.form-control{
 }
 
 /*** main ***/
+/** rate_stock **/
+#rate_stock{
+	margin-bottom:32px;
+}
+#main-calendar{
+	margin:40px 0;
+	h4{
+		position:relative;
+		> .more{
+			position:absolute;
+			bottom:0; right:0;
+		}
+	}
+	.groupLabel{
+		position:absolute;
+		left:0; top:15px;
+		font-size:14px;
+		> p{
+			margin-bottom:3px;
+			.label{
+				display: inline-block;
+				width:20px;height:13px;
+				margin-right:10px;
+				background-color:#eeeeee;
+				border-radius: 3px;
+				font-size:12px;
+				color:#888888;
+			}
+			.label.red{background-color:#e54343;color:#fff;}
+			.label.yellow{background-color:#fdb60b;color:#fff;}
+		}
+	}
+	.tbl_calendar{margin-top:25px;}
+	.tbl_calendar tbody td a > span{max-width:190px;}
+}
 /** best-anal **/
 #best_anal{
 	padding:30px 10px 0;
@@ -1390,7 +1656,7 @@ textarea.form-control{
 						color:#bfbfbf;
 					}
 					h4{
-						font-size:18px;
+						font-size:16px;
 						color:#666;
 						font-family: 'NanumSquare', 'Nanum Barun Gothic', Malgun Gothic,  Dotum, sans-serif;
 						font-weight: 400;
@@ -1402,12 +1668,27 @@ textarea.form-control{
 				top:0;
 				left:0;
 				z-index: 10;
+				> img{
+					position: absolute;
+					left: 0;
+					top: 0;
+					opacity: inherit;
+					transition: opacity 240ms;
+				}
+				> img:nth-child(1){z-index: 1;  opacity: 1;}
+				> img:nth-child(2){z-index: 10;  opacity: 0;}
 			}
 			.btn-group{
 				position:absolute;
 				left:0; right:75px; bottom:10px;
 				text-align: right;
 				z-index: 12;
+			}
+		}
+		.item:hover{
+			.img{
+				> img:nth-child(1){opacity: 0;}
+				> img:nth-child(2){opacity: 1;}
 			}
 		}
 	}
@@ -1480,6 +1761,17 @@ textarea.form-control{
 			.tit{margin-bottom:3px; font-size:18px;}
 			.name{margin-bottom:15px; color:#a6a6a6;}
 			.txt{margin-bottom:5px; color:#999999;}
+			.profit{
+				.stock{
+					
+				}
+				.per{
+					display:inline-block;
+					padding:3px 5px;
+					background-color:$primaryColor;
+					color:#fff;
+				}
+			}
 		}
 	}	
 }
@@ -1495,9 +1787,16 @@ textarea.form-control{
 			margin-bottom:18px;
 			padding:0 6.5px;
 			width:240px;
+			.addon{
+				position:absolute;
+				bottom:34px;
+				right:10px;
+				z-index: 10;
+			}
 			.text{
 				position: absolute;
 				top:20px;left:10px;
+				z-index: 10;
 				.name{
 					margin:10px 0 8px;
 					font-size:18px;
@@ -1526,21 +1825,42 @@ textarea.form-control{
 					}
 				}
 				.info.blue{
-					color:$infoColor;
+					color:$orangeColor;
 					> .circle{
-						background-color:$infoColor;
+						background-color:$orangeColor;
 					}
 				}
 			}
 			.img{
+				position: relative;
 				border-bottom: solid $defaultLineColor;
+				width:240px;
+				height:152px;
+				z-index: 1;
+				img{
+					position:absolute;
+					left:0;top:0;
+					opacity: inherit;
+					transition:opacity 240ms;
+				}
+				img:nth-child(1){
+					z-index: 10;
+					opacity: 1;
+				}
+				img:nth-child(2){
+					z-index: 1;
+					opacity: 0;
+				}
 			}
 			.bottom{
+				position: relative;
 				a{
+					position: relative;
 					float:left;
-					padding:6px 0;
+					padding:8px 0;
 					display:block;
 					width:50%;
+					height:30px;
 					color:#000;
 					text-align: center;
 					box-sizing: border-box;
@@ -1548,6 +1868,31 @@ textarea.form-control{
 				}
 				a:hover{
 					background-color: #f0f0f0;
+				}
+			}
+		}
+		.item:hover{
+			.img{
+				img:nth-child(1){
+					z-index: 10;
+					opacity: 0;
+				}
+				img:nth-child(2){
+					z-index: 1;
+					opacity: 1;
+				}
+			}
+		}
+		.item.kakao{
+			.bottom{
+				a{
+					width:30.0%;
+				}
+				a.kakao{
+					width:40.0%;
+					padding-left:18px;
+					background-color:#ffda00;
+					> i{position: absolute; left:5px; top:5px; font-size:18px;}
 				}
 			}
 		}
@@ -1872,6 +2217,7 @@ textarea.form-control{
 
 /** 재료달력 **/
 .calendar_nav{
+	position:relative;
 	padding:0 0 25px 0;
 	text-align: center;
 	font-size:17px;
@@ -1887,6 +2233,30 @@ textarea.form-control{
 		display:inline-block;
 		color:#888888;
 		vertical-align: middle;
+	}
+	.coment{
+		margin-top:20px;
+		font-size:16px;
+	}
+	.groupLabel{
+		position:absolute;
+		left:0; top:5px;
+		font-size:14px;
+		> p{
+			margin-bottom:3px;
+			.label{
+				display: inline-block;
+				width:50px;height:13px;
+				padding:3px 5px;
+				margin-right:10px;
+				background-color:#eeeeee;
+				border-radius: 3px;
+				font-size:12px;
+				color:#888888;
+			}
+			.label.red{background-color:#e54343;color:#fff;}
+			.label.yellow{background-color:#fdb60b;color:#fff;}
+		}
 	}
 }
 .tbl_calendar{
@@ -1920,15 +2290,61 @@ textarea.form-control{
 				font-weight: bold;
 				text-align: left;
 			}
-			p{color:#888888;}
+			p{
+				display:block;
+				min-height: 90px;
+				color:#888888;
+			}
+			a { 
+				display:block;
+				margin-bottom:2px;
+				height:21px;
+				> span{
+					position: absolute;
+					padding:4px 5px;
+					display:block;
+					max-width: 93px;
+					background-color:#eeeeee;
+					color:#888888;
+					border-radius: 3px;
+					box-sizing: border-box;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					transition: all 100ms;
+					z-index: 200;
+				}
+			}
+			a:not([data-dialogCall="false"]) > span:after{
+				position: absolute;
+				top:3px;right:3px;
+				display:block;
+				width:6px;height:6px;
+				border-radius: 50%;
+				background-color:#888888;
+				content: '';
+				clear: both
+			}
+			a:not([data-dialogCall="false"]).red > span:after{ background-color: #A40D0D;}
+			a:not([data-dialogCall="false"]).yellow > span:after{ background-color: #9E6F00;}
+			a.red > span{background-color:#e54343;color:#fff;}
+			a.yellow > span{background-color:#fdb60b;color:#fff;}
+			a:hover span{
+				position:absolute;
+				width:auto;
+				white-space: normal;
+				word-break: keep-all;
+				font-weight: bold;
+				box-shadow: 0 5px 5px 0 RGBA(0,0,0,0.20);
+				transform: scale(2);
+				z-index: 300; 
+			}
 		}
 		td.active{
-			background-color:#ffefe5;
-			p{color:#ff6000;text-decoration: underline;}
+			background-color:#ffffd0;
 		}
 	}
 }
-
 
 /** 아코디언 **/
 #accordion.qnaStyle {
@@ -2027,17 +2443,42 @@ textarea.form-control{
 	}
 }
 
-/** 페럴렉스 배경 **/
-.parallaxBackground { 
-	position: relative; 
-	margin: 0 auto; 
-	width: 100%; 
-	max-width: 1920px; 
-	height: 1000px; 
-	min-height: 1000px; 
-	background-image: url(images/sample-background.jpg) ;
-	background-position: center 0;
-	background-attachment: fixed;
-	background-repeat: repeat;
-	background-size: cover; 
+
+/*** 계약서 폼 ***/
+.contract{
+	.ipt-txt{display:inline-block; padding:1px 5px; font-weight: bold; color:#004CFF; vertical-align: initial; background-color:#FFFA82;}
+	.box{ 
+		padding:30px;
+		border:solid $defaultLineColor;
+		white-space: pre-line;
+		font-size:16px;
+		line-height: 1.5;
+		box-sizing: border-box;
+		strong{
+			vertical-align: initial;
+		}
+	}
+	.text{padding:0 15px;}
+	h4{
+		margin:30px 0 15px;
+		font-size:20px; font-weight: bold;
+	}
+	p{
+		font-size:14px;
+		line-height: 1.5;
+	}
+	p.link{
+		a{color:#0000FF; text-decoration: underline;}
+	}
+	ol{
+		margin-left:15px;
+		font-size:14px;
+		li{margin-bottom:15px; line-height: 1.5;}
+		ol{
+			padding-left:20px;
+			list-style: decimal ;
+			li{margin-bottom:0;font-size:14px;}
+		}
+		
+	}
 }

@@ -34,6 +34,7 @@
 <!-- JS -->
 <script type="text/javascript" src="../common/js/jquery-1.12.1.min.js"></script>
 <script type="text/javascript" src="../plugin/hammer.min.js"></script>
+<script type="text/javascript" src="../common/js/clipboard/clipboard.min.js"></script>
 <script type="text/javascript" src="../common/js/common.js"></script>
 </head>
 
@@ -43,8 +44,8 @@
 	<div class="header">
 		<div class="head">
 			<a href="#" class="m_nav"><img src="../images/icon_menu.png" width="24" alt="메뉴" /></a>
-			<h1 class="logo"><a href="../index.html"><img src="../images/logo.png" height="50" alt="815TV" /></a></h1>
-			<a href="../account/login.html" class="login"><img src="../images/icon_login.png" width="26" alt="로그인하기" /></a>
+			<h1 class="logo"><a href="../index.html"><img src="../images/logo.png" height="32" alt="815TV" /></a></h1>
+			<a href="../account/login.html" class="login"><img src="../images/icon_login.png" width="28" alt="로그인하기" /></a>
 			<!--<a href="mypage/mypage_index.html" class="mypage"><img src="images/icon_mypage.png" alt="마이페이지" /></a>-->
 		</div>
 		<div class="menu_side">
@@ -63,33 +64,43 @@
 						<div class="pull-left">
 							<h4 class="tit">고객센터</h4>
 							<p class="cs_number">1899-5786</p>
-							<span class="cs_time">365일 월~금 8:30~24:30</span>
 						</div>
 						<div class="pull-right">
-							<a href="tel:1899-5786" class="call">전화걸기</a>
+							<a href="tel:1899-5786" class="call"><img src="../images/slideMenu_call.png" width="38" /></a>
 						</div>
+					</div>
+					<div class="copyAccount">
+						<a href="#" data-clipboard-text="국민은행 816937-04-011298">
+							<h3 class="tit">계좌번호</h3>
+							<p class="bank_num">816937-04-011298</p>
+							<p class="txt"><span>KB</span>국민은행 (주)고구려인베스트먼트</p>
+							<span class="copy">복사하기</span>
+						</a>
 					</div>
 					<div class="menu_list">
 						<ul>
-							<li><a href="live.html">전문가방송 <i class="xi xi-angle-right pull-right"></i></a>
+							<li><a href="live.html">전문가방송 <i class="xi xi-angle-down pull-right"></i></a>
 								<ul>
-									<li><a href="#">서브1</a></li>
-									<li><a href="#">서브2</a></li>
-									<li><a href="#">서브3</a></li>
-									<li><a href="#">서브4</a></li>
+									<li><a href="live.html">라이브방송</a></li>
+									<li><a href="vod.html">녹화방송</a></li>
 								</ul>
 							</li>
-							<li><a href="../board/boardList.html">투자전략 <i class="xi xi-angle-right pull-right"></i></a></li>
-							<li><a href="../board/boardList.html">감사후기 <i class="xi xi-angle-right pull-right"></i></a>
+							<li><a href="../board/boardList.html">투자정보 <i class="xi xi-angle-down pull-right"></i></a>
 								<ul>
-									<li><a href="#">서브1</a></li>
-									<li><a href="#">서브2</a></li>
+									<li><a href="../board/boardList.html">주식투자전략</a></li>
+									<li><a href="../board/boardList.html">정회원게시판</a></li>
 								</ul>
 							</li>
-							<li><a href="../board/boardList.html">공지사항 <i class="xi xi-angle-right pull-right"></i></a>
+							<li><a href="../board/rorList.html">수익자랑 <i class="xi xi-angle-down pull-right"></i></a>
 								<ul>
-									<li><a href="#">서브1</a></li>
-									<li><a href="#">서브2</a></li>
+									<li><a href="../board/rorList.html">매매일지</a></li>
+									<li><a href="../board/boardList.html">감사후기</a></li>
+								</ul>
+							</li>
+							<li><a href="../board/boardList.html">고객센터 <i class="xi xi-angle-down pull-right"></i></a>
+								<ul>
+									<li><a href="../board/boardList.html">공지사항</a></li>
+									<li><a href="../board/boardList_event.html">진행중인이벤트</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -97,29 +108,25 @@
 				</div>
 			</div>
 		</div>
-		<div class="navigation">
-			<ul class="nav">
-				<li class="active"><a href="live.html">전문가방송</a></li>
-				<li><a href="../board/boardList.html">투자전략</a></li>
-				<li><a href="../board/boardList.html">감사후기</a></li>
-				<li><a href="../board/boardList.html">공지사항</a></li>
-			</ul>
-		</div>
     </div>
     <!--//header-->
     <div class="main_visual">
     </div>
     <div class="content">
 		<div class="sub-head">
-			<h2 class="title">전문가방송</h2>
+			<div class="left">
+				<a href="#" class="btn btn-transparent"><i class="xi xi-arrow-left"></i></a>
+			</div>
+			<h2 class="title">라이브방송</h2>
 		</div>
 		<form method="get" action="#">
 			<div class="search">
 				<div class="dp_tbl_cell">
 					<select class="form-control">
 						<option value="">전문가선택</option>
-						<option value="">투자지존</option>
-						<option value="">투자지존</option>
+						<option value="">신사임당</option>
+						<option value="">적풍</option>
+						<option value="">우라노스</option>
 					</select>
 				</div>
 			</div>
@@ -127,128 +134,196 @@
 		<!--section-->
 		<div class="content-default">
 			<div class="card-section">
-				<!--repeat {-->
-				<div class="item-cast">
-					<div class="profile-area">
-						<div class="picture">
-							<a href="profile.html">
-								<div class="profile-img"><img src="http://www.815tv.co.kr/images/anal/fok1541_live.jpg" alt="전문가사진" /></div>
-								<div class="link-cafe-home"><img src="../images/icon_cafe.png" alt="홈" /></div>
-							</a>
-						</div>
-						<div class="ment">
-							<a href="profile.html">
-								<h1 class="profile-title">태평성대로 가는길</h1>
-								<div class="name">
-									<span class="label-stock">주식</span>
-									<span class="name">암행어사</span>
+				<div id="live_list">
+					<div class="list">
+						<div class="item">
+							<div class="box">
+								<div class="img">
+									<a href="../live/profile.html"><img src="../images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a>
 								</div>
-								<div class="info">
-									<span class="time">2017. 3. 10&nbsp;&nbsp;08:30~15:30</span>
+								<span class="free">무료방송</span>
+								<div class="text">
+									<h3 class="name">주식에미친남자</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+								</div>										
+								<div class="bottom">
+									<a href="../live/live.html"><img src="../images/icon-play.png" alt="" /> 방송보기</a>
 								</div>
-							</a>
-						</div>
-					</div>
-					<div class="button-area">
-						<button type="button" class="btn btn-active animated infinite blink">특별방송</button>
-					</div>
-				</div>
-				<div class="item-cast">
-					<div class="profile-area">
-						<div class="picture">
-							<a href="profile.html">
-								<div class="profile-img"><img src="http://www.815tv.co.kr/images/anal/jupiteam3_live.jpg" alt="전문가사진" /></div>
-								<div class="link-cafe-home"><img src="../images/icon_cafe.png" alt="홈" /></div>
-							</a>
-						</div>
-						<div class="ment">
-							<a href="profile.html">
-								<h1 class="profile-title">우라노스의 모닝 크로노스</h1>
-								<div class="name">
-									<span class="label-stock">주식</span>
-									<span class="name">우라노스</span>
+							</div><!--.box-->
+						</div><!--.item-->
+						<div class="item">
+							<div class="box">
+								<div class="img">
+									<a href="../live/profile.html"><img src="../images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a>
 								</div>
-								<div class="info">
-									<span class="time">2017. 3. 10&nbsp;&nbsp;08:30~15:30</span>
+								<span class="pay">회원방송</span>
+								<div class="text">
+									<h3 class="name">주식에미친남자</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+								</div>										
+								<div class="bottom">
+									<a href="../live/live.html"><img src="../images/icon-play.png" alt="" /> 방송보기</a>
 								</div>
-							</a>
-						</div>
-					</div>
-					<div class="button-area">
-						<button type="button" class="btn btn-info">방송보기</button>
-					</div>
-				</div>
-				<div class="item-cast">
-					<div class="profile-area">
-						<div class="picture">
-							<a href="profile.html">
-								<div class="profile-img"><img src="http://www.815tv.co.kr/images/anal/fok1541_live.jpg" alt="전문가사진" /></div>
-								<div class="link-cafe-home"><img src="../images/icon_cafe.png" alt="홈" /></div>
-							</a>
-						</div>
-						<div class="ment">
-							<a href="profile.html">
-								<h1 class="profile-title">수익률 1위! 멘탈케어! 주식투자의 정석!</h1>
-								<div class="name">
-									<span class="label-stock">주식</span>
-									<span class="name">양귀비</span>
+							</div><!--.box-->
+						</div><!--.item-->
+						<div class="item">
+							<div class="box">
+								<div class="img">
+									<a href="../live/profile.html"><img src="../images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a>
 								</div>
-								<div class="info">
-									<span class="time">2017. 3. 10&nbsp;&nbsp;08:30~15:30</span>
+								<span class="wait">방송종료</span>
+								<div class="text">
+									<h3 class="name">주식에미친남자</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+								</div>										
+								<div class="bottom">
+									<a href="../live/live.html"><img src="../images/icon-play.png" alt="" /> 방송보기</a>
 								</div>
-							</a>
-						</div>
-					</div>
-					<div class="button-area">
-						<button type="button" class="btn btn-disable">방송예정</button>
-					</div>
-				</div>
-				<div class="item-cast">
-					<div class="profile-area">
-						<div class="picture">
-							<a href="profile.html">
-								<div class="profile-img"><img src="http://www.815tv.co.kr/images/anal/shinsaimdang_live.jpg" alt="전문가사진" /></div>
-								<div class="link-cafe-home"><img src="../images/icon_cafe.png" alt="홈" /></div>
-							</a>
-						</div>
-						<div class="ment">
-							<a href="profile.html">
-								<h1 class="profile-title">신사임당, 성격은 잔다르크</h1>
-								<div class="name">
-									<span class="label-stock">주식</span>
-									<span class="name">양귀비</span>
+							</div><!--.box-->
+						</div><!--.item-->
+						<div class="item">
+							<div class="box">
+								<div class="img">
+									<a href="../live/profile.html"><img src="../images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a>
 								</div>
-								<div class="info">
-									<span class="time">2017. 3. 10&nbsp;&nbsp;08:30~15:30</span>
+								<span class="wait">방송종료</span>
+								<div class="text">
+									<h3 class="name">주식에미친남자</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+								</div>										
+								<div class="bottom">
+									<a href="../live/live.html"><img src="../images/icon-play.png" alt="" /> 방송보기</a>
 								</div>
-							</a>
-						</div>
-					</div>
-					<div class="button-area">
-						<button type="button" class="btn btn-disable">방송예정</button>
-					</div>
-				</div>
-				<!--} repeat-->
+							</div><!--.box-->
+						</div><!--.item-->
+						<div class="item">
+							<div class="box">
+								<div class="img">
+									<a href="../live/profile.html"><img src="../images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a>
+								</div>
+								<span class="wait">방송종료</span>
+								<div class="text">
+									<h3 class="name">주식에미친남자</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+								</div>										
+								<div class="bottom">
+									<a href="../live/live.html"><img src="../images/icon-play.png" alt="" /> 방송보기</a>
+								</div>
+							</div><!--.box-->
+						</div><!--.item-->
+						<div class="item">
+							<div class="box">
+								<div class="img">
+									<a href="../live/profile.html"><img src="../images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a>
+								</div>
+								<span class="wait">방송종료</span>
+								<div class="text">
+									<h3 class="name">주식에미친남자</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+								</div>										
+								<div class="bottom">
+									<a href="../live/live.html"><img src="../images/icon-play.png" alt="" /> 방송보기</a>
+								</div>
+							</div><!--.box-->
+						</div><!--.item-->
+						<div class="item">
+							<div class="box">
+								<div class="img">
+									<a href="../live/profile.html"><img src="../images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a>
+								</div>
+								<span class="wait">방송종료</span>
+								<div class="text">
+									<h3 class="name">주식에미친남자</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+								</div>										
+								<div class="bottom">
+									<a href="../live/live.html"><img src="../images/icon-play.png" alt="" /> 방송보기</a>
+								</div>
+							</div><!--.box-->
+						</div><!--.item-->
+						<div class="item">
+							<div class="box">
+								<div class="img">
+									<a href="../live/profile.html"><img src="../images/anal/live-list-sample.png" alt="라이브리스트 전문가" /></a>
+								</div>
+								<span class="wait">방송종료</span>
+								<div class="text">
+									<h3 class="name">주식에미친남자</h3>
+									<p class="txt">아직 끝나지 않았다 영원한 클래스</p>
+								</div>										
+								<div class="bottom">
+									<a href="../live/live.html"><img src="../images/icon-play.png" alt="" /> 방송보기</a>
+								</div>
+							</div><!--.box-->
+						</div><!--.item-->
+					</div><!--.list-->
+				</div><!--#live_list-->
 			</div>
 		</div>
-		<!--//section-->
+		<!--//section1-->
+		<div class="content-padding">
+			<div class="copyAccount">
+				<a href="#" data-clipboard-text="국민은행 816937-04-011298">
+					<h3 class="tit">계좌번호</h3>
+					<p class="bank_num">816937-04-011298</p>
+					<p class="txt"><span>KB</span>국민은행 (주)고구려인베스트먼트</p>
+					<span class="copy">복사하기</span>
+				</a>
+			</div>
+		</div>
     </div>
     <!--//content-->
     <!--footer-->
     <div class="footer">
+		<div class="link">
+			<a href="../page/guide.html">이용약관</a>
+			<a href="../page/personalinfo.html">개인정보취급방침</a>
+		</div>
 		<p class="warning">
 			본 사이트에서 제공되는 모든 정보는 투자판단의 참고자료이며, 서비스 이용에 따른 최종 책임은 이용자에게 있습니다.
 		</p>
-		<p class="info">
-			㈜고구려인베스트먼트 | 대표이사 : 전운규 | 법인등록번호 : 110111-5510527 | 사업자등록번호 107-88-29382 | 통신판매 : 제2017-전주완산-0116호
-		</p>
-		<div class="copy">
-			Copyrightⓒ고구려인베스트먼트.co.,Ltd. All rights reserved.
-		</div>
+		<p class="info">(주)고구려인베스트먼트
+주소 : 경기도 용인시 수지구 풍덕천로 129번길 9 오성빌딩 577호
+대표이사 : 장동명
+법인등록번호 : 110111-5510527
+사업등록번호 :107-88-29382
+통신판매 : 제 2019-용인수지 0604호</p>
     </div>
     <!--//footer-->
 	<!-- quick_menu -->
     <div class="quick_menu">
+		<ul>
+			<li>
+				<a href="../board/rorList.html">
+					<span class="image"></span>
+					<span class="text">매매일지</span>
+				</a>
+			</li>
+			<li>
+				<a href="../board/boardView.html">
+					<span class="image"></span>
+					<span class="text">무방스케줄</span>
+				</a>
+			</li>
+			<li>
+				<a href="../board/boardList.html">
+					<span class="image"></span>
+					<span class="text">공지사항</span>
+				</a>
+			</li>
+			<li>
+				<a href="../mypage/sms.html">
+					<span class="image"></span>
+					<span class="text">SMS</span>
+				</a>
+			</li>
+			<li>
+				<a href="tel:1899=5786">
+					<span class="image"></span>
+					<span class="text">1899-5786</span>
+				</a>
+			</li>
+		</ul>
     </div>
 	<!-- //quick_menu -->
 </div>

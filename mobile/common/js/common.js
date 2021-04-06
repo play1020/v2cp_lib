@@ -9,10 +9,7 @@ function setupWebViewJavascriptBridge(callback) {
 	document.documentElement.appendChild(WVJBIframe);
 	setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
 }
-
-
 /** 메뉴 스크립트 **/
-
 //0. penLeft 설정
 $(document).ready(function(){
 	var closeSwipe = $('.menu_side')['0']
@@ -54,16 +51,24 @@ $(document).on('click scroll swipeleft','.menu_side .close, .menu_side .ly_dimme
 	window.AndroidJavascriptBridge.closeMenuCallback("{'menustatus': 'close'}");
 });
 
+// 계좌번호 복사하기
+$(document).ready(function(){
+	var clipboard = new ClipboardJS('.copyAccount > a');
+	clipboard.on('success', function(e) {
+		window.alert('복사완료:'+ e.text)
+	});
+})
 
 //메뉴 열림
 function menuOpen(e){
 	$('.menu_side').show();
-	$('.ly_dimmed').fadeIn(240);
+	$('.menu_side .ly_dimmed').fadeIn(240);
 	var width = $('.menu_side').width();
 	$('.menu_side > .inner').css({left:'-'+width+'px'});
 	$('.menu_side > .inner').animate({left:'0px'},240);
 	$('body').addClass('noscroll');
 }
+
 //메뉴 닫힘 
 var sideMenuSwipe=0; //스와이프 오류 방지
 function menuClose (e){
@@ -72,7 +77,7 @@ function menuClose (e){
 		var width = $('.menu_side').width();
 		$('.menu_side > .inner').animate({left:'-'+width+'px'}, 240, function(){
 			$('.menu_side > .inner > .con').animate({'scrollTop':'-9999px'})
-			$('.ly_dimmed').fadeOut(240,function(){
+			$('.menu_side .ly_dimmed').fadeOut(240,function(){
 				$('.menu_side').delay(150).hide();
 				sideMenuSwipe = 0; //정지
 			})
@@ -81,6 +86,36 @@ function menuClose (e){
 	$('body').removeClass('noscroll');
 }
 
+/***재료달력***/
+//오픈
+$(document).on('click','.calendar_month td a[data-more]',function(e){
+ 	e.preventDefault();
+	calendarOpen(e)
+})
+//닫기
+$(document).on('click','.viewArea .close, .viewArea .ly_dimmed',function(e){
+	e.preventDefault();
+	calendarClose (e)
+})
+function calendarOpen(e){
+	var dataMore = e.currentTarget.attributes['data-more'].nodeValue;
+	var classList = e.currentTarget.classList.contains('click')
+	if(dataMore == "false" && dataMore != "true" && classList == false) {
+		$(e.currentTarget).parents('tbody').find('a').removeClass('click')
+		$(e.currentTarget).toggleClass('click')
+		return false;
+	} else if(dataMore == "false" && classList == true){
+		$(e.currentTarget).removeClass('click')
+		return false;
+	} else{
+		$(e.currentTarget).parents('tbody').find('a').removeClass('click')
+		$('.viewArea').css({'width':'100%','height':'100%'}).addClass('visible');;
+		return false;	
+	}
+}
+function calendarClose (e){
+	$('.viewArea').removeClass('visible').delay(200).animate({'width':'0%','height':'0%'},0);;
+}
 
 $(document).ready(function(){
 	
@@ -109,7 +144,6 @@ $(document).ready(function(){
 		})
 	}
 	tabControl()
-	
 })
 
 //동영상사이즈 리사이즈

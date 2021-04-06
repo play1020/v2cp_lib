@@ -34,17 +34,18 @@
 <!-- JS -->
 <script type="text/javascript" src="../common/js/jquery-1.12.1.min.js"></script>
 <script type="text/javascript" src="../plugin/hammer.min.js"></script>
+<script type="text/javascript" src="../common/js/clipboard/clipboard.min.js"></script>
 <script type="text/javascript" src="../common/js/common.js"></script>
 </head>
 
-<body>
+<body style="background-color: #f5f5f5;">
 <div id="wrap">
 	<!--header-->
 	<div class="header">
 		<div class="head">
 			<a href="#" class="m_nav"><img src="../images/icon_menu.png" width="24" alt="메뉴" /></a>
-			<h1 class="logo"><a href="../index.html"><img src="../images/logo.png" height="50" alt="815TV" /></a></h1>
-			<a href="../account/login.html" class="login"><img src="../images/icon_login.png" width="26" alt="로그인하기" /></a>
+			<h1 class="logo"><a href="../index.html"><img src="../images/logo.png" height="32" alt="815TV" /></a></h1>
+			<a href="../account/login.html" class="login"><img src="../images/icon_login.png" width="28" alt="로그인하기" /></a>
 			<!--<a href="mypage/mypage_index.html" class="mypage"><img src="images/icon_mypage.png" alt="마이페이지" /></a>-->
 		</div>
 		<div class="menu_side">
@@ -63,47 +64,49 @@
 						<div class="pull-left">
 							<h4 class="tit">고객센터</h4>
 							<p class="cs_number">1899-5786</p>
-							<span class="cs_time">365일 월~금 8:30~24:30</span>
 						</div>
 						<div class="pull-right">
-							<a href="tel:1899-5786" class="call">전화걸기</a>
+							<a href="tel:1899-5786" class="call"><img src="../images/slideMenu_call.png" width="38" /></a>
 						</div>
+					</div>
+					<div class="copyAccount">
+						<a href="#" data-clipboard-text="국민은행 816937-04-011298">
+							<h3 class="tit">계좌번호</h3>
+							<p class="bank_num">816937-04-011298</p>
+							<p class="txt"><span>KB</span>국민은행 (주)고구려인베스트먼트</p>
+							<span class="copy">복사하기</span>
+						</a>
 					</div>
 					<div class="menu_list">
 						<ul>
-							<li><a href="live.html">전문가방송 <i class="xi xi-angle-right pull-right"></i></a>
+							<li><a href="live.html">전문가방송 <i class="xi xi-angle-down pull-right"></i></a>
 								<ul>
-									<li><a href="#">서브1</a></li>
-									<li><a href="#">서브2</a></li>
-									<li><a href="#">서브3</a></li>
-									<li><a href="#">서브4</a></li>
+									<li><a href="live.html">라이브방송</a></li>
+									<li><a href="vod.html">녹화방송</a></li>
 								</ul>
 							</li>
-							<li><a href="../board/boardList.html">투자전략 <i class="xi xi-angle-right pull-right"></i></a></li>
-							<li><a href="../board/boardList.html">감사후기 <i class="xi xi-angle-right pull-right"></i></a>
+							<li><a href="../board/boardList.html">투자정보 <i class="xi xi-angle-down pull-right"></i></a>
 								<ul>
-									<li><a href="#">서브1</a></li>
-									<li><a href="#">서브2</a></li>
+									<li><a href="../board/boardList.html">주식투자전략</a></li>
+									<li><a href="../board/boardList.html">정회원게시판</a></li>
 								</ul>
 							</li>
-							<li><a href="../board/boardList.html">공지사항 <i class="xi xi-angle-right pull-right"></i></a>
+							<li><a href="../board/rorList.html">수익자랑 <i class="xi xi-angle-down pull-right"></i></a>
 								<ul>
-									<li><a href="#">서브1</a></li>
-									<li><a href="#">서브2</a></li>
+									<li><a href="../board/rorList.html">매매일지</a></li>
+									<li><a href="../board/boardList.html">감사후기</a></li>
+								</ul>
+							</li>
+							<li><a href="../board/boardList.html">고객센터 <i class="xi xi-angle-down pull-right"></i></a>
+								<ul>
+									<li><a href="../board/boardList.html">공지사항</a></li>
+									<li><a href="../board/boardList_event.html">진행중인이벤트</a></li>
 								</ul>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="navigation">
-			<ul class="nav">
-				<li class="active"><a href="live.html">전문가방송</a></li>
-				<li><a href="../board/boardList.html">투자전략</a></li>
-				<li><a href="../board/boardList.html">감사후기</a></li>
-				<li><a href="../board/boardList.html">공지사항</a></li>
-			</ul>
 		</div>
     </div>
     <!--//header-->
@@ -114,63 +117,210 @@
 			<h2 class="title">전문가프로필</h2>
 		</div>
 
-		<div class="content-default">
-			<div class="card-section">
+		<div class="content-paddingTop">
+			<div class="profile">
+				<div class="anal_img">
+					<img src="../images/anal/profileVisual-sample.png" alt="noimg" />
+				</div>
+			</div>
+		</div>
+		<div class="content-paddingTop">
+			<div class="card-section noborder">
 				<div class="profile">
-					<div class="anal_img"><img src="http://www.815tv.co.kr/images/anal/jupiteam3_live.jpg" alt="noimg" /></div>
-					<div class="ment">
-						<div class="name">
-							<span class="label-stock">주식</span>
-							<span class="name">우라노스</span>
+					<div class="tit"><p>투자전략</p></div>
+					<div class="con">
+						<div class="listWrap">
+							<p>· 철저한 맥점 진입으로 급등주 선취매</p>
+							<p>· 최저점 공략후 수익 극대화 전략 &amp; 다앙햔 공략 제시</p>
+							<p>· 바쁜 직장인을 위한 쉬운 리딩</p>
 						</div>
-						<h2 class="profile-title">주식시장에 한발 빠른 페이스메이커!</h2>
-						<h3 class="profile-subtitle">고수검색식을 이용한 단타기법</h3>
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<div class="content-default">
-			<div class="latest-default">
-				<div class="head">
-					<h2 class="tit">
-						프로필 
-						<span class="sub"></span> 
-					</h2>
-				</div>
-				<div class="con">
-					<ul class="profile-list">
-						<li>⊙ 前 동부증권 리서치센터</li>
-						<li>⊙ 前 동부증권 리서치센터</li>
-						<li>⊙ 前 동부증권 리서치센터</li>
-						<li>⊙ 前 동부증권 리서치센터</li>
-					</ul>
+		</div><!-- .content-default -->
+		<div class="content-paddingTop">
+			<div class="card-section noborder">
+				<div class="profile">
+					<div style="float: left;">
+						<div class="tit"><p>10월 마지막 매매전략</p></div>
+						<div class="con">
+							<p style="color: #999;">10월 29일 월요일 08:30~15:30</p>
+						</div>
+					</div>
+					<div class="profile_btn"><a href="0">LIVE<br>방송</a></div>
 				</div>
 			</div>
-		</div>
-		
-		<div class="content-default">
-			<div class="latest-default">
-				<div class="head">
-					<h2 class="tit">
-						투자전략 
-						<span class="sub"></span> 
-					</h2>
-				</div>
-				<div class="con">
-					<ul class="profile-list">
-						<li>고수검색식을 통해 종목 포착!</li>
-						<li>장시작1시간안에매수!당일매매종료!</li>
-						<li>단기 스캘핑/ 종가급등주 공략</li>
-						<li>확고한원칙/수급주/급등전매매</li>
-						<li>기업분석,실질분석의 종목발굴로 안정적인 수익!</li>
-					</ul>
+		</div><!-- .content-default -->
+		<div class="content-paddingTop">
+			<div class="card-section noborder">
+				<div class="profile">
+					<div class="latest-default">
+						<div class="head">
+							<p class="tit">
+								녹화방송
+								<span class="sub"></span>
+								<a href="#" class="more"><img src="../images/icon_latest_moreB.png" alt="더보기" width="16"></a>
+							</p>
+						</div>
+						<div class="con">
+							<div class="item item-vod">
+								<a href="#">
+									<div class="textWrap">
+										<div class="date"><span class="">10.25</span></div>
+										<h3 class="tit">[주식와이프]감사합니다! 수익률 오랫만에 올랐네요!!</h3>
+									</div>
+									<div class="btnWrap"><div class="vod_btn"><span class="arrow"><img src="../images/icon-play.png" alt=""></span><span class="text">방송보기</span></div></div>
+								</a>
+							</div>
+							<div class="item item-vod">
+								<a href="#">
+									<div class="textWrap">
+										<div class="date"><span class="">10.25</span></div>
+										<h3 class="tit">[주식와이프]감사합니다! 수익률 오랫만에 올랐네요!!</h3>
+									</div>
+									<div class="btnWrap"><div class="vod_btn"><span class="arrow"><img src="../images/icon-play.png" alt=""></span><span class="text">방송보기</span></div></div>
+								</a>
+							</div>
+							<div class="item item-vod">
+								<a href="#">
+									<div class="textWrap">
+										<div class="date"><span class="">10.25</span></div>
+										<h3 class="tit">[주식와이프]감사합니다! 수익률 오랫만에 올랐네요!!</h3>
+									</div>
+									<div class="btnWrap"><div class="vod_btn"><span class="arrow"><img src="../images/icon-play.png" alt=""></span><span class="text">방송보기</span></div></div>
+								</a>
+							</div>
+						</div><!-- .con -->
+					</div>
 				</div>
 			</div>
-		</div>
+		</div><!-- .content-default -->
+		<div class="content-paddingTop">
+			<div class="card-section noborder">
+				<div class="profile">
+					<div class="latest-default">
+						<div class="head">
+							<p class="tit">
+								감사후기
+								<span class="sub"></span>
+								<a href="#" class="more"><img src="../images/icon_latest_moreB.png" alt="더보기" width="16"></a>
+							</p>
+						</div>
+						<div class="con">
+							<div class="item">
+								<a href="#">
+									<h3 class="tit">[주식와이프]감사합니다! 수익률 오랫만에 올랐네요!!</h3>
+									<div class="info">
+										<span class="">사용자1</span>
+									</div>
+								</a>
+							</div>
+							<div class="item">
+								<a href="#">
+									<h3 class="tit">[적풍]감사감사</h3>
+									<div class="info">
+										<span class="">사용자사용자</span>
+									</div>
+								</a>
+							</div>
+							<div class="item">
+								<a href="#">
+									<h3 class="tit">[주식와이프]감사합니다! 수익률 오랫만에 올랐네요!!</h3>
+									<div class="info">
+										<span class="">사용자사용자사용자</span>
+									</div>
+								</a>
+							</div>
+						</div><!-- .con -->
+					</div>
+				</div>
+			</div>
+		</div><!-- .content-default -->
+		<div class="content-paddingTop">
+			<div class="card-section noborder">
+				<div class="profile">
+					<div class="latest-default">
+						<div class="head">
+							<p class="tit">
+								투자전략
+								<span class="sub"></span>
+								<a href="#" class="more"><img src="../images/icon_latest_moreB.png" alt="더보기" width="16"></a>
+							</p>
+						</div>
+						<div class="con">
+							<div class="item">
+								<a href="#">
+									<h3 class="tit">10월 18일 유료방송 - 증시 사이클 지속 12월 첫 째주 시장전략</h3>
+									<div class="info">
+										<span class="">2020.10.25</span>
+									</div>
+								</a>
+							</div>
+							<div class="item">
+								<a href="#">
+									<h3 class="tit">10월 18일 유료방송 - 증시 사이클 지속 12월 첫 째주 시장전략</h3>
+									<div class="info">
+										<span class="">2020.10.25</span>
+									</div>
+								</a>
+							</div>
+							<div class="item">
+								<a href="#">
+									<h3 class="tit">10월 18일 유료방송 - 증시 사이클 지속 12월 첫 째주 시장전략</h3>
+									<div class="info">
+										<span class="">2020.10.25</span>
+									</div>
+								</a>
+							</div>
+						</div><!-- .con -->
+					</div>
+				</div>
+			</div>
+		</div><!-- .content-default -->
+		<div class="content-paddingTop">
+			<div class="card-section noborder">
+				<div class="profile">
+					<div class="latest-default">
+						<div class="head">
+							<p class="tit">
+								정회원게시판
+								<span class="sub"></span>
+								<a href="#" class="more"><img src="../images/icon_latest_moreB.png" alt="더보기" width="16"></a>
+							</p>
+						</div>
+						<div class="con">
+							<div class="item">
+								<a href="#">
+									<h3 class="tit">시장 및 종목 방향성, 드리고 싶은 말씀</h3>
+									<div class="info">
+										<span class="">2020.10.25</span>
+									</div>
+								</a>
+							</div>
+							<div class="item">
+								<a href="#">
+									<h3 class="tit">★★보기만 해도 100% 이해되는 섹터 정리 자료(언택트 산업!) ★★</h3>
+									<div class="info">
+										<span class="">2020.10.25</span>
+									</div>
+								</a>
+							</div>
+							<div class="item">
+								<a href="#">
+									<h3 class="tit">[오전시황] 상승중이지만 반드시 알아야 할 것</h3>
+									<div class="info">
+										<span class="">2020.10.25</span>
+									</div>
+								</a>
+							</div>
+						</div><!-- .con -->
+					</div>
+				</div>
+			</div>
+		</div><!-- .content-default -->
 		
-		<div class="content-default">
-			<div class="card-section">
+		<div class="content-paddingTop">
+			<div class="card-section noborder">
 				<select class="form-control">
 					<option value="">가격보기</option>
 					<option value="">1개월</option>
@@ -192,27 +342,60 @@
     <!--//content-->
     <!--footer-->
     <div class="footer">
+		<div class="link">
+			<a href="../page/guide.html">이용약관</a>
+			<a href="../page/personalinfo.html">개인정보취급방침</a>
+		</div>
 		<p class="warning">
 			본 사이트에서 제공되는 모든 정보는 투자판단의 참고자료이며, 서비스 이용에 따른 최종 책임은 이용자에게 있습니다.
 		</p>
-		<p class="info">
-			㈜고구려인베스트먼트 | 대표이사 : 전운규 | 법인등록번호 : 110111-5510527 | 사업자등록번호 107-88-29382 | 통신판매 : 제2017-전주완산-0116호
-		</p>
-		<div class="copy">
-			Copyrightⓒ고구려인베스트먼트.co.,Ltd. All rights reserved.
-		</div>
+		<p class="info">(주)고구려인베스트먼트
+주소 : 경기도 용인시 수지구 풍덕천로 129번길 9 오성빌딩 577호
+대표이사 : 장동명
+법인등록번호 : 110111-5510527
+사업등록번호 :107-88-29382
+통신판매 : 제 2019-용인수지 0604호</p>
     </div>
     <!--//footer-->
 	<!-- quick_menu -->
     <div class="quick_menu">
+		<ul>
+			<li>
+				<a href="../board/rorList.html">
+					<span class="image"></span>
+					<span class="text">매매일지</span>
+				</a>
+			</li>
+			<li>
+				<a href="../board/boardView.html">
+					<span class="image"></span>
+					<span class="text">무방스케줄</span>
+				</a>
+			</li>
+			<li>
+				<a href="../board/boardList.html">
+					<span class="image"></span>
+					<span class="text">공지사항</span>
+				</a>
+			</li>
+			<li>
+				<a href="../mypage/sms.html">
+					<span class="image"></span>
+					<span class="text">SMS</span>
+				</a>
+			</li>
+			<li>
+				<a href="tel:1899=5786">
+					<span class="image"></span>
+					<span class="text">1899-5786</span>
+				</a>
+			</li>
+		</ul>
     </div>
 	<!-- //quick_menu -->
 </div>
 </body>
 </html>
-
-
-
 
 
 

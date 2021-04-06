@@ -4,7 +4,7 @@
 *{
 	font-family:HelveticaNeue,AppleSDGothicNeo, 'Malgun Gothic','맑은 고딕',sans-serif;
 }
-body{background-color:#f0f0f0; font-size:16px;}
+body{ font-size:16px;}
 
 /*** layout ***/
 
@@ -26,7 +26,7 @@ body{background-color:#f0f0f0; font-size:16px;}
 .align-right {text-align:right !important;}
 
 /*** form ***/
-.form-control{display:inline-block; padding:10px 10px; width:100%; height:46px; border:1px solid #d9d9d9; background-color:#fff; outline:none; vertical-align:middle}
+.form-control{display:inline-block; padding:10px 10px; width:100%; height:46px; border:1px solid #d9d9d9; background-color:#fff; outline:none; vertical-align:middle; border-radius: 5px;}
 .form-control + .form-control{margin-top:10px;}
 .form-control + .form-control:last-child{margin-bottom:10px;}
 input[disabled="disabled"].form-control{background-color:#eee}
@@ -37,24 +37,25 @@ input[disabled="disabled"].form-control{background-color:#eee}
 .fieldset .info{display:block; margin-top:15px; padding-top:15px; border-top:1px dashed #d9d9d9; font-size:0.875rem}
 
 .input-group{position: relative; display: table; border-collapse: separate; margin-bottom:10px;}
-.input-group .form-control{float:left;width:100%;}
+.input-group .form-control{float:left;width:100%;border-top-right-radius: 0;border-bottom-right-radius: 0; }
 .input-group .input-group-btn {word-break:keep-all; width:1%; vertical-align:middle}
-.input-group .input-group-btn > .btn{vertical-align:middle;border:none; height:46px}
+.input-group .input-group-btn > .btn{vertical-align:middle;border:none; height:46px;border-top-left-radius: 0;border-bottom-left-radius: 0;}
 .input-group .form-control, .input-group .input-group-btn {display:table-cell;}
 
 textarea.form-control{height:auto; padding:15px; margin-bottom:10px;}
 
 /*** button ***/
-.btn{display:inline-block; font-size:1em; padding:10px 10px; border:0; outline:none;box-sizing:border-box; text-align:center; vertical-align:middle}
-.btn.block{display:block;width:100%;}
+.btn{display:inline-block; font-size:1em; padding:10px 10px; border:0; outline:none;box-sizing:border-box; text-align:center; vertical-align:middle; border-radius: 5px;}
+.btn.block{display:block;width:100%; border-radius: 0}
 .btn.border-radius{border-radius:5px}
 
 .btn-default{background-color:RGBA(0,0,0,1); color:#fff !important;}
 .btn-active{background-color:RGBA(245,10,43,1);color:#fff !important;}
 .btn-danger{background-color:#f53232;color:#fff !important;}
-.btn-info{background-color:#0071bc; color:#fff !important;}
+.btn-info{background-color:#608df9; color:#fff !important;}
 .btn-white{background-color:#fff; color:#6a6e7c !important;}
-.btn-primary{background-color:#6a6e7c; color:#fff !important;}
+.btn-primary{background-color:#608df9; color:#fff !important;}
+.btn-primary2{background-color:#ff6292; color:#fff !important;}
 .btn-disable{background-color:#bfbfbf; color:#fff !important;}
 .btn-line{background-color:transparent; border:1px solid #cccccc}
 .btn-transparent{background-color:transparent;color:#fff !important;}
@@ -82,7 +83,8 @@ textarea.form-control{height:auto; padding:15px; margin-bottom:10px;}
 .text-normal{color:#222;}
 .text-white {color: #fff;}
 .text-muted{color: #555;}
-.text-primary{color:#037ac5}
+.text-primary{color:#608df9}
+.text-primary2{color:#ff6292}
 .text-warning{color: #f89406;}
 .text-error{color: #c10841;}
 .text-danger{color: #f00e53;}
@@ -92,7 +94,8 @@ textarea.form-control{height:auto; padding:15px; margin-bottom:10px;}
 .bg-normal{background-color:#f9f9f9;} 
 .bg-white {background: #fff !important;}
 .bg-muted {background: #333333 !important;}
-.bg-primary {background: #037ac5 !important;}
+.bg-primary {background: #608df9 !important;}
+.bg-primary2{background: #ff6292 !important;}
 .bg-warning {background: #f89406 !important;}
 .bg-error{background: #c10841 !important;}
 .bg-danger{background: #f00e53 !important;}

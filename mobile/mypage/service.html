@@ -34,6 +34,7 @@
 <!-- JS -->
 <script type="text/javascript" src="../common/js/jquery-1.12.1.min.js"></script>
 <script type="text/javascript" src="../plugin/hammer.min.js"></script>
+<script type="text/javascript" src="../common/js/clipboard/clipboard.min.js"></script>
 <script type="text/javascript" src="../common/js/common.js"></script>
 </head>
 
@@ -43,9 +44,9 @@
 	<div class="header">
 		<div class="head">
 			<a href="#" class="m_nav"><img src="../images/icon_menu.png" width="24" alt="메뉴" /></a>
-			<h1 class="logo"><a href="../index.html"><img src="../images/logo.png" height="50" alt="815TV" /></a></h1>
-			<a href="../account/login.html" class="login"><img src="../images/icon_login.png" width="26" alt="로그인하기" /></a>
-			<!--<a href="mypage/mypage_index.html" class="mypage"><img src="images/icon_mypage.png" alt="마이페이지" /></a>-->
+			<h1 class="logo"><a href="../index.html"><img src="../images/logo.png" height="32" alt="815TV" /></a></h1>
+			<!--<a href="../account/login.html" class="login"><img src="../images/icon_login.png" width="28" alt="로그인하기" /></a>-->
+			<a href="mypage_index.html" class="mypage"><img src="../images/icon_mypage.png" alt="마이페이지" /></a>
 		</div>
 		<div class="menu_side">
 			<div class="ly_dimmed"></div>
@@ -63,33 +64,43 @@
 						<div class="pull-left">
 							<h4 class="tit">고객센터</h4>
 							<p class="cs_number">1899-5786</p>
-							<span class="cs_time">365일 월~금 8:30~24:30</span>
 						</div>
 						<div class="pull-right">
-							<a href="tel:1899-5786" class="call">전화걸기</a>
+							<a href="tel:1899-5786" class="call"><img src="../images/slideMenu_call.png" width="38" /></a>
 						</div>
+					</div>
+					<div class="copyAccount">
+						<a href="#" data-clipboard-text="국민은행 816937-04-011298">
+							<h3 class="tit">계좌번호</h3>
+							<p class="bank_num">816937-04-011298</p>
+							<p class="txt"><span>KB</span>국민은행 (주)고구려인베스트먼트</p>
+							<span class="copy">복사하기</span>
+						</a>
 					</div>
 					<div class="menu_list">
 						<ul>
-							<li><a href="../live/live.html">전문가방송 <i class="xi xi-angle-right pull-right"></i></a>
+							<li><a href="../live/live.html">전문가방송 <i class="xi xi-angle-down pull-right"></i></a>
 								<ul>
-									<li><a href="#">서브1</a></li>
-									<li><a href="#">서브2</a></li>
-									<li><a href="#">서브3</a></li>
-									<li><a href="#">서브4</a></li>
+									<li><a href="../live/live.html">라이브방송</a></li>
+									<li><a href="../live/vod.html">녹화방송</a></li>
 								</ul>
 							</li>
-							<li><a href="../board/boardList.html">투자전략 <i class="xi xi-angle-right pull-right"></i></a></li>
-							<li><a href="../board/boardList.html">감사후기 <i class="xi xi-angle-right pull-right"></i></a>
+							<li><a href="../board/boardList.html">투자정보 <i class="xi xi-angle-down pull-right"></i></a>
 								<ul>
-									<li><a href="#">서브1</a></li>
-									<li><a href="#">서브2</a></li>
+									<li><a href="../board/boardList.html">주식투자전략</a></li>
+									<li><a href="../board/boardList.html">정회원게시판</a></li>
 								</ul>
 							</li>
-							<li><a href="../board/boardList.html">공지사항 <i class="xi xi-angle-right pull-right"></i></a>
+							<li><a href="../board/rorList.html">수익자랑 <i class="xi xi-angle-down pull-right"></i></a>
 								<ul>
-									<li><a href="#">서브1</a></li>
-									<li><a href="#">서브2</a></li>
+									<li><a href="../board/rorList.html">매매일지</a></li>
+									<li><a href="../board/boardList.html">감사후기</a></li>
+								</ul>
+							</li>
+							<li><a href="../board/boardList.html">고객센터 <i class="xi xi-angle-down pull-right"></i></a>
+								<ul>
+									<li><a href="../board/boardList.html">공지사항</a></li>
+									<li><a href="../board/boardList_event.html">진행중인이벤트</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -97,20 +108,15 @@
 				</div>
 			</div>
 		</div>
-		<div class="navigation">
-			<ul class="nav">
-				<li class="active"><a href="../live/live.html">전문가방송</a></li>
-				<li><a href="../board/boardList.html">투자전략</a></li>
-				<li><a href="../board/boardList.html">감사후기</a></li>
-				<li><a href="../board/boardList.html">공지사항</a></li>
-			</ul>
-		</div>
     </div>
     <!--//header-->
     <div class="main_visual">
     </div>
     <div class="content">
 		<div class="sub-head">
+			<div class="left">
+				<a href="#" class="btn btn-transparent"><i class="xi xi-arrow-left"></i></a>
+			</div>
 			<h2 class="title">마이페이지</h2>
 		</div>
 		<!--tab-->
@@ -120,6 +126,7 @@
 					<li><a href="mypage_index.html" class="btn">개인정보관리</a></li>
 					<li class="active"><a href="service.html" class="btn">서비스이용내역</a></li>
 					<li><a href="sms.html" class="btn">SMS수신내역</a></li>
+					<li><a href="leave.html" class="btn">회원탈퇴</a></li>
 				</ul>
 			</div>
 		</div>
@@ -208,24 +215,70 @@
 			-->
 
 		</div>
-		<!--//section-->
+		<!--//section1-->
+		<div class="content-padding">
+			<div class="copyAccount">
+				<a href="#" data-clipboard-text="국민은행 816937-04-011298">
+					<h3 class="tit">계좌번호</h3>
+					<p class="bank_num">816937-04-011298</p>
+					<p class="txt"><span>KB</span>국민은행 (주)고구려인베스트먼트</p>
+					<span class="copy">복사하기</span>
+				</a>
+			</div>
+		</div>
     </div>
     <!--//content-->
     <!--footer-->
     <div class="footer">
+		<div class="link">
+			<a href="../page/guide.html">이용약관</a>
+			<a href="../page/personalinfo.html">개인정보취급방침</a>
+		</div>
 		<p class="warning">
 			본 사이트에서 제공되는 모든 정보는 투자판단의 참고자료이며, 서비스 이용에 따른 최종 책임은 이용자에게 있습니다.
 		</p>
-		<p class="info">
-			㈜고구려인베스트먼트 | 대표이사 : 전운규 | 법인등록번호 : 110111-5510527 | 사업자등록번호 107-88-29382 | 통신판매 : 제2017-전주완산-0116호
-		</p>
-		<div class="copy">
-			Copyrightⓒ고구려인베스트먼트.co.,Ltd. All rights reserved.
-		</div>
+		<p class="info">(주)고구려인베스트먼트
+주소 : 경기도 용인시 수지구 풍덕천로 129번길 9 오성빌딩 577호
+대표이사 : 장동명
+법인등록번호 : 110111-5510527
+사업등록번호 :107-88-29382
+통신판매 : 제 2019-용인수지 0604호</p>
     </div>
     <!--//footer-->
 	<!-- quick_menu -->
     <div class="quick_menu">
+		<ul>
+			<li>
+				<a href="../board/rorList.html">
+					<span class="image"></span>
+					<span class="text">매매일지</span>
+				</a>
+			</li>
+			<li>
+				<a href="../board/boardView.html">
+					<span class="image"></span>
+					<span class="text">무방스케줄</span>
+				</a>
+			</li>
+			<li>
+				<a href="../board/boardList.html">
+					<span class="image"></span>
+					<span class="text">공지사항</span>
+				</a>
+			</li>
+			<li>
+				<a href="sms.html">
+					<span class="image"></span>
+					<span class="text">SMS</span>
+				</a>
+			</li>
+			<li>
+				<a href="tel:1899=5786">
+					<span class="image"></span>
+					<span class="text">1899-5786</span>
+				</a>
+			</li>
+		</ul>
     </div>
 	<!-- //quick_menu -->
 </div>

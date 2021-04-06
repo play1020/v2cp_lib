@@ -38,7 +38,7 @@ var myElement = document.getElementById('myElement');
 var mc = new Hammer(myElement);
 
 // listen to events...
-mc.on("panleft panright tap press", function(e) {
+mc.on("panleft", function(e) {
     myElement.style.backgroundColor = "#0f0"
 });
 </script>
